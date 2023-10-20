@@ -264,11 +264,11 @@ header .header-btn img {
   margin: 35px 0;
   cursor: pointer;
 }
-header button {
-  border: 0;
-  background-color: transparent;
-  height: fit-content;
-}
+header .menu-animation {
+        position: relative;
+        width: 50px;
+        height: 55.5px;
+    }
 header .menu {
   position: absolute;
   width: 100%;
