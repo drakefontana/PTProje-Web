@@ -4,18 +4,6 @@ $("a[href='#top']").click(function() {
     return false;
 });
 
-// Menu
-// Login Menu Toggle
-$("#toggleLoginMenu").click(function(event) {
-    event.stopPropagation(); // Prevents the event from bubbling up the DOM tree.
-    $("#loginMenu").toggleClass("active");
-    $("#navMenu").removeClass("active");
-});
-
-$("#exitLoginMenu").click(function() {
-    $("#loginMenu").removeClass("active");
-});
-
 // Inquire Modal Toggle
 $(".toggleInquireModal").click(function(event) {
     event.stopPropagation(); // Prevents the event from bubbling up the DOM tree.
@@ -32,8 +20,10 @@ $(".more-content-toggler").click(function() {
     $("#videoModal").toggleClass("active");
 });
 
-// Initialize Lottie animation and menu toggle
+// Header Menus
 $(document).ready(function() {
+    
+    // For Main Menu
     let menuOpen = false;
     const navMenu = document.getElementById('navMenu');
 
@@ -66,6 +56,42 @@ $(document).ready(function() {
             menuAnimation.setDirection(-1);
             menuAnimation.playSegments([menuAnimation.currentFrame, 0], true);
             navMenu.style.display = 'none'; // Hide navMenu
+        }
+    });
+
+    // For Agency Portal
+    let agencyOpen = false;
+    const loginMenu = document.getElementById('loginMenu');
+
+    // Initialize Lottie animation
+    const agencyAnimation = lottie.loadAnimation({
+        container: document.getElementById('agency-animation'),
+        renderer: 'svg',
+        loop: false,
+        autoplay: false,
+        path: '/anim/PTP-Header-AgencyPortal-Icon.json' // Replace with your JSON file path
+    });
+
+    // Set the animation to its initial frame
+    agencyAnimation.addEventListener('DOMLoaded', function() {
+        agencyAnimation.goToAndStop(0, true);
+        loginMenu.style.display = 'none'; // Initially hide navMenu
+    });
+
+    // Toggle menu state
+    $('#agency-container').click(function() {
+        agencyOpen = !agencyOpen;
+
+        if (agencyOpen) {
+            // Open menu and play animation forward
+            agencyAnimation.setDirection(1);
+            agencyAnimation.playSegments([0, agencyAnimation.totalFrames - 1], true);
+            loginMenu.style.display = 'block'; // Show navMenu
+        } else {
+            // Close menu and play animation in reverse
+            agencyAnimation.setDirection(-1);
+            agencyAnimation.playSegments([agencyAnimation.currentFrame, 0], true);
+            loginMenu.style.display = 'none'; // Hide navMenu
         }
     });
 });

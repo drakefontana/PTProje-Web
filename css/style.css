@@ -247,27 +247,51 @@ a:hover {
 
 /* page styles */
 /* Header */
-header {
-  width: 100%;
+header.border-gray-b {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 14vh;
   background-color: white;
-  position: relative;
-  text-align: center;
 }
-header .icon {
-  position: relative;
+header .col-head {
+  flex: 1; /* Take up equal space */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-header .logo img,
-header .header-btn img {
+header .col-head.icon {
+  flex-basis: 25%; /* 3/12 */
+}
+header .col-head.logo {
+  flex-basis: 50%; /* 6/12 */
+}
+header .logo img{
   width: auto;
   height: 100%;
   max-height: 40px;
   margin: 35px 0;
   cursor: pointer;
 }
-header .menu-animation {
+header #menu-container{
+  height: 30%;
+  display: flex;
+  align-items: center;
+}
+header #menu-animation {
         position: relative;
+        height: 50px;
+        width: 55px;
+    }
+header #agency-container{
+  height: 50%;
+  display: flex;
+  align-items: center;
+}
+header #agency-animation {
+        position: relative;
+        height: 50px;
         width: 50px;
-        height: 55.5px;
     }
 header .menu {
   position: absolute;
