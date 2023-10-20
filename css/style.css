@@ -182,9 +182,6 @@ html,
   line-height: 10px;
   float: left;
 }
-img {
-  width: 100%;
-}
 a {
   text-decoration: none;
   transition: 0.3s;
@@ -266,12 +263,10 @@ header .col-head.icon {
 header .col-head.logo {
   flex-basis: 50%; /* 6/12 */
 }
-header .logo img{
-  width: auto;
-  height: 100%;
-  max-height: 40px;
-  margin: 35px 0;
-  cursor: pointer;
+header #ptpHeadLogo{
+  height: 30%;
+  display: flex;
+  align-items: center;
 }
 header #menu-container{
   height: 30%;
@@ -280,8 +275,7 @@ header #menu-container{
 }
 header #menu-animation {
         position: relative;
-        height: 50px;
-        width: 55px;
+        height: 6vh;
     }
 header #agency-container{
   height: 50%;
@@ -290,8 +284,7 @@ header #agency-container{
 }
 header #agency-animation {
         position: relative;
-        height: 50px;
-        width: 50px;
+        height: 7vh;
     }
 header .menu {
   position: absolute;
@@ -415,6 +408,9 @@ header .agency-port-menu p {
   background-color: var(--light_gray);
   position: relative;
   display: flex;
+}
+.hero img{
+  width: 100%;
 }
 .nav-rtl {
   text-align: left;
