@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Property Turkey - Proje</title>
+    <title>PT Proje: Powered by Property Turkey</title>
     <link href="css/aos.css" rel="stylesheet" />
     <link rel="stylesheet" href="css/bootstrap-5.3.min.css" />
     <link rel="stylesheet" href="css/style.css" />
@@ -88,23 +88,31 @@
           </div>
     </header>
 
-    <div class="hero">
-      <div class="sec-image">
-        <img src="img/site_imgs/Hero-Homepage.webp" alt="" />
-      </div>
-      <div class="nav">
+<div class="hero">
+    <picture id="hero-feat">
+        <!-- For high-resolution screens on devices with min-width 768px -->
+        <source media="(min-width: 768px) and (min-resolution: 192dpi)" srcset="/img/PTP-Home-Feat/PTP-Istanbul-Feat.webp" type="image/webp">
+        <source media="(min-width: 768px) and (min-resolution: 192dpi)" srcset="/img/PTP-Home-Feat/PTP-Istanbul-Feat.jpg">
+        <!-- For devices with min-width 768px -->
+        <source media="(min-width: 768px)" srcset="/img/PTP-Home-Feat/PTP-Istanbul-Feat.webp" type="image/webp">
+        <source media="(min-width: 768px)" srcset="/img/PTP-Home-Feat/PTP-Istanbul-Feat.jpg">
+        <!-- Default -->
+        <source srcset="/img/PTP-Home-Feat/PTP-Istanbul-Feat-Sm.webp" type="image/webp">
+        <img src="/img/PTP-Home-Feat/PTP-Istanbul-Feat-Sm.jpg" alt="Winter Lake">
+    </picture>
+    <div class="hero-nav">
         <a href="#">Vision</a>
         <a href="#" class="active">
-          <img src="img/gif_icons/PTP_HouseArrow_HoverEl_Still.gif" alt="" />
-          PROJECTS
+            <img src="img/gif_icons/PTP_HouseArrow_HoverEl_Still.gif" alt="" />
+            PROJECTS
         </a>
         <a href="#">INSIGHTS</a>
         <a href="#">RECEPTION</a>
         <a href="#">ECOSYSTEM</a>
         <a href="#">CONTACT</a>
-      </div>
-      <p class="image-address">HALIC, İSTANBUL</p>
     </div>
+    <p class="image-caption">HALIC, İSTANBUL</p>
+</div>
     <section class="global-tagline">
       <div class="container-fluid">
         <div class="row">

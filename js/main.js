@@ -50,7 +50,7 @@ $(document).ready(function() {
     if (menuOpen) {
       menuAnimation.setDirection(1);
       menuAnimation.playSegments([0, menuAnimation.totalFrames - 1], true);
-      navMenu.style.maxHeight = "86vh";  // You can adjust this value
+      navMenu.style.maxHeight = "100vh";  // You can adjust this value
     } else {
       menuAnimation.setDirection(-1);
       menuAnimation.playSegments([menuAnimation.currentFrame, 0], true);
@@ -82,7 +82,7 @@ $(document).ready(function() {
     if (agencyOpen) {
       agencyAnimation.setDirection(1);
       agencyAnimation.playSegments([0, agencyAnimation.totalFrames - 1], true);
-      loginMenu.style.maxHeight = "86vh";  // You can adjust this value
+      loginMenu.style.maxHeight = "100vh";  // You can adjust this value
     } else {
       agencyAnimation.setDirection(-1);
       agencyAnimation.playSegments([agencyAnimation.currentFrame, 0], true);
@@ -91,6 +91,7 @@ $(document).ready(function() {
   });
 });
 
+// Navigation Hover Arrows
 
 
 // AOS Init

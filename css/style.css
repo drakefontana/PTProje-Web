@@ -490,7 +490,7 @@ header .agency-port-menu p {
     direction: rtl;
 }
 
-.nav {
+.hero-nav {
     padding: 90px 40px;
     width: 40%;
     height: 100px;
@@ -505,12 +505,12 @@ header .agency-port-menu p {
     flex-direction: column;
 }
 
-.nav a img {
+.hero-nav a img {
     width: 40px;
     height: fit-content;
 }
 
-.nav a {
+.hero-nav a {
     display: block;
     height: fit-content;
     font-size: 66px;
@@ -520,11 +520,11 @@ header .agency-port-menu p {
     color: var(--gray);
 }
 
-.nav a:hover {
+.hero-nav a:hover {
     color: var(--dark_red);
 }
 
-.nav a.active {
+.hero-nav a.active {
     color: var(--dark_red);
     background: url("../img/gif_icons/PTP_Close_FormAfter.gif") 20% center center;
     background-size: cover;
@@ -533,7 +533,7 @@ header .agency-port-menu p {
     justify-content: end;
 }
 
-.image-address {
+.image-caption {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
@@ -887,12 +887,12 @@ footer .to_top a:hover {
     direction: ltr;
 }
 
-.sec-image {
+.hero-feat {
     width: 100%;
     max-width: 60%;
 }
 
-.sec-image img {
+.hero-feat img {
     height: 100%;
     object-fit: cover;
 }
@@ -1120,7 +1120,7 @@ section {
     overflow: hidden;
 }
 
-.common-sec .sec-image {
+.common-sec .hero-feat {
     max-width: 100%;
     z-index: -1;
     top: -130px;
@@ -1139,7 +1139,7 @@ section {
     height: 100%;
 }
 
-.common-sec .image-address {
+.common-sec .image-caption {
     bottom: -60px;
 }
 
@@ -1430,7 +1430,7 @@ section {
         height: auto;
     }
 
-    .sec-image {
+    .hero-feat {
         max-width: 100%;
         height: 180px;
     }
@@ -1446,7 +1446,7 @@ section {
         margin-bottom: 20px;
     }
 
-    .image-address {
+    .image-caption {
         display: none;
     }
 
@@ -1535,7 +1535,7 @@ section {
         font-size: 14px;
     }
 
-    .common-sec .sec-image {
+    .common-sec .hero-feat {
         top: unset;
     }
 
@@ -1561,7 +1561,7 @@ section {
         padding: 0;
     }
 
-    .ecosystem .sec-image {
+    .ecosystem .hero-feat {
         height: 250px;
     }
 
