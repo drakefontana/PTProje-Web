@@ -476,13 +476,24 @@ header .agency-port-menu p {
 /* Hero */
 
 .hero {
-    background-color: var(--light_gray);
     position: relative;
     display: flex;
 }
 
-.hero img {
-    width: 100%;
+#hero-feat {
+  width: 60vw;
+  height: 86vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  z-index: -1; // To put it behind the content
+}
+
+#hero-img {
+  object-fit: cover;
+  min-width: 100%;
+  min-height: 100%;
 }
 
 .nav-rtl {
@@ -491,23 +502,20 @@ header .agency-port-menu p {
 }
 
 .hero-nav {
-    padding: 90px 40px;
-    width: 40%;
-    height: 100px;
+    width: 40vw;
+    height: 86vh;
     background-color: white;
-    text-align: right;
-    margin-left: auto;
-    height: 100%;
-    display: flex;
-    justify-content: space-around;
-    gap: 20px;
-    align-items: center;
-    flex-direction: column;
+    display: flex;             /* Enable flexbox */
+    justify-content: center;   /* Center vertically */
+    align-items: center;       /* Center horizontally */
 }
 
-.hero-nav a img {
-    width: 40px;
-    height: fit-content;
+.nav-item-container {
+    text-align: right;
+    display: flex;
+    gap: 2vh;
+    align-items: flex-end;
+    flex-direction: column;
 }
 
 .hero-nav a {
@@ -520,17 +528,24 @@ header .agency-port-menu p {
     color: var(--gray);
 }
 
+.nav-item {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
 .hero-nav a:hover {
     color: var(--dark_red);
 }
 
 .hero-nav a.active {
     color: var(--dark_red);
-    background: url("../img/gif_icons/PTP_Close_FormAfter.gif") 20% center center;
-    background-size: cover;
-    display: flex;
-    align-items: center;
-    justify-content: end;
+}
+
+.mainNav-Arrow {
+    width: 50px;  /* Adjust as needed */
+    height: 50px; /* Adjust as needed */
+    margin-left: 10px;
 }
 
 .image-caption {

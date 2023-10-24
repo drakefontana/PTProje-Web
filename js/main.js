@@ -92,7 +92,39 @@ $(document).ready(function() {
 });
 
 // Navigation Hover Arrows
+$(document).ready(function() {
+    // Initialize Lottie animations for each menu item
+    const arrowAnimations = {};
+    $('.mainNav-Arrow').each(function(index, element) {
+        const id = $(element).attr('id');
+        arrowAnimations[id] = lottie.loadAnimation({
+            container: element,
+            renderer: 'svg',
+            loop: false,
+            autoplay: false,
+            path: '/anim/PTP-Home-HeroMenu-Hover.json' // Replace with the actual path
+        });
 
+        arrowAnimations[id].addEventListener('DOMLoaded', function() {
+            console.log('DOMLoaded fired for:', id); // Debugging
+            arrowAnimations[id].goToAndStop(0, true);
+        });
+    });
+
+    // Hover interactions
+    $('.nav-item').hover(
+        function() { // Mouse enter
+            const id = $(this).find('.mainNav-Arrow').attr('id');
+            arrowAnimations[id].setDirection(1);
+            arrowAnimations[id].playSegments([0, arrowAnimations[id].totalFrames - 1], true);
+        },
+        function() { // Mouse leave
+            const id = $(this).find('.mainNav-Arrow').attr('id');
+            arrowAnimations[id].setDirection(-1);
+            arrowAnimations[id].playSegments([arrowAnimations[id].currentFrame, 0], true);
+        }
+    );
+});
 
 // AOS Init
 AOS.init();
