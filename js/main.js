@@ -126,6 +126,44 @@ $(document).ready(function() {
     );
 });
 
+// Video Content
+document.addEventListener("DOMContentLoaded", () => {
+  const videoElement = document.getElementById("videoElement");
+  videoElement.muted = true;
+
+  // Function to check if any part of the element is in the viewport
+const isInViewport = (elem) => {
+  const bounding = elem.getBoundingClientRect();
+  return (
+    bounding.top <= (window.innerHeight || document.documentElement.clientHeight) &&
+    bounding.bottom >= 0 &&
+    bounding.left <= (window.innerWidth || document.documentElement.clientWidth) &&
+    bounding.right >= 0
+  );
+};
+
+
+  // Autoplay video when in viewport
+  const checkVideoInViewport = () => {
+    if (isInViewport(videoElement)) {
+      videoElement.play();
+    } else {
+      videoElement.pause();
+    }
+  };
+
+  // Loop video
+  videoElement.addEventListener("ended", () => {
+    videoElement.currentTime = 0;
+    videoElement.play();
+  }, false);
+
+  // Initial check and subsequent checks on scroll
+  checkVideoInViewport();
+  window.addEventListener("scroll", checkVideoInViewport);
+});
+
+
 // AOS Init
 AOS.init();
 

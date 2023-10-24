@@ -217,14 +217,14 @@ a:hover {
 
 .my-btn {
     border: 0;
-    font-size: 20px;
+    font-size: 1.25em;
     color: white;
     background-color: var(--dark_gray);
-    padding: 3px 20px;
+    padding: .5vw 1.5vw;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 10px;
+    gap: 1.5vw;
     width: fit-content;
     height: fit-content;
     min-width: 260px;
@@ -236,9 +236,19 @@ a:hover {
     transform: scale(1.05);
 }
 
-.my-btn img {
-    width: 40px;
+.my-btn svg {
+  width: 1.5vw;
+  height: auto;  /* Maintain aspect ratio */
 }
+
+.my-btn svg path {
+  fill: white;
+}
+
+.my-btn:hover svg path {
+  fill: var(--dark_red);
+}
+
 
 .my-input {
     background-color: white;
@@ -521,7 +531,7 @@ header .agency-port-menu p {
 .hero-nav a {
     display: block;
     height: fit-content;
-    font-size: 66px;
+    font-size: 4em;
     width: 100%;
     text-transform: uppercase;
     line-height: 1;
@@ -583,12 +593,12 @@ header .agency-port-menu p {
 
 .global-tagline .sec-1 h2 {
     font-weight: bold;
-    font-size: 30px;
+    font-size: 1.9em;
 }
 
 .my-accordion h3 {
     color: var(--brown);
-    font-size: 30px;
+    font-size: 1.9em;
     margin-left: 16px;
     border-bottom: var(--border-gray) !important;
     padding-bottom: 20px;
@@ -596,7 +606,7 @@ header .agency-port-menu p {
 
 .my-accordion p {
     color: var(--brown);
-    font-size: 18px;
+    font-size: 1em;
     line-height: 1.4;
 }
 
@@ -607,12 +617,14 @@ header .agency-port-menu p {
 .global-tagline .sec-1 p {
     margin: 40px 0;
     margin-top: 55px;
-    font-size: 23px;
+    font-size: 1.33em;
 }
 
 .global-tagline .sec-1 .my-btn {
     position: absolute;
     bottom: 50px;
+    margin-top: 120px;
+    font-weight: normal;
 }
 
 .my-accordion {
@@ -649,6 +661,26 @@ header .agency-port-menu p {
     background-image: url(../img/gif_icons/PTP_Close_FormBefore.gif);
     transform: rotate(45deg);
 }
+
+#accordian-4 {
+  margin-bottom: 12vh;
+}
+/* Video */
+.video-section {
+  position: relative;
+  overflow: hidden;
+  height: 60vh; /* Adjust as needed */
+}
+
+.video-horizontal {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 
 /* buildings */
 .proj-tagline {
