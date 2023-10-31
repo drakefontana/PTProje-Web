@@ -155,9 +155,10 @@
                 <div class="col-md-7 sec-2 col-12" data-aos="fade-up">
                     <div class="my-accordion accordion accordion-flush" id="accordion1">
                         <h3>WHY PT PROJE?</h3>
-                        <div class="accordion-item" id="accordian-1">
+                        <div class="accordion-item" id="accordion-1">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne1" aria-expanded="false" aria-controls="collapseOne1">
-                                INDUSTRY PIONEERS
+                                <span>INDUSTRY PIONEERS</span>
+                                <div class="lottie-container" id="plus-1"></div>
                             </button>
                             <div id="collapseOne1" class="accordion-collapse collapse" data-bs-parent="#accordion1">
                                 <div class="accordion-body">
@@ -167,11 +168,12 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="accordion-item" id="accordian-2">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne4" aria-expanded="false" aria-controls="collapseOne4">
-                                UNWAVERING STANDARDS
+                        <div class="accordion-item" id="accordion-2">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne2" aria-expanded="false" aria-controls="collapseOne2">
+                                <span>UNWAVERING STANDARDS</span>
+                                <div class="lottie-container" id="plus-2"></div>
                             </button>
-                            <div id="collapseOne4" class="accordion-collapse collapse" data-bs-parent="#accordion1">
+                            <div id="collapseOne2" class="accordion-collapse collapse" data-bs-parent="#accordion1">
                                 <div class="accordion-body">
                                     <p>
                                         Trust is the cornerstone of our success. We prioritize transparency, integrity, and open communication in all our dealings. With PT Proje, you'll always know you're in the most trustworthy hands.
@@ -179,11 +181,12 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="accordion-item" id="accordian-3">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne5" aria-expanded="false" aria-controls="collapseOne5">
-                                PROFITABLE PARTNERSHIPS
+                        <div class="accordion-item" id="accordion-3">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne3" aria-expanded="false" aria-controls="collapseOne3">
+                                <span>PROFITABLE PARTNERSHIPS</span>
+                                <div class="lottie-container" id="plus-3"></div>
                             </button>
-                            <div id="collapseOne5" class="accordion-collapse collapse" data-bs-parent="#accordion1">
+                            <div id="collapseOne3" class="accordion-collapse collapse" data-bs-parent="#accordion1">
                                 <div class="accordion-body">
                                     <p>
                                         Your success is our mission. We specialize in crafting profitable partnerships between developers and investors. With our expertise, we maximize your returns and ensure that your real estate investments thrive.
@@ -191,11 +194,12 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="accordion-item" id="accordian-4">
-                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne6" aria-expanded="true" aria-controls="collapseOne6">
-                                EXTENSIVE PROJECT PORTFOLIO
+                        <div class="accordion-item" id="accordion-4">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne4" aria-expanded="false" aria-controls="collapseOne4">
+                                <span>EXTENSIVE PROJECT PORTFOLIO</span>
+                                <div class="lottie-container" id="plus-4"></div>
                             </button>
-                            <div id="collapseOne6" class="accordion-collapse collapse show" data-bs-parent="#accordion1">
+                            <div id="collapseOne4" class="accordion-collapse collapse" data-bs-parent="#accordion1">
                                 <div class="accordion-body">
                                     <p>
                                         Explore our extensive portfolio of successfully obtained sales offices in major Turkish real estate projects. Our track record of accomplishments speaks volumes about our commitment to excellence and achieving remarkable results.
@@ -219,35 +223,50 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-12 col-lg-7 border-gray-r pe-5 ps-5" data-aos="fade-right">
-                    <div class="owl-carousel">
-                        <a href="#" class="building">
-                            <div class="building-image">
+                    <div id="slider" class="portfolio-carousel">
+                        <div class="carousel-wrapper">
+                          <div id="slides" class="slides">
+                            <!-- Your building elements go here -->
+                            <a href="#" class="building" id="portfolio-1">
+                                <div class="building-image">
+                                    <img src="img/site_imgs/proj-1.webp" alt="" />
+                                </div>
+                                <h4 class="building-title">Little Bosphorus</h4>
+                                <span class="building-address">Ateşehir, Istanbul</span>
+                            </a>
+                            <a href="#" class="building" id="portfolio-2">
                                 <img src="img/site_imgs/proj-1.webp" alt="" />
-                            </div>
-                            <h4 class="building-title">Little Bosphorus</h4>
-                            <span class="building-address">Ateşehir, Istanbul</span>
-                        </a>
-                        <a href="#" class="building">
-                            <img src="img/site_imgs/proj-1.webp" alt="" />
-                            <h4 class="building-title">Yedi Mavi</h4>
-                            <span class="building-address">Zeytinburnu, Istanbul</span>
-                        </a>
-                        <a href="#" class="building">
-                            <img src="img/site_imgs/proj-1.webp" alt="" />
-                            <h4 class="building-title">Queen Bomonti</h4>
-                            <span class="building-address">Halıç, Istanbul</span>
-                        </a>
+                                <h4 class="building-title">Yedi Mavi</h4>
+                                <span class="building-address">Zeytinburnu, Istanbul</span>
+                            </a>
+                            <a href="#" class="building" id="portfolio-3">
+                                <img src="img/site_imgs/proj-1.webp" alt="" />
+                                <h4 class="building-title">Queen Bomonti</h4>
+                                <span class="building-address">Halıç, Istanbul</span>
+                            </a>
+                          </div>
+                        </div>
+                        <button id="prev" class="carousel-prev">
+                          <svg id="CarouselArrow-Left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                            <circle cx="50" cy="50" r="50" fill="#cbe3e5" stroke-width="0"/>
+                            <polygon points="69.48 74.86 69.48 25.14 39.48 25.14 19.48 50 39.48 74.86 69.48 74.86" fill="#80181a" stroke-width="0"/>
+                          </svg>
+                        </button>
+                        <button id="next" class="carousel-next">
+                          <svg id="CarouselArrow-Right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                            <circle cx="50" cy="50" r="50" fill="#cbe3e5" stroke-width="0" />
+                            <polygon points="30.52 74.86 30.52 25.14 60.52 25.14 80.52 50 60.52 74.86 30.52 74.86" fill="#80181a" stroke-width="0" />
+                          </svg>
+                        </button>
                     </div>
                 </div>
                 <div class="col-12 col-lg-5 ps-5" data-aos="fade-left">
                     <h2>
-                        PROJECT FOCUSED <br />
-                        TAGLINE W/ TWO LINES
+                        EXPLORE TOMORROW'S TURKISH<br />
+                        REAL ESTATE TODAY
                     </h2>
                     <p>
-                        Three line descriptor description <br />
-                        and descript description,<br />
-                        descriptor description.
+                        Witness the future of Turkish real estate through our diverse portfolio of prestigious projects.
                     </p>
                     <button class="my-btn">
                         See Our Projects
@@ -428,7 +447,6 @@
     <script src="js/jquery-ui.min.js"></script>
     <script src="js/bootstrap-5.3.min.js"></script>
     <script src="js/aos.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
     <script src="js/main.js"></script>
 </body>
 

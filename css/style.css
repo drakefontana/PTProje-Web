@@ -237,16 +237,16 @@ a:hover {
 }
 
 .my-btn svg {
-  width: 1.5vw;
-  height: auto;  /* Maintain aspect ratio */
+    width: 1.5vw;
+    /* Maintain aspect ratio */
 }
 
 .my-btn svg path {
-  fill: white;
+    fill: white;
 }
 
 .my-btn:hover svg path {
-  fill: var(--dark_red);
+    fill: var(--dark_red);
 }
 
 
@@ -295,7 +295,8 @@ header.header-main {
 }
 
 header .col-head {
-    flex: 1;/* Take up equal space */
+    flex: 1;
+    /* Take up equal space */
     display: flex;
     position: relative;
     justify-content: center;
@@ -306,11 +307,13 @@ header .col-head {
 }
 
 header .col-head.icon {
-    flex-basis: 25%;/* 3/12 */
+    flex-basis: 25%;
+    /* 3/12 */
 }
 
 header .col-head.logo {
-    flex-basis: 50%;/* 6/12 */
+    flex-basis: 50%;
+    /* 6/12 */
     border-left: var(--border-gray);
     border-right: var(--border-gray);
 }
@@ -345,7 +348,8 @@ header #agency-animation {
 
 header .menu {
     position: absolute;
-    max-height: 0vh; /* Initial off-screen position */
+    max-height: 0vh;
+    /* Initial off-screen position */
     overflow: hidden;
     top: 14vh;
     background-color: white;
@@ -357,7 +361,8 @@ header .menu {
 }
 
 header .menu.open {
-    max-height: 86vh; /* You can adjust this value */
+    max-height: 86vh;
+    /* You can adjust this value */
     overflow: auto;
 }
 
@@ -491,19 +496,19 @@ header .agency-port-menu p {
 }
 
 #hero-feat {
-  width: 60vw;
-  height: 86vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-  z-index: -1; // To put it behind the content
+    width: 60vw;
+    height: 86vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    z-index: -1; // To put it behind the content
 }
 
 #hero-img {
-  object-fit: cover;
-  min-width: 100%;
-  min-height: 100%;
+    object-fit: cover;
+    min-width: 100%;
+    min-height: 100%;
 }
 
 .nav-rtl {
@@ -515,9 +520,12 @@ header .agency-port-menu p {
     width: 40vw;
     height: 86vh;
     background-color: white;
-    display: flex;             /* Enable flexbox */
-    justify-content: center;   /* Center vertically */
-    align-items: center;       /* Center horizontally */
+    display: flex;
+    /* Enable flexbox */
+    justify-content: center;
+    /* Center vertically */
+    align-items: center;
+    /* Center horizontally */
 }
 
 .nav-item-container {
@@ -553,8 +561,10 @@ header .agency-port-menu p {
 }
 
 .mainNav-Arrow {
-    width: 50px;  /* Adjust as needed */
-    height: 50px; /* Adjust as needed */
+    width: 50px;
+    /* Adjust as needed */
+    height: 50px;
+    /* Adjust as needed */
     margin-left: 10px;
 }
 
@@ -596,6 +606,19 @@ header .agency-port-menu p {
     font-size: 1.9em;
 }
 
+.global-tagline .sec-1 p {
+    margin: 40px 0;
+    margin-top: 55px;
+    font-size: 1.33em;
+}
+
+.global-tagline .sec-1 .my-btn {
+    position: absolute;
+    bottom: 50px;
+    margin-top: 120px;
+    font-weight: normal;
+}
+
 .my-accordion h3 {
     color: var(--brown);
     font-size: 1.9em;
@@ -614,27 +637,8 @@ header .agency-port-menu p {
     padding: 20px 0;
 }
 
-.global-tagline .sec-1 p {
-    margin: 40px 0;
-    margin-top: 55px;
-    font-size: 1.33em;
-}
-
-.global-tagline .sec-1 .my-btn {
-    position: absolute;
-    bottom: 50px;
-    margin-top: 120px;
-    font-weight: normal;
-}
-
 .my-accordion {
     color: var(--brown);
-}
-
-.my-accordion .accordion-button {
-    font-size: 25px;
-    color: var(--brown);
-    padding-left: 0;
 }
 
 .my-accordion .accordion-item {
@@ -643,9 +647,17 @@ header .agency-port-menu p {
     margin-left: 16px;
 }
 
-.my-accordion .accordion-button:not(.collapsed)::after {
-    background-image: url(../img/gif_icons/PTP_Close_FormAfter.gif);
-    transform: rotate(450deg);
+.my-accordion .accordion-button {
+    font-size: 25px;
+    color: var(--brown);
+    padding-left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.my-accordion .accordion-button::after {
+    content: none;
 }
 
 .my-accordion .accordion-button:not(.collapsed) {
@@ -657,51 +669,108 @@ header .agency-port-menu p {
     box-shadow: none;
 }
 
-.my-accordion .accordion-button::after {
-    background-image: url(../img/gif_icons/PTP_Close_FormBefore.gif);
-    transform: rotate(45deg);
+#accordion-4 {
+    margin-bottom: 6vh;
 }
 
-#accordian-4 {
-  margin-bottom: 12vh;
+.lottie-container {
+    /* Your styling here */
+    width: 24px;
+    /* Example width */
+    height: 24px;
+    /* Example height */
 }
+
+.lottie-container svg {
+    vertical-align: top;
+    /* or any other value that suits your design */
+}
+
 /* Video */
 .video-section {
-  position: relative;
-  overflow: hidden;
-  height: 60vh; /* Adjust as needed */
+    position: relative;
+    overflow: hidden;
+    height: 60vh;
+    /* Adjust as needed */
 }
 
 .video-horizontal {
-  width: 100%;
-  height: auto;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
-
 
 /* buildings */
 .proj-tagline {
     margin: 30px 0;
     overflow: hidden;
+    padding: 50px 30px;
     color: var(--brown);
 }
 
 .proj-tagline h2 {
     font-weight: bold;
+    font-size: 1.9em;
 }
 
 .proj-tagline p {
-    font-size: 24px;
-    margin-top: 70px;
+    margin: 40px 0;
+    margin-top: 55px;
+    font-size: 1.33em;
 }
 
 .proj-tagline .my-btn {
+    position: absolute;
+    bottom: 50px;
     margin-top: 120px;
     font-weight: normal;
 }
+
+.carousel-wrapper {
+    justify-content: center; /* Add this to center the active item */
+    overflow: hidden;
+    position: relative;
+}
+
+.slides {
+  display: flex;
+  flex-direction: row;
+  left: 0;
+  position: relative;
+  transition: left 0.3s ease-out; /* Added transition */
+}
+
+.carousel-prev,
+.carousel-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+
+.carousel-prev svg,
+.carousel-next svg {
+    height: 3vw;
+    width: 3vw;
+}
+
+.carousel-prev {
+    left: calc(.5 * 3vw); /* Negative of the arrow's width */
+    aria-label: "Previous"; /* Added for accessibility */
+}
+
+.carousel-next {
+    right: calc(.5 * 3vw); /* Negative of the arrow's width */
+    aria-label: "Next"; /* Added for accessibility */
+}
+
+/* Your existing .building and image styles remain the same */
 
 .building img {
     height: 310px;
@@ -713,6 +782,7 @@ header .agency-port-menu p {
     display: block;
     color: var(--brown);
     margin: 20px 0;
+    flex: 0 0 calc(100% / 2.3);
 }
 
 .building .building-title {
@@ -728,6 +798,22 @@ header .agency-port-menu p {
     font-weight: bold;
     display: block;
 }
+
+@media (max-width: 768px) {
+    .building img {
+        height: 200px;
+    }
+
+    .building {
+        padding: 0 15px;
+    }
+
+    .building .building-title,
+    .building .building-address {
+        font-size: 16px;
+    }
+}
+
 
 /* Companies sect */
 .companies {
