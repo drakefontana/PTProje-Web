@@ -10,6 +10,7 @@
     --light_red: #d1ac99;
     --light_blue: #cfe7e9;
     --sky_blue: #17b2e6;
+    --forest_green: #0E3534;
     /* Border */
     --border-gray: solid 2px #a3b6bc;
 }
@@ -238,6 +239,7 @@ a:hover {
 
 .my-btn svg {
     width: 1.5vw;
+    height: auto;
     /* Maintain aspect ratio */
 }
 
@@ -771,9 +773,22 @@ header .agency-port-menu p {
 }
 
 /* Your existing .building and image styles remain the same */
+.building-image {
+  position: relative;
+  overflow: hidden;
+  height: 33vh; /* or any other value you prefer */
+  width: 100%;
+}
 
 .building img {
-    height: 310px;
+  object-fit: cover;
+  object-position: center;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .building {
@@ -1199,8 +1214,11 @@ section {
     color: var(--brown);
 }
 
+/* Inquire Modal */
+
 .inquire {
-    max-width: 800px;
+    width: 50vw;
+    min-height: 60vh;
     z-index: 1111;
     background-color: white;
     border: 2px solid var(--gray);
@@ -1221,6 +1239,18 @@ section {
     justify-content: space-between;
 }
 
+.button-close{
+    position: relative;
+    height: 5vh;
+}
+
+#fallback-button-close {
+    display: none;
+    /* Additional styles to make it visually consistent with the Lottie animation */
+    position: relative;
+    height: 5vh;
+}
+
 .inquire .inquire_form input {
     width: 100%;
     border: 0;
@@ -1234,17 +1264,54 @@ section {
     color: var(--gray);
 }
 
-.inquire .inquire_form a {
-    min-width: 240px;
+.inquire .inquire_form button {
     margin-left: auto;
     margin-top: 20px;
 }
 
 .inquire .inquire_form p {
     color: var(--gray);
-
     margin-bottom: 5px;
     font-weight: normal;
+}
+
+#thank-you-message.thank-you-hidden {
+    display: none;
+}
+
+#thank-you-message.thank-you-visible {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    display: flex; /* Using Flexbox to center content */
+}
+
+.thank-you-message-container {
+    flex-grow: 1; /* Allow it to take up available space */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    padding-top: 5vh;
+}
+
+#thank-you-message h4,
+#thank-you-message h5 {
+    margin: 0;
+    text-align: center;
+    color: var(--forest_green);
+    font-size: 2em;
+}
+
+#thank-you-message img {
+    height: 5vh;
+    margin-top: auto;
+    margin-bottom: 5vh; /* Positioning the logo 5vh from the bottom */
 }
 
 /* ------------------------------info Page--------------------------- */

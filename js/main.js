@@ -5,15 +5,77 @@ $("a[href='#top']").click(function() {
 });
 
 // Inquire Modal Toggle
-$(".toggleInquireModal").click(function(event) {
-    event.stopPropagation(); // Prevents the event from bubbling up the DOM tree.
-    $("#inquireModal").toggleClass("active");
-    $("#navMenu").removeClass("active");
+$(document).ready(function() {
+    // Initialize Lottie animation for 'x' close button
+    let isLottieSupported = true; // Assume Lottie is supported initially
+    const closeButtonAnimation = lottie.loadAnimation({
+        container: document.getElementById('exitInquireModal'),
+        renderer: 'svg',
+        loop: false,
+        autoplay: false,
+        path: 'anim/PTP-Close-Form-Icon.json', // Replace with your actual JSON path
+        rendererSettings: {
+            progressiveLoad: false // Helps in quicker detection of unsupported browsers
+        }
+    });
+
+    closeButtonAnimation.addEventListener('DOMLoaded', function() {
+        closeButtonAnimation.goToAndStop(0, true);
+        closeButtonAnimation.setSpeed(1.5); // Set the speed to twice as fast
+    });
+
+    closeButtonAnimation.addEventListener('error', function() {
+        isLottieSupported = false; // Lottie is not supported
+        $('#fallback-button-close').show(); // Show the fallback SVG
+    });
+
+
+    // Event handler for opening/closing the inquire modal
+    $(".toggleInquireModal").click(function(event) {
+        event.stopPropagation(); // Prevents the event from bubbling up the DOM tree.
+        $("#inquireModal").toggleClass("active");
+        $("#navMenu").removeClass("active");
+    });
+
+    // Event handler for 'x' close button hover
+    $('#exitInquireModal').hover(
+        function() {
+            // Hover in
+            closeButtonAnimation.setDirection(1);
+            closeButtonAnimation.playSegments([0, closeButtonAnimation.totalFrames - 1], true);
+        },
+        function() {
+            // Hover out
+            closeButtonAnimation.setDirection(-1);
+            closeButtonAnimation.playSegments([closeButtonAnimation.currentFrame, 0], true);
+        }
+    );
+
+    // Event handler for 'x' close button click
+    $('#exitInquireModal').click(function() {
+        $("#inquireModal").removeClass("active");
+    });
+
+    // Form submission logic
+    $('.inquire_form').submit(function(e) {
+        e.preventDefault();
+        // Simulate AJAX call or other form submission logic here
+        // ...
+
+        // On successful "submission"
+        $('.inquire_form').hide(); // Hide the form
+        $('#thank-you-message').removeClass('thank-you-hidden').addClass('thank-you-visible'); // Show thank-you message
+
+        setTimeout(function() {
+            $('#thank-you-message').removeClass('thank-you-visible').addClass('thank-you-hidden'); // Hide thank-you message
+            $('.inquire_form').show(); // Show the form again
+            $('.inquire_form')[0].reset(); // Clear the form
+            $("#inquireModal").removeClass("active"); // Close the form automatically
+        }, 2000); // 2 seconds
+    });
+
 });
 
-$("#exitInquireModal").click(function() {
-    $("#inquireModal").removeClass("active");
-});
 
 // Video Modal Toggle
 $(".more-content-toggler").click(function() {
