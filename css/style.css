@@ -286,8 +286,10 @@ a:hover {
     justify-content: center;
 }
 
-/* page styles */
-/* Header */
+/* ------- PAGE STYLES ------- */
+
+/* Header Section */
+
 header.header-main {
     display: flex;
     position: relative;
@@ -490,7 +492,7 @@ header .agency-port-menu p {
 }
 
 /* ------------------------------ HOME PAGE ---------------------------- */
-/* Hero */
+/* Hero Section */
 
 .hero {
     position: relative;
@@ -595,7 +597,8 @@ header .agency-port-menu p {
     border-bottom: var(--border-gray);
 }
 
-/* global-tagline */
+/* General Info Section */
+
 .global-tagline {
     padding: 50px 30px;
     color: var(--brown);
@@ -688,7 +691,8 @@ header .agency-port-menu p {
     /* or any other value that suits your design */
 }
 
-/* Video */
+/* Autoplay Video Texture */
+
 .video-section {
     position: relative;
     overflow: hidden;
@@ -705,12 +709,13 @@ header .agency-port-menu p {
     transform: translate(-50%, -50%);
 }
 
-/* buildings */
+/* Projects Feature Section */
+
 .proj-tagline {
-    margin: 30px 0;
     overflow: hidden;
-    padding: 50px 30px;
+    padding: 6vh 3vw;
     color: var(--brown);
+    border-bottom: var(--border-gray);
 }
 
 .proj-tagline h2 {
@@ -829,30 +834,42 @@ header .agency-port-menu p {
     }
 }
 
+/* Insights & Stats Section */
 
-/* Companies sect */
-.companies {
-    display: flex;
-    overflow: hidden;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-    padding: 40px 0;
-    background-color: var(--light_blue);
+/* Stats */
+
+#reception-desk-sect {
+  padding-left: 3vw;
 }
 
-.companies img {
-    padding: 10px;
-    width: 100%;
-    max-width: 160px;
+#biz-insights-cont,
+#reception-desk-cont {
+    height: auto; /* Change from fixed height to auto */
 }
 
-/* */
 .stats {
-    padding: 50px 30px;
+    padding: 6vh 3vw;
     color: var(--brown);
-    border-top: var(--border-gray);
     border-bottom: var(--border-gray);
+}
+
+.stats .my-btn {
+    bottom: 50px;
+    margin-top: 2vh;
+    margin-bottom: 4vh;
+    font-weight: normal;
+}
+
+
+.stats h2 {
+    font-weight: bold;
+    font-size: 1.9em;
+}
+
+#biz-insights-sect, #reception-desk-sect {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* This will push the button to the bottom */
 }
 
 .stat-small div {
@@ -906,6 +923,126 @@ header .agency-port-menu p {
 }
 
 .images-sec {}
+
+/* Bar Graph */
+
+.bar-graph {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  height: 40vh; /* Adjust as needed */
+  transform: translateX(-2vw);
+}
+
+.graph-axis {
+  /* Style for the axis image */
+  width: 100%; /* Adjust as needed */
+  height: auto; /* Maintain aspect ratio */
+  margin-bottom: 10px; /* Space between axis and bars */
+}
+
+.year {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.bar {
+  position: relative;
+  width: 10%; /* Adjust based on the number of bars */
+  transition: height 0.5s ease; /* Smooth transition for animation */
+}
+
+.red.major { background-image: url('path/to/light-red-background.jpg'); }
+.red.minor { background-image: url('path/to/dark-red-background.jpg'); }
+.blue.major { background-image: url('path/to/light-blue-background.jpg'); }
+.blue.minor { background-image: url('path/to/dark-blue-background.jpg'); }
+/* and so on for other bars */
+
+.major, .minor {
+  height: var(--height); /* Height controlled by inline style */
+  position: relative; /* Needed for positioning the SVGs */
+  background-size: cover; /* Ensures the image covers the bar */
+  background-position: center; /* Centers the background image */
+}
+
+.major > img, .minor > img {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image covers the bar */
+}
+
+
+/* Partner Section */
+
+.banner-link {
+    text-decoration: none; /* Removes the underline from the link */
+    color: inherit; /* Ensures the link color matches the surrounding text */
+    display: block; /* Makes the link block-level to contain the section */
+}
+
+.partners {
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    gap: 2vw; /* Space between partner logos */
+    padding: 2vh 0; /* Vertical padding for the section */
+    background-color: var(--light_blue); /* Custom variable for background color */
+}
+
+.logo-container {
+    padding: 0.5vw; /* Padding around each logo */
+    width: 100%;
+    max-width: 10vw; /* Maximum width of each logo container */
+    /* Ensure the logo is centered within the container */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 15vh; /* Set a fixed height for the container */
+    position: relative; /* Needed for positioning the logo and caption */
+    overflow: hidden; /* Ensures the caption doesn't overflow the container */
+}
+
+.partner-logo {
+    width: 75%; /* Logo takes full width of its container */
+    height: auto; /* Height is adjusted automatically to maintain aspect ratio */
+    position: absolute; /* Position the logo absolutely within the container */
+    top: 50%; /* Vertically center the logo */
+    left: 50%; /* Horizontally center the logo */
+    transform: translate(-50%, -50%); /* Adjust position */
+    transition: transform 0.3s; /* Smooth transition for the hover effect */
+}
+
+.logo-container:hover .partner-logo {
+    transform: translate(-50%, -80%); /* Move the logo up within the container on hover */
+}
+
+.partner-logo path {
+  fill: #34110B; /* Unify the fill color */
+}
+
+.logo-container:hover .partner-logo path {
+    fill: revert-layer; /* Revert to original color on hover */
+}
+
+.logo-container p {
+  font-size: .75em;
+  position: absolute; /* Position the caption absolutely within the container */
+  bottom: 0; /* Align the caption at the bottom */
+  left: 50%; /* Center the caption horizontally */
+  transform: translateX(-50%); /* Adjust position */
+  opacity: 0; /* Hide the caption initially */
+  transition: opacity 0.3s; /* Smooth transition for the hover effect */
+  white-space: nowrap; /* Prevent the caption from wrapping */
+}
+
+.logo-container:hover p {
+    opacity: 1; /* Show the caption on hover */
+}
 
 /* footer */
 footer {
