@@ -930,18 +930,17 @@ header .agency-port-menu p {
   display: flex;
   justify-content: space-around;
   align-items: flex-end;
-  height: 40vh; /* Adjust as needed */
+  height: 40vh;
   transform: translateX(-2vw);
 }
 
 .graph-axis {
-  /* Style for the axis image */
-  width: 100%; /* Adjust as needed */
-  height: auto; /* Maintain aspect ratio */
-  margin-bottom: 10px; /* Space between axis and bars */
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
 }
 
-.year {
+.twenty-sixteen {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
@@ -949,21 +948,9 @@ header .agency-port-menu p {
 
 .bar {
   position: relative;
-  width: 10%; /* Adjust based on the number of bars */
-  transition: height 0.5s ease; /* Smooth transition for animation */
-}
-
-.red.major { background-image: url('path/to/light-red-background.jpg'); }
-.red.minor { background-image: url('path/to/dark-red-background.jpg'); }
-.blue.major { background-image: url('path/to/light-blue-background.jpg'); }
-.blue.minor { background-image: url('path/to/dark-blue-background.jpg'); }
-/* and so on for other bars */
-
-.major, .minor {
-  height: var(--height); /* Height controlled by inline style */
-  position: relative; /* Needed for positioning the SVGs */
-  background-size: cover; /* Ensures the image covers the bar */
-  background-position: center; /* Centers the background image */
+  width: 15%; /* Adjust based on the number of bars */
+  transition: height 0.5s ease;
+  background-color: black; /* Simplified background color */
 }
 
 .major > img, .minor > img {
@@ -971,7 +958,7 @@ header .agency-port-menu p {
   bottom: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Ensures the image covers the bar */
+  object-fit: cover;
 }
 
 
