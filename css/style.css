@@ -947,20 +947,40 @@ header .agency-port-menu p {
 }
 
 .bar {
-  position: relative;
-  width: 15%; /* Adjust based on the number of bars */
+  position: relative; /* This makes it a positioning context for absolutely positioned children */
+  flex-grow: 1; /* Adjust this value as needed */
   transition: height 0.5s ease;
-  background-color: black; /* Simplified background color */
 }
 
-.major > img, .minor > img {
+.major {
+  height: var(--height-major); /* Height controlled by inline style */
+  position: relative;
+}
+
+.minor {
+  height: var(--height-minor); /* Height controlled by inline style */
   position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  bottom: 0; /* Aligns the bottom of the minor bar with the major bar */
+  width: 100%; /* Ensures the minor bar stretches the full width of the major bar */
 }
 
+
+.lr-svg-bar {
+  width: 3vw;
+  height: 100%;
+}
+.dr-svg-bar {
+  width: 3vw;
+  height: 100%;
+}
+.lb-svg-bar {
+  width: 3vw;
+  height: 100%;
+}
+.db-svg-bar {
+  width: 3vw;
+  height: 100%;
+}
 
 /* Partner Section */
 
