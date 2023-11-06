@@ -362,3 +362,49 @@ document.addEventListener("DOMContentLoaded", () => {
     // Refresh AOS animations
     AOS.refresh();
 });
+
+// Graph Scroll
+// Function to animate the bars on scroll
+function animateBarsOnScroll() {
+  const windowHeight = window.innerHeight;
+  const graphContainer = document.querySelector('.graph-bars');
+  const graphTop = graphContainer.getBoundingClientRect().top + window.scrollY;
+  const graphHeight = graphContainer.clientHeight;
+  const graphBottom = graphTop + graphHeight;
+
+  // Select all bar elements
+  const bars = document.querySelectorAll('.graph-bars .bar');
+
+  bars.forEach(bar => {
+    // Calculate the percentage of the graph that is visible based on scroll position
+    const scrollY = window.scrollY;
+    let percentageVisible = 100;
+
+    if (scrollY < graphTop) {
+      percentageVisible = 100;
+    } else if (scrollY > graphBottom) {
+      percentageVisible = 0;
+    } else {
+      // Calculate the visible percentage of the graph
+      const visiblePart = graphBottom - scrollY;
+      percentageVisible = (visiblePart / graphHeight) * 100;
+    }
+
+    // Set the opacity of the bar based on the visible percentage
+    bar.style.opacity = percentageVisible / 100;
+  });
+
+  // Debugging log
+  console.log('Scroll Y:', window.scrollY);
+  console.log('Graph Top:', graphTop);
+  console.log('Graph Bottom:', graphBottom);
+  console.log('Graph Height:', graphHeight);
+}
+
+// Listen for the scroll event
+window.addEventListener('scroll', animateBarsOnScroll);
+
+// Initialize the bars at full opacity
+window.addEventListener('DOMContentLoaded', (event) => {
+  animateBarsOnScroll(); // This will set the initial opacity based on the scroll position on page load
+});

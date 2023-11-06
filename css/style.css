@@ -925,30 +925,73 @@ header .agency-port-menu p {
 .images-sec {}
 
 /* Bar Graph */
-
 .bar-graph {
+  position: relative;
   display: flex;
-  justify-content: space-around;
-  align-items: flex-end;
-  height: 40vh;
-  transform: translateX(-2vw);
+  justify-content: space-around; /* This will space out the year containers evenly */
+  align-items: flex-end; /* This aligns the bars to the bottom */
+  height: 40vh; /* Adjust height as necessary */
+  transform: translateX(-2vw); /* Adjust or remove if not needed */
 }
 
 .graph-axis {
-  width: 100%;
-  height: auto;
-  margin-bottom: 10px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%; /* Ensure the axis spans the entire width of the bar-graph */
+  height: 100%; 
+  z-index: 1;
+  display: flex; /* Use flexbox to align year sections */
+  justify-content: space-between; /* This will space out the year containers evenly */
 }
 
-.twenty-sixteen {
+#graph-axis-cont, .graph-bars {
+  position: absolute;
+  bottom: 19%;
+  left: 10%;
+  width: 90%; /* Ensure it spans the full width */
+  height: auto; /* Maintain aspect ratio */
+  z-index: 3;
+}
+
+#graph-axis-svg {
+  height: 100%;
+  width: 100%;
+}
+
+#graph-labels-svg {
+  position: absolute;
+  left: 0;
+  width: 90%;
+  z-index: 1; /* Lower than the axis-graph */
+}
+
+.year-container {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
+  flex-direction: row; /* Align children horizontally */
+  justify-content: space-around; /* Distribute children with space between them */
+  align-items: flex-end; /* Align children to the bottom */
+  position: absolute; /* Position relative to .graph-bars */
+  bottom: 0;
+  left: 0;
+  width: 100%; /* Take full width of .graph-bars */
+  height: auto; /* Take full height of .graph-bars */
+  padding: 0 7.5%; /* Add some padding to create space at the edges */
+}
+
+.twenty-sixteen, .twenty-seventeen, .twenty-eighteen, .twenty-nineteen, .twenty-twenty, .twenty-twenty-one, .twenty-twenty-two {
+  flex: 1; /* Each year container will take up equal space */
+  display: flex;
+  justify-content: flex-end; /* Distribute major bars with space between them */
+  align-items: flex-end; /* Align bars to the bottom */
+  margin: 0 1.5%; /* Add some padding to create space between year containers */
+  z-index: 2;
 }
 
 .bar {
-  position: relative; /* This makes it a positioning context for absolutely positioned children */
+  position: relative; /* Bars will be positioned relative to their year sections */
   flex-grow: 1; /* Adjust this value as needed */
+  height: 100%;
   transition: height 0.5s ease;
 }
 
@@ -962,24 +1005,6 @@ header .agency-port-menu p {
   position: absolute;
   bottom: 0; /* Aligns the bottom of the minor bar with the major bar */
   width: 100%; /* Ensures the minor bar stretches the full width of the major bar */
-}
-
-
-.lr-svg-bar {
-  width: 3vw;
-  height: 100%;
-}
-.dr-svg-bar {
-  width: 3vw;
-  height: 100%;
-}
-.lb-svg-bar {
-  width: 3vw;
-  height: 100%;
-}
-.db-svg-bar {
-  width: 3vw;
-  height: 100%;
 }
 
 /* Partner Section */
