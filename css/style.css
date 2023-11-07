@@ -24,17 +24,71 @@
 
 @font-face {
     font-family: "Mont";
-    src: url("../font/Montserrat Webfont/Montserrat-Bold.woff2") format("woff2"),
-        url("../font/Montserrat Webfont/Montserrat-Bold.woff") format("woff");
-    font-weight: 600;
+    src: url("../font/Montserrat Webfont/Montserrat-Thin.woff2") format("woff2"),
+        url("../font/Montserrat Webfont/Montserrat-Thin.woff") format("woff");
+    font-weight: 100;
     font-style: normal;
     font-display: fallback;
 }
 
 @font-face {
     font-family: "Mont";
-    src: url("../font/Montserrat Webfont/Montserrat-Italic.woff2") format("woff2"),
-        url("../font/Montserrat Webfont/Montserrat-Italic.woff") format("woff");
+    src: url("../font/Montserrat Webfont/Montserrat-ThinItalic.woff2") format("woff2"),
+        url("../font/Montserrat Webfont/Montserrat-ThinItalic.woff") format("woff");
+    font-weight: 100;
+    font-style: italic;
+    font-display: fallback;
+}
+
+@font-face {
+    font-family: "Mont";
+    src: url("../font/Montserrat Webfont/Montserrat-ExtraLight.woff2") format("woff2"),
+        url("../font/Montserrat Webfont/Montserrat-ExtraLight.woff") format("woff");
+    font-weight: 200;
+    font-style: normal;
+    font-display: fallback;
+}
+
+@font-face {
+    font-family: "Mont";
+    src: url("../font/Montserrat Webfont/Montserrat-ExtraLightItalic.woff2") format("woff2"),
+        url("../font/Montserrat Webfont/Montserrat-ExtraLightItalic.woff") format("woff");
+    font-weight: 200;
+    font-style: italic;
+    font-display: fallback;
+}
+
+@font-face {
+    font-family: "Mont";
+    src: url("../font/Montserrat Webfont/Montserrat-Light.woff2") format("woff2"),
+        url("../font/Montserrat Webfont/Montserrat-Light.woff") format("woff");
+    font-weight: 300;
+    font-style: normal;
+    font-display: fallback;
+}
+
+@font-face {
+    font-family: "Mont";
+    src: url("../font/Montserrat Webfont/Montserrat-LightItalic.woff2") format("woff2"),
+        url("../font/Montserrat Webfont/Montserrat-LightItalic.woff") format("woff");
+    font-weight: 300;
+    font-style: italic;
+    font-display: fallback;
+}
+
+@font-face {
+    font-family: "Mont";
+    src: url("../font/Montserrat Webfont/Montserrat-Medium.woff2") format("woff2"),
+        url("../font/Montserrat Webfont/Montserrat-Medium.woff") format("woff");
+    font-weight: 400;
+    font-style: normal;
+    font-display: fallback;
+}
+
+@font-face {
+    font-family: "Mont";
+    src: url("../font/Montserrat Webfont/Montserrat-MediumItalic.woff2") format("woff2"),
+        url("../font/Montserrat Webfont/Montserrat-MediumItalic.woff") format("woff");
     font-weight: 400;
     font-style: italic;
     font-display: fallback;
@@ -44,8 +98,89 @@
     font-family: "Mont";
     src: url("../font/Montserrat Webfont/Montserrat-Regular.woff2") format("woff2"),
         url("../font/Montserrat Webfont/Montserrat-Regular.woff") format("woff");
-    font-weight: 400;
+    font-weight: 500;
     font-style: normal;
+    font-display: fallback;
+}
+
+@font-face {
+    font-family: "Mont";
+    src: url("../font/Montserrat Webfont/Montserrat-Italic.woff2") format("woff2"),
+        url("../font/Montserrat Webfont/Montserrat-Italic.woff") format("woff");
+    font-weight: 500;
+    font-style: italic;
+    font-display: fallback;
+}
+
+@font-face {
+    font-family: "Mont";
+    src: url("../font/Montserrat Webfont/Montserrat-SemiBold.woff2") format("woff2"),
+        url("../font/Montserrat Webfont/Montserrat-SemiBold.woff") format("woff");
+    font-weight: 600;
+    font-style: normal;
+    font-display: fallback;
+}
+
+@font-face {
+    font-family: "Mont";
+    src: url("../font/Montserrat Webfont/Montserrat-SemiBoldItalic.woff2") format("woff2"),
+        url("../font/Montserrat Webfont/Montserrat-SemiBoldItalic.woff") format("woff");
+    font-weight: 600;
+    font-style: italic;
+    font-display: fallback;
+}
+
+@font-face {
+    font-family: "Mont";
+    src: url("../font/Montserrat Webfont/Montserrat-Bold.woff2") format("woff2"),
+        url("../font/Montserrat Webfont/Montserrat-Bold.woff") format("woff");
+    font-weight: 700;
+    font-style: normal;
+    font-display: fallback;
+}
+
+@font-face {
+    font-family: "Mont";
+    src: url("../font/Montserrat Webfont/Montserrat-BoldItalic.woff2") format("woff2"),
+        url("../font/Montserrat Webfont/Montserrat-BoldItalic.woff") format("woff");
+    font-weight: 700;
+    font-style: italic;
+    font-display: fallback;
+}
+
+@font-face {
+    font-family: "Mont";
+    src: url("../font/Montserrat Webfont/Montserrat-ExtraBold.woff2") format("woff2"),
+        url("../font/Montserrat Webfont/Montserrat-ExtraBold.woff") format("woff");
+    font-weight: 800;
+    font-style: normal;
+    font-display: fallback;
+}
+
+@font-face {
+    font-family: "Mont";
+    src: url("../font/Montserrat Webfont/Montserrat-ExtraBoldItalic.woff2") format("woff2"),
+        url("../font/Montserrat Webfont/Montserrat-ExtraBoldItalic.woff") format("woff");
+    font-weight: 800;
+    font-style: italic;
+    font-display: fallback;
+}
+
+@font-face {
+    font-family: "Mont";
+    src: url("../font/Montserrat Webfont/Montserrat-Black.woff2") format("woff2"),
+        url("../font/Montserrat Webfont/Montserrat-Black.woff") format("woff");
+    font-weight: 900;
+    font-style: normal;
+    font-display: fallback;
+}
+
+@font-face {
+    font-family: "Mont";
+    src: url("../font/Montserrat Webfont/Montserrat-BlackItalic.woff2") format("woff2"),
+        url("../font/Montserrat Webfont/Montserrat-BlackItalic.woff") format("woff");
+    font-weight: 900;
+    font-style: italic;
     font-display: fallback;
 }
 
@@ -219,6 +354,7 @@ a:hover {
 .my-btn {
     border: 0;
     font-size: 1.25em;
+    font-weight: 600;
     color: white;
     background-color: var(--dark_gray);
     padding: .5vw 1.5vw;
@@ -371,7 +507,7 @@ header .menu.open {
 }
 
 header .menu .list {
-    padding: 30px 40px;
+    padding: 4vh 3vw;
     text-align: left;
     border-top: var(--border-gray);
 }
@@ -382,7 +518,8 @@ header .menu .list .my-btn {
 
 header .menu ul {
     list-style: none;
-    font-size: 32px;
+    font-size: 2.125em;
+    font-weight: 600;
     color: var(--gray);
     padding: 0;
 }
@@ -393,8 +530,8 @@ header .menu ul li a {
 
 header .menu .social {
     display: flex;
-    gap: 2px;
-    font-size: 27px;
+    gap: 1vw;
+    font-size: 1em;
     color: var(--dark_gray);
 }
 
@@ -409,27 +546,25 @@ header .menu ul li a.active {
 }
 
 header .menu .info {
-    margin: 10px 0;
+    margin-top: 2vh;
     border-bottom: var(--border-gray);
-    padding-bottom: 15px;
-    margin-bottom: 30px;
-    line-height: 1.2;
+    padding-bottom: 2vh;
+    margin-bottom: 2vh;
+    line-height: 1.5;
 }
 
 header .menu .info p {
     color: var(--dark_gray);
     margin: 0;
-    font-size: 22px;
+    font-size: 1.5em;
+    font-weight: 400;
 }
 
 header .menu .info span {
     font-style: italic;
     color: var(--gray);
-}
-
-header .menu .my-btn img {
-    margin: 0;
-    margin-bottom: 4px;
+    font-size: 1.125em;
+    font-weight: 400;
 }
 
 header .agency-port-menu .list {
@@ -544,6 +679,7 @@ header .agency-port-menu p {
     display: block;
     height: fit-content;
     font-size: 4em;
+    font-weight: 600;
     width: 100%;
     text-transform: uppercase;
     line-height: 1;
@@ -565,11 +701,9 @@ header .agency-port-menu p {
 }
 
 .mainNav-Arrow {
-    width: 50px;
-    /* Adjust as needed */
-    height: 50px;
-    /* Adjust as needed */
-    margin-left: 10px;
+    width: auto;
+    height: 2em;
+    margin-left: 1vw;
 }
 
 .image-caption {
@@ -577,8 +711,9 @@ header .agency-port-menu p {
     left: 50%;
     transform: translateX(-50%);
     color: white;
-    bottom: 5px;
-    font-size: 24px;
+    bottom: 2vh;
+    font-size: 1.67em;
+    font-weight: 400;
 }
 
 .border-gray-l {
@@ -600,46 +735,50 @@ header .agency-port-menu p {
 /* General Info Section */
 
 .global-tagline {
-    padding: 50px 30px;
+    padding: 6vh 3vw;
     color: var(--brown);
     border-top: var(--border-gray);
     border-bottom: var(--border-gray);
 }
 
+.global-tagline .sec-1 {
+    padding-right: 2vw;
+}
+
 .global-tagline .sec-1 h2 {
-    font-weight: bold;
+    font-weight: 800;
     font-size: 1.9em;
 }
 
 .global-tagline .sec-1 p {
-    margin: 40px 0;
-    margin-top: 55px;
-    font-size: 1.33em;
+    margin-top: 5vh;
+    font-size: 1.25em;
+    font-weight: 400;
 }
 
 .global-tagline .sec-1 .my-btn {
     position: absolute;
-    bottom: 50px;
-    margin-top: 120px;
-    font-weight: normal;
+    bottom: 4vh;
 }
 
 .my-accordion h3 {
     color: var(--brown);
     font-size: 1.9em;
-    margin-left: 16px;
+    font-weight: 600;
+    margin-left: 3vw;
     border-bottom: var(--border-gray) !important;
-    padding-bottom: 20px;
+    padding-bottom: 2vh;
 }
 
 .my-accordion p {
     color: var(--brown);
     font-size: 1em;
+    font-weight: 400;
     line-height: 1.4;
 }
 
 .my-accordion .accordion-body {
-    padding: 20px 0;
+    padding: 1vh 0 2vh 0;
 }
 
 .my-accordion {
@@ -649,16 +788,17 @@ header .agency-port-menu p {
 .my-accordion .accordion-item {
     border: 0;
     border-bottom: var(--border-gray) !important;
-    margin-left: 16px;
+    margin-left: 3vw;
 }
 
 .my-accordion .accordion-button {
-    font-size: 25px;
+    font-size: 1.67em;
+    font-weight: 400;
     color: var(--brown);
     padding-left: 0;
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: center;
 }
 
 .my-accordion .accordion-button::after {
@@ -680,9 +820,9 @@ header .agency-port-menu p {
 
 .lottie-container {
     /* Your styling here */
-    width: 24px;
+    width: auto;
     /* Example width */
-    height: 24px;
+    height: 1em;
     /* Example height */
 }
 
@@ -719,21 +859,19 @@ header .agency-port-menu p {
 }
 
 .proj-tagline h2 {
-    font-weight: bold;
+    font-weight: 800;
     font-size: 1.9em;
 }
 
 .proj-tagline p {
-    margin: 40px 0;
-    margin-top: 55px;
-    font-size: 1.33em;
+    margin-top: 5vh;
+    font-size: 1.25em;
+    font-weight: 400;
 }
 
 .proj-tagline .my-btn {
     position: absolute;
-    bottom: 50px;
-    margin-top: 120px;
-    font-weight: normal;
+    bottom: 4vh;
 }
 
 .carousel-wrapper {
@@ -798,40 +936,27 @@ header .agency-port-menu p {
 
 .building {
     border-left: var(--border-gray);
-    padding: 0 30px;
+    padding: 0 2vw;
     display: block;
     color: var(--brown);
-    margin: 20px 0;
+    margin: 2vh 0;
     flex: 0 0 calc(100% / 2.3);
 }
 
 .building .building-title {
-    margin-top: 20px;
+    margin-top: 2vh;
+    font-size: 1.4rem;
+    font-weight: 600;
 }
 
 .building .building-address {
-    margin-top: 100px;
+    margin-top: 12vh;
     width: 100%;
     text-align: right;
     font-style: italic;
-    font-size: 20px;
-    font-weight: bold;
+    font-size: 1em;
+    font-weight: 400;
     display: block;
-}
-
-@media (max-width: 768px) {
-    .building img {
-        height: 200px;
-    }
-
-    .building {
-        padding: 0 15px;
-    }
-
-    .building .building-title,
-    .building .building-address {
-        font-size: 16px;
-    }
 }
 
 /* Insights & Stats Section */
@@ -857,12 +982,11 @@ header .agency-port-menu p {
     bottom: 50px;
     margin-top: 2vh;
     margin-bottom: 4vh;
-    font-weight: normal;
 }
 
 
 .stats h2 {
-    font-weight: bold;
+    font-weight: 800;
     font-size: 1.9em;
 }
 
@@ -873,25 +997,61 @@ header .agency-port-menu p {
 }
 
 .stat-small div {
+    display: flex; /* Use flexbox for alignment */
+    align-items: center; /* Align items vertically */
+    justify-content: center; /* Center items horizontally */
     text-align: center;
-    padding: 20px 0;
-    font-size: 30px;
+    padding: 1vw;
+    font-size: 2em;
+    font-weight: 500;
+    white-space: nowrap; /* Prevent the text from wrapping */
+    text-align: center;
+}
+
+.stat-small p {
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 .stat-big div {
+    display: flex; /* Use flexbox for alignment */
+    align-items: center; /* Align items vertically */
+    justify-content: center; /* Center items horizontally */
     text-align: center;
-    padding: 20px;
-    font-size: 60px;
+    padding: 1vw;
+    font-size: 4em;
+    font-weight: 500;
+    white-space: nowrap; /* Prevent the text from wrapping */
 }
 
 .stat-big span {
-    padding-bottom: 20px;
+    padding-bottom: 2vw;
 }
 
-.stat-title {
+.stat-big p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.nation-flag {
+    height: 1em; /* Set the height relative to the font size of the text */
+    margin-right: 1vw; /* Add some margin to the right of the image */
+}
+
+.stat-big .stat-title {
     text-align: center;
     width: 100%;
     display: block;
+    font-size: 1em;
+    font-weight: 400;
+}
+
+.stat-small .stat-title {
+    text-align: center;
+    width: 100%;
+    display: block;
+    font-size: .75em;
+    font-weight: 400;
 }
 
 .info-sec {
@@ -1009,7 +1169,7 @@ header .agency-port-menu p {
 
 /* Partner Section */
 
-.banner-link {
+.partner-banner {
     text-decoration: none; /* Removes the underline from the link */
     color: inherit; /* Ensures the link color matches the surrounding text */
     display: block; /* Makes the link block-level to contain the section */
@@ -1079,22 +1239,34 @@ header .agency-port-menu p {
 /* footer */
 footer {
     background-color: var(--dark_red);
-    padding: 40px;
-    padding-bottom: 70px;
+    padding-right: 3vw;
+    padding-left: 3vw;
+    padding-bottom: 5vh;
+    padding-top: 4vh;
     display: flex;
     justify-content: center;
 }
 
 footer .logo {
-    padding-bottom: 10px;
-    margin: 2px 0;
+    padding-bottom: 3vh;
+    min-height: 20vh;
+    align-items: flex-end;
 }
 
 footer .logo div {
-    font-size: 65px;
+    font-size: 3em;
     color: var(--light_red);
-    font-weight: bold;
-    line-height: 1.2;
+    font-weight: 700;
+    line-height: 1;
+}
+
+footer .logo p {
+  margin-bottom: 0;
+}
+
+footer #ptp-footer-logo {
+  vertical-align: bottom;
+  width: 30vw;
 }
 
 footer .logo .my-btn {
@@ -1105,45 +1277,77 @@ footer .logo .my-btn {
     color: var(--dark_red);
 }
 
-footer .logo img {
-    max-width: 550px;
+footer .info p {
+    font-size: 1.75em;
+    font-weight: 400;
+    color: var(--light_gray);
+    margin-bottom: 0;
 }
 
-footer .info p {
-    margin: 2px 0;
-    font-size: 28px;
-    color: var(--light_gray);
+footer .links .padding_h_20px {
+    padding-bottom: 3vh;
+    min-height: 20vh;
+    align-items: flex-end;
 }
 
 footer .links a {
     color: var(--light_gray);
-    font-size: 25px;
-    text-align: right;
-    margin: 3px 0;
+    font-size: 1.75em;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
 }
 
 footer .links a:hover {
     color: var(--light_red);
+}
 
+footer #footer-page-links {
+    display: flex;
+    align-content: flex-end;
+}
+
+footer #footer-social-links {
+    display: flex;
+    align-content: flex-start;
+    height: auto;
 }
 
 footer .to_top {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
+    display: flex; /* Use flexbox for alignment */
+    align-items: center; /* Align items vertically */
+    justify-content: flex-end; /* Aligns content to the right */
+    text-align: right;
+    white-space: nowrap; /* Prevents wrapping to a new line */
 }
 
 footer .to_top a {
+    display: flex; /* Ensures the text and SVG icon are in a flex container */
+    align-items: center; /* Centers them vertically */
+    justify-content: center; /* Centers the items horizontally */
+    text-decoration: none; /* Optional: removes the underline from the link */
     text-transform: uppercase;
-    color: var(--light_gray);
-    padding: 20px;
-    font-size: 25px;
+    color: var(--light_blue);
     background-color: transparent;
-    display: block;
+    margin-top: 2vh;
 }
 
 footer .to_top a:hover {
     color: var(--light_red);
+}
+
+footer .back-to-top {
+    font-size: 2em;
+    font-weight: 600;
+    margin: 0; /* Removes margin to prevent unexpected breaks */
+    display: inline-block; /* Ensures the text is treated as one block */
+}
+
+footer #back-to-top-icon {
+    height: 2em; /* Set the height relative to the font size of the text */
+    margin-left: 1vw; /* Add some margin to the right of the image */
+    width: auto;
+    transform: rotate(90deg); /* Rotates the SVG icon 90 degrees clockwise */
 }
 
 /* ------------------------------ PROJECTS PAGE ---------------------------- */
@@ -1392,9 +1596,11 @@ section {
     background-color: white;
     border: 2px solid var(--gray);
     position: fixed;
-    right: -1000px;
+    right: -50vw;
     bottom: 0;
-    padding: 40px;
+    padding-left: 3vw;
+    padding-right: 3vw;
+    padding-top: 4vh;
     transition: 0.4s;
 }
 
@@ -1424,9 +1630,13 @@ section {
     width: 100%;
     border: 0;
     border-bottom: solid 2px #34110b;
-    padding: 10px 0px;
-    margin: 10px 0;
-    font-size: 20px;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    margin-bottom: 1vh;
+    margin-top: 2vh;
+    font-size: 1.25em;
+    font-weight: 400;
+    font-style: italic;
 }
 
 .inquire .inquire_form input::placeholder {
@@ -1435,13 +1645,13 @@ section {
 
 .inquire .inquire_form button {
     margin-left: auto;
-    margin-top: 20px;
+    margin-top: 2vh;
 }
 
 .inquire .inquire_form p {
     color: var(--gray);
-    margin-bottom: 5px;
-    font-weight: normal;
+    margin-bottom: 0.5vh;
+    font-weight: 400;
 }
 
 #thank-you-message.thank-you-hidden {
@@ -1475,6 +1685,7 @@ section {
     text-align: center;
     color: var(--forest_green);
     font-size: 2em;
+    font-weight: 500;
 }
 
 #thank-you-message img {
