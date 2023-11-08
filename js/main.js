@@ -1,6 +1,6 @@
 // Scroll to top functionality
 $("a[href='#top']").click(function() {
-    $("html, body").animate({ scrollTop: 0 }, "slow");
+    $("html, body").animate({ scrollTop: 0 }, "fast");
     return false;
 });
 
@@ -76,24 +76,16 @@ $(document).ready(function() {
 
 });
 
-
-// Video Modal Toggle
-$(".more-content-toggler").click(function() {
-    $("#videoModal").toggleClass("active");
-});
-
 // AOS Init
 AOS.init();
 
 // Header Menus
 $(document).ready(function() {
     // Common variables
-    let start;
-    let animationFrameId;
-
-    // For Main Menu
     let menuOpen = false;
+    let agencyOpen = false;
     const navMenu = document.getElementById('navMenu');
+    const loginMenu = document.getElementById('loginMenu');
 
     // Initialize Lottie animation for Main Menu
     const menuAnimation = lottie.loadAnimation({
@@ -109,24 +101,6 @@ $(document).ready(function() {
         navMenu.style.maxHeight = "0vh";
     });
 
-    $('#menu-container').click(function() {
-        menuOpen = !menuOpen;
-
-        if (menuOpen) {
-            menuAnimation.setDirection(1);
-            menuAnimation.playSegments([0, menuAnimation.totalFrames - 1], true);
-            navMenu.style.maxHeight = "100vh"; // You can adjust this value
-        } else {
-            menuAnimation.setDirection(-1);
-            menuAnimation.playSegments([menuAnimation.currentFrame, 0], true);
-            navMenu.style.maxHeight = "0vh";
-        }
-    });
-
-    // For Agency Portal
-    let agencyOpen = false;
-    const loginMenu = document.getElementById('loginMenu');
-
     // Initialize Lottie animation for Agency Portal
     const agencyAnimation = lottie.loadAnimation({
         container: document.getElementById('agency-animation'),
@@ -141,20 +115,71 @@ $(document).ready(function() {
         loginMenu.style.maxHeight = '0vh';
     });
 
-    $('#agency-container').click(function() {
-        agencyOpen = !agencyOpen;
+    // Function to check if the clicked element is outside of the given element
+    function isClickOutside(event, element) {
+        return !element.contains(event.target);
+    }
 
+    // Function to close the menu
+    function closeMenu() {
+        menuAnimation.setDirection(-1);
+        menuAnimation.playSegments([menuAnimation.currentFrame, 0], true);
+        navMenu.style.maxHeight = "0vh";
+        menuOpen = false;
+    }
+
+    // Function to close the agency portal
+    function closeAgencyPortal() {
+        agencyAnimation.setDirection(-1);
+        agencyAnimation.playSegments([agencyAnimation.currentFrame, 0], true);
+        loginMenu.style.maxHeight = "0vh";
+        agencyOpen = false;
+    }
+
+    // Event listener for document click to close the menu if clicked outside
+    $(document).click(function(event) {
+        if (menuOpen && isClickOutside(event, navMenu) && isClickOutside(event, $('#menu-container')[0])) {
+            closeMenu();
+        }
+        if (agencyOpen && isClickOutside(event, loginMenu) && isClickOutside(event, $('#agency-container')[0])) {
+            closeAgencyPortal();
+        }
+    });
+
+    // Prevent the event from closing the menu when clicking on the menu itself
+    $('#navMenu, #loginMenu').click(function(event) {
+        event.stopPropagation();
+    });
+
+    // Event handler for Main Menu toggle
+    $('#menu-container').click(function(event) {
+        if (menuOpen) {
+            event.stopPropagation(); // Prevent the click from being propagated when the menu is open
+            closeMenu();
+        } else {
+            menuOpen = true;
+            menuAnimation.setDirection(1);
+            menuAnimation.playSegments([0, menuAnimation.totalFrames - 1], true);
+            navMenu.style.maxHeight = "100vh"; // You can adjust this value
+        }
+    });
+
+    // Event handler for Agency Portal toggle
+    $('#agency-container').click(function(event) {
         if (agencyOpen) {
+            event.stopPropagation(); // Prevent the click from being propagated when the agency portal is open
+            closeAgencyPortal();
+        } else {
+            agencyOpen = true;
             agencyAnimation.setDirection(1);
             agencyAnimation.playSegments([0, agencyAnimation.totalFrames - 1], true);
             loginMenu.style.maxHeight = "100vh"; // You can adjust this value
-        } else {
-            agencyAnimation.setDirection(-1);
-            agencyAnimation.playSegments([agencyAnimation.currentFrame, 0], true);
-            loginMenu.style.maxHeight = "0vh";
         }
     });
+
+    // ... (any other code you may have)
 });
+
 
 // Navigation Hover Arrows
 $(document).ready(function() {
@@ -363,48 +388,9 @@ document.addEventListener("DOMContentLoaded", () => {
     AOS.refresh();
 });
 
-// Graph Scroll
-// Function to animate the bars on scroll
-function animateBarsOnScroll() {
-  const windowHeight = window.innerHeight;
-  const graphContainer = document.querySelector('.graph-bars');
-  const graphTop = graphContainer.getBoundingClientRect().top + window.scrollY;
-  const graphHeight = graphContainer.clientHeight;
-  const graphBottom = graphTop + graphHeight;
+// ------------END of HOME PAGE --------------
 
-  // Select all bar elements
-  const bars = document.querySelectorAll('.graph-bars .bar');
-
-  bars.forEach(bar => {
-    // Calculate the percentage of the graph that is visible based on scroll position
-    const scrollY = window.scrollY;
-    let percentageVisible = 100;
-
-    if (scrollY < graphTop) {
-      percentageVisible = 100;
-    } else if (scrollY > graphBottom) {
-      percentageVisible = 0;
-    } else {
-      // Calculate the visible percentage of the graph
-      const visiblePart = graphBottom - scrollY;
-      percentageVisible = (visiblePart / graphHeight) * 100;
-    }
-
-    // Set the opacity of the bar based on the visible percentage
-    bar.style.opacity = percentageVisible / 100;
-  });
-
-  // Debugging log
-  console.log('Scroll Y:', window.scrollY);
-  console.log('Graph Top:', graphTop);
-  console.log('Graph Bottom:', graphBottom);
-  console.log('Graph Height:', graphHeight);
-}
-
-// Listen for the scroll event
-window.addEventListener('scroll', animateBarsOnScroll);
-
-// Initialize the bars at full opacity
-window.addEventListener('DOMContentLoaded', (event) => {
-  animateBarsOnScroll(); // This will set the initial opacity based on the scroll position on page load
+// Video Modal Toggle
+$(".more-content-toggler").click(function() {
+    $("#videoModal").toggleClass("active");
 });
