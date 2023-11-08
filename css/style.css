@@ -1272,7 +1272,6 @@ footer .to_top a {
     text-transform: uppercase;
     color: var(--light_blue);
     background-color: transparent;
-    margin-top: 2vh;
 }
 
 footer .to_top a:hover {
@@ -1286,6 +1285,10 @@ footer .back-to-top {
     /* Removes margin to prevent unexpected breaks */
     display: inline-block;
     /* Ensures the text is treated as one block */
+}
+
+footer .border_h {
+    border-bottom: 0;
 }
 
 footer #back-to-top-icon {
