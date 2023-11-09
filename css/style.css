@@ -599,6 +599,7 @@ header .ptp-agency-logo p {
 .global-tagline .sec-1 h2 {
     font-weight: 800;
     font-size: 1.9em;
+    text-transform: uppercase;
 }
 
 .global-tagline .sec-1 p {
@@ -619,6 +620,7 @@ header .ptp-agency-logo p {
     margin-left: 3vw;
     border-bottom: var(--border-gray) !important;
     padding-bottom: 2vh;
+    text-transform: uppercase;
 }
 
 .my-accordion p {
@@ -650,6 +652,7 @@ header .ptp-agency-logo p {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    text-transform: uppercase;
 }
 
 .my-accordion .accordion-button::after {
@@ -1287,6 +1290,268 @@ footer #back-to-top-icon {
     /* Rotates the SVG icon 90 degrees clockwise */
 }
 
+
+/* -------------------ECOSYSTEM PAGE--------------------- */
+
+/* Hero Section */
+/* Styles specific to the ecosystem page */
+.page-ecosystem .hero {
+    /* New flex-direction only for the ecosystem page */
+    flex-direction: row-reverse;
+    border-bottom: solid 2px var(--gray);
+}
+
+.page-ecosystem .hero-nav {
+    /* Specific order and alignment for the ecosystem page */
+    order: 1;
+}
+
+.page-ecosystem .hero-nav a {
+    font-size: 2.25em;
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 3vw;
+    width: auto;
+    padding-top: 3vh;
+    padding-bottom: 3vh;
+}
+
+.page-ecosystem section:target {
+  scroll-margin-top: 10vh;
+}
+
+.page-ecosystem .nav-item-container {
+    /* Align items to the left on the ecosystem page */
+    align-items: flex-start;
+    gap: 0;
+    width: 100%;
+}
+
+.page-ecosystem .nav-item {
+    border-bottom: solid 2px var(--gray);
+    width: 100%;
+    justify-content: flex-start;
+}
+
+.page-ecosystem .nav-item:hover {
+    border-bottom: solid 2px var(--dark_red);
+}
+
+.page-ecosystem .mainNav-Arrow {
+    /* Reflect the arrows only on the ecosystem page */
+    transform: scaleX(-1);
+    height: 1.5em;
+}
+
+.page-ecosystem .mainNav-Arrow svg {
+    vertical-align: inherit;
+}
+
+.page-ecosystem #hero-feat {
+    width: 60vw;
+    height: 86vh;
+    position: relative;
+    /* This will be the reference for its absolutely positioned children */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.page-ecosystem #ptp-ecosystem-diagram {
+    /* SVG positioning for the ecosystem page */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+    height: auto;
+    z-index: 2;
+}
+
+.page-ecosystem #ptp-ecosystem-feat {
+    /* Ensure the picture element is filling the container on the ecosystem page */
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.page-ecosystem #ptp-ecosystem-feat img, .eco-item-image img {
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+}
+
+/* Info Section */
+.page-ecosystem .info-section {
+    padding: 6vh 3vw;
+    border-bottom: solid var(--gray) 2px;
+}
+
+.page-ecosystem .info-section h2 {
+    text-align: center;
+    font-weight: 800;
+    font-size: 1.9em;
+}
+
+.page-ecosystem .body-2col {
+    width: 100%;
+}
+
+.page-ecosystem .info-section .body-2col p {
+    font-size: 1.25em;
+    font-weight: 400;
+    margin-bottom: 1em; /* Adjust this value to control spacing between paragraphs */
+}
+
+.page-ecosystem .info-section .body-2col {
+    margin-top: 5vh; /* Common top margin */
+    -webkit-column-count: 2;
+    /* Chrome, Safari, Opera */
+    -moz-column-count: 2;
+    /* Firefox */
+    column-count: 2;
+    /* Standard syntax */
+    -webkit-column-gap: 4vw;
+    /* Chrome, Safari, Opera */
+    -moz-column-gap: 4vw;
+    /* Firefox */
+    column-gap: 4vw;
+    /* Standard syntax */
+}
+
+/* Ecosystem Partner Section */
+.page-ecosystem .ecosystem-item:not(:first-of-type) {
+    border-bottom: solid var(--gray) 2px;
+}
+
+.page-ecosystem .ecosystem-item .info {
+    color: var(--brown);
+    padding: 6vh 2vw 6vh 3vw;
+}
+
+.page-ecosystem .ecosystem-item h2 {
+    font-size: 1.9em;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.page-ecosystem .ecosystem-item p {
+    font-size: 1em;
+    font-weight: 400;
+    line-height: 1.4;
+    margin-top: 5vh;
+}
+
+.page-ecosystem .ecosystem-item #item-media {
+    height: 40vh;
+}
+
+.page-ecosystem .ecosystem-item .eco-item-image {
+    position: relative;
+    height: 67%;
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+}
+
+.page-ecosystem .ecosystem-item .eco-item-logo-cont {
+    position: relative;
+    height: 33%;
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.page-ecosystem .ecosystem-item .eco-item-logo-bg img {
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+}
+
+.page-ecosystem .ecosystem-item .eco-item-logo {
+    /* SVG positioning for the ecosystem page */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 60%;
+    width: auto;
+    z-index: 2;
+}
+
+.page-ecosystem #funding-turkey-2 {
+  height: 50%;
+}
+
+
+/* ----------------------------VISION PAGE --------------------------------*/
+
+/* Vision Hero Section */
+.common-sec {
+    height: 28.5vh;
+    overflow: hidden;
+}
+
+.page-vision #hero-feat {
+    width: 100vw;
+    height: 57.5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    z-index: -1; // To put it behind the content
+}
+
+.page-vision #hero-img {
+    object-fit: cover;
+    min-width: 100%;
+    min-height: auto;
+}
+
+/* Vision Info Section */
+.page-vision .info-section {
+    padding: 6vh 3vw;
+    border-bottom: solid var(--gray) 2px;
+}
+
+.page-vision .info-section h2 {
+    text-align: center;
+    font-weight: 800;
+    font-size: 1.9em;
+    text-transform: uppercase;
+}
+
+.page-vision .body-2col {
+    width: 100%;
+}
+
+.page-vision .info-section .body-2col p {
+    font-size: 1.25em;
+    font-weight: 400;
+    margin-bottom: 1em; /* Adjust this value to control spacing between paragraphs */
+}
+
+.page-vision .info-section .body-2col {
+    margin-top: 5vh; /* Common top margin */
+    -webkit-column-count: 2;
+    /* Chrome, Safari, Opera */
+    -moz-column-count: 2;
+    /* Firefox */
+    column-count: 2;
+    /* Standard syntax */
+    -webkit-column-gap: 4vw;
+    /* Chrome, Safari, Opera */
+    -moz-column-gap: 4vw;
+    /* Firefox */
+    column-gap: 4vw;
+    /* Standard syntax */
+}
+
 /* ------------------------------ PROJECTS PAGE ---------------------------- */
 
 .projects {
@@ -1667,18 +1932,6 @@ section {
 
 /* ------------------------------info Page--------------------------- */
 
-.common-sec {
-    height: 93vh;
-    overflow: hidden;
-}
-
-.common-sec .hero-feat {
-    max-width: 100%;
-    z-index: -1;
-    top: -130px;
-    position: relative;
-}
-
 .common-sec .carousel-control-next,
 .common-sec .carousel-control-prev {
     top: 200px;
@@ -1797,202 +2050,6 @@ section {
 
 .agent img {
     margin: auto;
-}
-
-/* -------------------ECOSYSTEM PAGE--------------------- */
-
-/* Hero Section */
-/* Styles specific to the ecosystem page */
-.page-ecosystem .hero {
-    /* New flex-direction only for the ecosystem page */
-    flex-direction: row-reverse;
-    border-bottom: solid 2px var(--gray);
-}
-
-.page-ecosystem .hero-nav {
-    /* Specific order and alignment for the ecosystem page */
-    order: 1;
-}
-
-.page-ecosystem .hero-nav a {
-    font-size: 2.25em;
-    display: flex;
-    justify-content: flex-start;
-    padding-left: 3vw;
-    width: auto;
-    padding-top: 3vh;
-    padding-bottom: 3vh;
-}
-
-.page-ecosystem section:target {
-  scroll-margin-top: 10vh;
-}
-
-.page-ecosystem .nav-item-container {
-    /* Align items to the left on the ecosystem page */
-    align-items: flex-start;
-    gap: 0;
-    width: 100%;
-}
-
-.page-ecosystem .nav-item {
-    border-bottom: solid 2px var(--gray);
-    width: 100%;
-    justify-content: flex-start;
-}
-
-.page-ecosystem .nav-item:hover {
-    border-bottom: solid 2px var(--dark_red);
-}
-
-.page-ecosystem .mainNav-Arrow {
-    /* Reflect the arrows only on the ecosystem page */
-    transform: scaleX(-1);
-    height: 1.5em;
-}
-
-.page-ecosystem .mainNav-Arrow svg {
-    vertical-align: inherit;
-}
-
-.page-ecosystem #hero-feat {
-    width: 60vw;
-    height: 86vh;
-    position: relative;
-    /* This will be the reference for its absolutely positioned children */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-}
-
-.page-ecosystem #ptp-ecosystem-diagram {
-    /* SVG positioning for the ecosystem page */
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 60%;
-    height: auto;
-    z-index: 2;
-}
-
-.page-ecosystem #ptp-ecosystem-feat {
-    /* Ensure the picture element is filling the container on the ecosystem page */
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    z-index: 1;
-}
-
-.page-ecosystem #ptp-ecosystem-feat img, .eco-item-image img {
-    object-fit: cover;
-    width: 100%;
-    height: auto;
-}
-
-/* Info and Project Sections */
-.page-ecosystem .info-section {
-    padding: 6vh 3vw;
-    border-bottom: solid var(--gray) 2px;
-}
-
-.page-ecosystem .info-section h2 {
-    text-align: center;
-    font-weight: 800;
-    font-size: 1.9em;
-}
-
-.page-ecosystem .body-2col {
-    width: 100%;
-}
-
-.info-section p {
-    font-size: 1.25em;
-    font-weight: 400;
-    margin-top: 5vh;
-    /* Common top margin */
-}
-
-.info-section p {
-    -webkit-column-count: 2;
-    /* Chrome, Safari, Opera */
-    -moz-column-count: 2;
-    /* Firefox */
-    column-count: 2;
-    /* Standard syntax */
-    -webkit-column-gap: 4vw;
-    /* Chrome, Safari, Opera */
-    -moz-column-gap: 4vw;
-    /* Firefox */
-    column-gap: 4vw;
-    /* Standard syntax */
-}
-
-.ecosystem-item:not(:first-of-type) {
-    border-bottom: solid var(--gray) 2px;
-}
-
-.page-ecosystem .ecosystem-item .info {
-    color: var(--brown);
-    padding: 6vh 2vw 6vh 3vw;
-}
-
-.page-ecosystem .ecosystem-item h2 {
-    font-size: 1.9em;
-    font-weight: 600;
-    text-transform: uppercase;
-}
-
-.page-ecosystem .ecosystem-item p {
-    font-size: 1em;
-    font-weight: 400;
-    line-height: 1.4;
-    margin-top: 5vh;
-}
-
-.page-ecosystem .ecosystem-item #item-media {
-    height: 40vh;
-}
-
-.page-ecosystem .ecosystem-item .eco-item-image {
-    position: relative;
-    height: 67%;
-    width: 100%;
-    display: flex;
-    overflow: hidden;
-}
-
-.page-ecosystem .ecosystem-item .eco-item-logo-cont {
-    position: relative;
-    height: 33%;
-    width: 100%;
-    display: flex;
-    overflow: hidden;
-    z-index: 1;
-}
-
-.page-ecosystem .ecosystem-item .eco-item-logo-bg img {
-    object-fit: cover;
-    width: 100%;
-    height: auto;
-}
-
-.page-ecosystem .ecosystem-item .eco-item-logo {
-    /* SVG positioning for the ecosystem page */
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    height: 60%;
-    width: auto;
-    z-index: 2;
-}
-
-.page-ecosystem #funding-turkey-2 {
-  height: 50%;
 }
 
 /* -------------------BUSINESS PAGE--------------------- */
@@ -2197,7 +2254,7 @@ section {
     }
 
     /* Default styles for smaller viewports */
-    .info-section p {
+    .info-section .body-2col {
         -webkit-column-count: 1;
         /* Chrome, Safari, Opera */
         -moz-column-count: 1;
