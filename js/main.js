@@ -394,3 +394,27 @@ document.addEventListener("DOMContentLoaded", () => {
 $(".more-content-toggler").click(function() {
     $("#videoModal").toggleClass("active");
 });
+
+// ============== Ecosystem Page -------------
+
+// Section Link Spacing
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    // Check if the clicked link is inside the .to_top div
+    if (!this.closest('.to_top')) {
+      e.preventDefault();
+      const targetId = this.getAttribute('href');
+      const targetElement = document.querySelector(targetId);
+
+      // Calculate the position you want to scroll to
+      const offsetTop = targetElement.getBoundingClientRect().top + window.pageYOffset - (window.innerHeight * 0.1);
+
+      window.scrollTo({
+        top: offsetTop,
+        behavior: 'smooth'
+      });
+    }
+    // If it's inside .to_top, let the default action proceed
+  });
+});
+

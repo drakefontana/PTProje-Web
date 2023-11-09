@@ -925,9 +925,8 @@ header .ptp-agency-logo p {
     font-weight: 400;
 }
 
-.info-sec {
+.info-section {
     color: var(--brown);
-    padding: 30px;
 }
 
 .images-sec {
@@ -938,19 +937,6 @@ header .ptp-agency-logo p {
 .images-sec img {
     top: -280px;
     position: relative;
-}
-
-.info-sec h2 {
-    font-weight: bold;
-    text-align: center;
-    margin-bottom: 30px;
-
-    .images-sec {}
-}
-
-.info-sec p {
-    font-size: 20px;
-    line-height: 1.1;
 }
 
 .images-sec {}
@@ -1337,6 +1323,35 @@ footer #back-to-top-icon {
     border-color: var(--dark_red);
 }
 
+
+/* Project Caorusel  */
+.project .carousel-indicators {
+    margin: 0;
+}
+
+.project .carousel-control-next,
+.project .carousel-control-prev {
+    opacity: 1;
+    width: 7%;
+}
+
+.project .carousel-control-next .carousel-control-next-icon,
+.project .carousel-control-next .carousel-control-prev-icon,
+.project .carousel-control-prev .carousel-control-next-icon,
+.project .carousel-control-prev .carousel-control-prev-icon {
+    color: white;
+    font-weight: bold;
+    width: 40px;
+    height: 40px;
+}
+
+.project .carousel-indicators [data-bs-target] {
+    text-indent: 0;
+    width: 100px;
+    height: -moz-fit-content;
+    height: fit-content;
+}
+
 /* ------------------------------ PROJECT 1 PAGE ---------------------------- */
 
 .project {
@@ -1651,6 +1666,7 @@ section {
 }
 
 /* ------------------------------info Page--------------------------- */
+
 .common-sec {
     height: 93vh;
     overflow: hidden;
@@ -1784,10 +1800,13 @@ section {
 }
 
 /* -------------------ECOSYSTEM PAGE--------------------- */
+
+/* Hero Section */
 /* Styles specific to the ecosystem page */
 .page-ecosystem .hero {
     /* New flex-direction only for the ecosystem page */
     flex-direction: row-reverse;
+    border-bottom: solid 2px var(--gray);
 }
 
 .page-ecosystem .hero-nav {
@@ -1803,6 +1822,10 @@ section {
     width: auto;
     padding-top: 3vh;
     padding-bottom: 3vh;
+}
+
+.page-ecosystem section:target {
+  scroll-margin-top: 10vh;
 }
 
 .page-ecosystem .nav-item-container {
@@ -1835,7 +1858,8 @@ section {
 .page-ecosystem #hero-feat {
     width: 60vw;
     height: 86vh;
-    position: relative; /* This will be the reference for its absolutely positioned children */
+    position: relative;
+    /* This will be the reference for its absolutely positioned children */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1863,103 +1887,116 @@ section {
     z-index: 1;
 }
 
-.page-ecosystem #ptp-ecosystem-feat img {
+.page-ecosystem #ptp-ecosystem-feat img, .eco-item-image img {
     object-fit: cover;
     width: 100%;
-    height: 100%;
+    height: auto;
 }
 
-
-.ecosystem {
-    display: flex;
+/* Info and Project Sections */
+.page-ecosystem .info-section {
+    padding: 6vh 3vw;
+    border-bottom: solid var(--gray) 2px;
 }
 
-.ecosystem .project-nav a {
-    padding-right: 0;
-    padding-left: 30px;
+.page-ecosystem .info-section h2 {
+    text-align: center;
+    font-weight: 800;
+    font-size: 1.9em;
+}
+
+.page-ecosystem .body-2col {
+    width: 100%;
+}
+
+.info-section p {
+    font-size: 1.25em;
+    font-weight: 400;
+    margin-top: 5vh;
+    /* Common top margin */
+}
+
+.info-section p {
+    -webkit-column-count: 2;
+    /* Chrome, Safari, Opera */
+    -moz-column-count: 2;
+    /* Firefox */
+    column-count: 2;
+    /* Standard syntax */
+    -webkit-column-gap: 4vw;
+    /* Chrome, Safari, Opera */
+    -moz-column-gap: 4vw;
+    /* Firefox */
+    column-gap: 4vw;
+    /* Standard syntax */
 }
 
 .ecosystem-item:not(:first-of-type) {
-    border-top: solid var(--gray) 1px;
-    border-bottom: solid var(--gray) 1px;
+    border-bottom: solid var(--gray) 2px;
 }
 
-.ecosystem-item .info {
+.page-ecosystem .ecosystem-item .info {
     color: var(--brown);
-    padding: 40px;
+    padding: 6vh 2vw 6vh 3vw;
 }
 
-.ecosystem-item .image {
-    background-color: var(--sky_blue);
-    height: 340px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 60px;
-    color: white;
+.page-ecosystem .ecosystem-item h2 {
+    font-size: 1.9em;
+    font-weight: 600;
+    text-transform: uppercase;
 }
 
-.ecosystem-item .image img {
-    width: 70px;
-    margin: auto;
+.page-ecosystem .ecosystem-item p {
+    font-size: 1em;
+    font-weight: 400;
+    line-height: 1.4;
+    margin-top: 5vh;
 }
 
-.ecosystem-item p {
-    font-size: 19px;
-    line-height: 1.3;
+.page-ecosystem .ecosystem-item #item-media {
+    height: 40vh;
 }
 
-.ecosystem-item .logo-image {
-    bottom: 0;
-    background-color: #cfe7e9;
+.page-ecosystem .ecosystem-item .eco-item-image {
+    position: relative;
+    height: 67%;
     width: 100%;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 30px 0;
+    overflow: hidden;
 }
 
-.ecosystem-item .logo-image img {
-    width: 240px;
-    margin: auto;
+.page-ecosystem .ecosystem-item .eco-item-logo-cont {
+    position: relative;
+    height: 33%;
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+    z-index: 1;
 }
 
-.ecosystem-item h2 {
-    font-weight: bold;
-    text-transform: uppercase;
-    margin: 20px 0;
-    margin-bottom: 50px;
+.page-ecosystem .ecosystem-item .eco-item-logo-bg img {
+    object-fit: cover;
+    width: 100%;
+    height: auto;
 }
 
-/*  */
-.project .carousel-indicators {
-    margin: 0;
+.page-ecosystem .ecosystem-item .eco-item-logo {
+    /* SVG positioning for the ecosystem page */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 60%;
+    width: auto;
+    z-index: 2;
 }
 
-.project .carousel-control-next,
-.project .carousel-control-prev {
-    opacity: 1;
-    width: 7%;
-}
-
-.project .carousel-control-next .carousel-control-next-icon,
-.project .carousel-control-next .carousel-control-prev-icon,
-.project .carousel-control-prev .carousel-control-next-icon,
-.project .carousel-control-prev .carousel-control-prev-icon {
-    color: white;
-    font-weight: bold;
-    width: 40px;
-    height: 40px;
-}
-
-.project .carousel-indicators [data-bs-target] {
-    text-indent: 0;
-    width: 100px;
-    height: -moz-fit-content;
-    height: fit-content;
+.page-ecosystem #funding-turkey-2 {
+  height: 50%;
 }
 
 /* -------------------BUSINESS PAGE--------------------- */
+
 .b2b-text {
     margin: 0;
     padding-bottom: 20px;
@@ -1967,8 +2004,10 @@ section {
     line-height: 1.2;
 }
 
-/*  */
+/* ------------------- MEDIA QUERIES ------------------ */
+
 /* <576px Small ≥576px Medium ≥768px Large ≥992px Extra large ≥1200px */
+
 @media (max-width: 992px) {
     .no-border-on-sm {
         border: 0;
@@ -2145,18 +2184,6 @@ section {
         padding: 0 12px;
     }
 
-    .info-sec {
-        padding: 20px 10px;
-    }
-
-    .info-sec h2 {
-        font-size: 16px;
-    }
-
-    .info-sec p {
-        font-size: 14px;
-    }
-
     .common-sec .hero-feat {
         top: unset;
     }
@@ -2167,6 +2194,16 @@ section {
 
     .images-sec img {
         top: unset;
+    }
+
+    /* Default styles for smaller viewports */
+    .info-section p {
+        -webkit-column-count: 1;
+        /* Chrome, Safari, Opera */
+        -moz-column-count: 1;
+        /* Firefox */
+        column-count: 1;
+        /* Standard syntax */
     }
 
     .ecosystem-item .info {
