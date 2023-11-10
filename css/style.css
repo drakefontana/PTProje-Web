@@ -1493,9 +1493,30 @@ footer #back-to-top-icon {
 
 /* Vision Hero Section */
 .common-sec {
+    display: flex;
     height: 28.5vh;
     overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    padding: 3vh 3vw;
 }
+
+
+.common-sec .title {
+    text-align: center;
+    font-size: 4em;
+    font-weight: 600;
+    color: var(--gray);
+    line-height: 1.2;
+    text-transform: uppercase;
+    margin-bottom: 0;
+}
+
+.common-sec .title span {
+    color: var(--dark_red);
+}
+
 
 .page-vision #hero-feat {
     width: 100vw;
@@ -1511,6 +1532,70 @@ footer #back-to-top-icon {
     object-fit: cover;
     min-width: 100%;
     min-height: auto;
+}
+
+/* Vision Value Feature Section */
+
+.mission-statment {
+    display: flex;
+    text-align: center;
+    max-width: 100%;
+    color: var(--brown);
+    padding-top: 6vh;
+    justify-content: center;
+    color: var(--brown);
+}
+
+.mission-statment p {
+    max-width: 67%;
+    font-style: italic;
+    font-size: 1.67em;
+    font-weight: 400;
+    color: var(--brown);
+}
+
+.values {
+    padding: 6vh 3vw;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.values .value-feat {
+    padding-left: 2vw;
+    padding-right: 2vw;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    color: var(--brown);
+    max-width: 30%;
+}
+
+.values .value-feat .value-icon {
+    width: auto;
+    height: 11vh;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    padding-bottom: 2vh;
+    border-bottom: var(--border-gray);
+}
+
+.values .value-feat h4 {
+    font-size: 1.9em;
+    font-weight: 600;
+    padding-top: 3vh;
+    padding-bottom: 2vh;
+    text-transform: uppercase;
+}
+
+.values .value-feat p {
+    text-align: left;
+    font-size: 1em;
+    font-weight: 400;
+    line-height: 1.4;
 }
 
 /* Vision Info Section */
@@ -1942,67 +2027,6 @@ section {
 .carousel,
 .carousel-inner {
     height: 100%;
-}
-
-.common-sec .image-caption {
-    bottom: -60px;
-}
-
-.common-sec .text {
-    text-align: center;
-    font-size: 65px;
-    color: var(--gray);
-    background-color: white;
-    line-height: 1.2;
-    padding: 25px 0;
-    margin: auto;
-}
-
-.common-sec .text span {
-    color: var(--dark_red);
-}
-
-.mission-statment {
-    text-align: center;
-    max-width: 65%;
-    margin: auto;
-    font-size: 24px;
-    color: var(--brown);
-    margin-top: 50px;
-}
-
-.features {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 50px;
-    flex-wrap: wrap;
-}
-
-.features .feat {
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    justify-content: center;
-    color: var(--brown);
-    max-width: 400px;
-}
-
-.features .feat img {
-    margin: auto;
-    width: 80px;
-    height: 100px;
-}
-
-.features .feat h4 {
-    font-size: 31px;
-    margin: 40px 0;
-}
-
-.features .feat p {
-    text-align: left;
-    font-size: 17px;
 }
 
 /* agents */
