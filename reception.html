@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PT Proje Reception</title>
+    <link href="css/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/bootstrap-5.3.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.7.6/lottie.min.js" defer></script>
+</head>
+
+<body class="page-reception">
+    <!-- Header Section -->
+    <header class="header-main">
+        <div class="col-head icon" id="nav-menu-cont">
+            <div class="nav-menu menu" id="navMenu">
+                <div class="list">
+                    <ul>
+                        <li><a href="vision.html" name="Vision Link"> VISION </a></li>
+                        <li><a href="projects.html" name="Projects Link"> PROJECTS </a></li>
+                        <li><a href="insights.html" name="Insights Link"> INSIGHTS </a></li>
+                        <li><a href="reception.html" name="Reception Link"> RECEPTION </a></li>
+                        <li><a href="ecosystem.html" name="EcoSystem Link"> ECOSYSTEM </a></li>
+                        <li><a class="toggleInquireModal" href="javascript:void(0);" name="Contact Link"> CONTACT </a></li>
+                    </ul>
+                    <div class="social">
+                        <a href="#" name="Whatsapp Link">
+                            <svg id="whatsapp-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 66.68 67">
+                                <path d="M56.965,9.736A33.209,33.209,0,0,0,4.71,49.8L0,67l17.6-4.617a33.172,33.172,0,0,0,15.866,4.041h.014A33.215,33.215,0,0,0,56.965,9.736M33.48,60.817h-.011a27.552,27.552,0,0,1-14.045-3.846l-1.008-.6L7.972,59.112,10.76,48.929,10.1,47.885A27.594,27.594,0,1,1,33.48,60.817M48.616,40.15c-.83-.415-4.908-2.422-5.668-2.7s-1.314-.415-1.867.415-2.143,2.7-2.627,3.253-.967.623-1.8.208a22.688,22.688,0,0,1-6.671-4.118,25,25,0,0,1-4.615-5.747c-.484-.83-.051-1.279.364-1.693.373-.371.829-.969,1.244-1.453a5.637,5.637,0,0,0,.829-1.384,1.527,1.527,0,0,0-.068-1.453c-.208-.415-1.867-4.5-2.558-6.16-.674-1.617-1.358-1.4-1.867-1.424-.483-.024-1.037-.029-1.59-.029A3.046,3.046,0,0,0,19.513,18.9a9.3,9.3,0,0,0-2.9,6.92c0,4.084,2.972,8.028,3.387,8.582s5.849,8.933,14.171,12.526A47.869,47.869,0,0,0,38.9,48.68a11.369,11.369,0,0,0,5.225.328c1.594-.238,4.908-2.006,5.6-3.944a6.942,6.942,0,0,0,.484-3.945c-.208-.346-.76-.554-1.59-.969" fill="#unset" fill-rule="evenodd" /></svg>
+                        </a>
+                        <a href="#" name="LinkedIn Link">
+                            <svg id="linkedin-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 67 67">
+                                <path d="M159.206,67H111.593a9.694,9.694,0,0,1-9.693-9.694V9.693A9.693,9.693,0,0,1,111.593,0h47.613A9.694,9.694,0,0,1,168.9,9.693V57.306A9.694,9.694,0,0,1,159.206,67M122,57.033H111.365V25.045H122ZM116.681,20.68h-.069a5.506,5.506,0,0,1-5.875-5.528c0-3.138,2.377-5.527,6.015-5.527s5.875,2.389,5.944,5.527c0,3.069-2.308,5.528-6.015,5.528m10.152,36.353h10.632V39.17a7.274,7.274,0,0,1,.35-2.594,5.82,5.82,0,0,1,5.455-3.889c3.848,0,5.386,2.934,5.386,7.233V57.033h10.631V38.692c0-9.825-5.245-14.4-12.24-14.4a10.587,10.587,0,0,0-9.652,5.39h.07v-4.64H126.833c.14,3,0,31.988,0,31.988" transform="translate(-101.9)" fill="unset" fill-rule="evenodd" /></svg>
+                        </a>
+                        <a href="#" name="Facebook Link">
+                            <svg id="facebook-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 67 66.594">
+                                <path d="M237.46.2A33.5,33.5,0,0,0,232.226,66.8V43.387H223.72V33.7h8.506V26.324c0-8.4,5-13.034,12.653-13.034a51.544,51.544,0,0,1,7.5.654v8.244h-4.225c-4.161,0-5.459,2.583-5.459,5.231V33.7h9.291L250.5,43.387h-7.806V66.8A33.5,33.5,0,0,0,237.46.2" transform="translate(-203.96 -0.203)" fill="unset" /></svg>
+                        </a>
+                        <a href="#" name="Instagram Link">
+                            <svg id="instagram-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 67 67">
+                                <path d="M427.706.232A24.531,24.531,0,0,0,419.58,1.8a16.385,16.385,0,0,0-5.927,3.874,16.423,16.423,0,0,0-3.853,5.94,24.6,24.6,0,0,0-1.541,8.136c-.156,3.573-.192,4.713-.175,13.809s.058,10.238.228,13.812a24.541,24.541,0,0,0,1.573,8.126A17.125,17.125,0,0,0,419.7,65.28a24.6,24.6,0,0,0,8.133,1.542c3.573.157,4.714.192,13.809.174s10.239-.057,13.812-.227a24.628,24.628,0,0,0,8.127-1.572,17.118,17.118,0,0,0,9.777-9.817,24.517,24.517,0,0,0,1.541-8.131c.157-3.575.194-4.717.176-13.813s-.058-10.236-.228-13.808a24.579,24.579,0,0,0-1.572-8.129A16.446,16.446,0,0,0,469.4,5.573a16.373,16.373,0,0,0-5.942-3.851A24.5,24.5,0,0,0,455.327.18C451.754.022,450.613-.013,441.516,0s-10.237.057-13.81.228m.391,60.56a18.568,18.568,0,0,1-6.222-1.14,11.089,11.089,0,0,1-6.37-6.345,18.552,18.552,0,0,1-1.165-6.219c-.166-3.531-.2-4.591-.22-13.536s.015-10,.169-13.536a18.533,18.533,0,0,1,1.14-6.22,10.4,10.4,0,0,1,2.5-3.858,10.392,10.392,0,0,1,3.847-2.513,18.551,18.551,0,0,1,6.218-1.164c3.533-.167,4.591-.2,13.533-.221s10.005.015,13.539.17a18.506,18.506,0,0,1,6.219,1.139,10.384,10.384,0,0,1,3.858,2.5,10.375,10.375,0,0,1,2.513,3.849,18.464,18.464,0,0,1,1.164,6.215c.168,3.533.206,4.592.222,13.535s-.015,10-.17,13.536a18.562,18.562,0,0,1-1.14,6.224,11.087,11.087,0,0,1-6.347,6.369,18.522,18.522,0,0,1-6.215,1.165c-3.533.166-4.591.2-13.537.22s-10-.016-13.535-.169m27.31-45.2a4.02,4.02,0,1,0,4.011-4.027,4.02,4.02,0,0,0-4.011,4.027m-31.028,17.94A17.2,17.2,0,1,0,441.546,16.3a17.2,17.2,0,0,0-17.167,17.234m6.034-.012A11.167,11.167,0,1,1,441.6,44.666a11.167,11.167,0,0,1-11.187-11.145" transform="translate(-408.08 0)" fill="unset" /></svg>
+                        </a>
+                    </div>
+                    <div class="info">
+                        <p>+901234567890</p>
+                        <span>Istanbul</span>
+                    </div>
+                    <a class="my-btn toggleInquireModal" href="javascript:void(0);" name="Inquire Form">
+                        INQUIRE
+                        <svg id="PTP-Button-Arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 49.726">
+                            <path d="M24.863,0,0,20V50H49.726V20Z" transform="translate(50) rotate(90)" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div id="menu-container">
+                <div id="menu-animation"></div>
+            </div>
+        </div>
+        <div class="col-head logo" id="header-logo-cont">
+            <div id="ptpHeadLogo">
+                <a href="index.html" alt="PT Proje Home">
+                    <svg id="ptproje-logo" alt="PTProje-Logo" xmlns="http://www.w3.org/2000/svg" style="height: 7vh;" viewBox="0 0 518.2 182.73">
+                        <defs>
+                            <style>.cls-pt,.cls-proje,.cls-tag{stroke-width:0px;}.cls-proje{fill:#80181a;}.cls-pt,.cls-tag{fill:#ea2427;}</style>
+                        </defs>\
+                        <g id="Layer_1-2">
+                            <path class="cls-pt" d="m35.77,27.36H0v78.25h22.13v-20.46h13.64c21.35,0,34.77-11.07,34.77-28.84s-13.41-28.95-34.77-28.95Zm-1.34,40.36h-12.3v-22.92h12.3c9.17,0,13.75,4.25,13.75,11.51s-4.58,11.4-13.75,11.4Zm29.78-40.36c.72.51,1.42,1.03,2.09,1.59,5.14,4.27,8.72,9.68,10.63,15.96h11.29v60.7h22.13v-60.7h23.92v-17.55h-70.07Z" />
+                            <path class="cls-proje" d="m415.65,43.45h-64.7c-12.05.03-22.08,9.97-22.08,23.14s10.17,23.36,22.14,23.36,21.69-10.17,21.69-23.36c0-5.99-1.98-11.3-5.28-15.33h22.75c1.93,4.64,2.98,9.76,2.98,15.21,0,22.81-18.11,40.13-42.37,40.13s-42.26-17.22-42.26-40.13,18.11-39.13,42.26-39.13h64.87v16.1Zm-254.51-15.99v78.25h19.9v-22.02h14.2c20.01,0,31.52-10.62,31.52-28.95s-11.51-27.28-31.52-27.28h-34.1Zm19.9,15.65h13.19c8.72,0,13.75,4.14,13.75,12.3s-5.03,12.63-13.75,12.63h-13.19v-24.93Zm100.54,62.6h22.58l-16.43-25.82c9.17-4.58,14.2-13.19,14.2-25.15,0-17.44-11.85-27.28-32.53-27.28h-34.99v78.25h19.9v-22.02h15.65l11.63,22.02Zm-27.28-37.67v-24.93h15.09c8.61,0,13.64,4.14,13.64,12.3s-5.03,12.63-13.64,12.63h-15.09Zm262.67-24.93v-15.65h-61.26v78.25h62.49v-15.65h-42.59v-15.76h37.34v-15.65h-37.34v-15.54h41.36Zm-91.3-15.76v52.54c0,6.37-3.13,9.61-8.38,9.61-4.55,0-10.77-2.87-16.33-8.62-1.65,5.5-4.23,10.55-7.59,15.01,6.68,6.82,15.06,10.71,25.26,10.71,16.66,0,27.05-9.61,27.05-26.27V27.36h-20.01Zm20.01-19.17l-10.17-8.18-10.17,8.18v12.27s20.34,0,20.34,0v-12.27Z" />
+                            <path class="cls-tag" d="m222.66,163.82c0,4.38-3.17,7.03-8.42,7.03h-4.99v6.11h-2.88v-20.17h7.87c5.25,0,8.42,2.65,8.42,7.03Zm-2.88,0c0-2.88-1.93-4.52-5.62-4.52h-4.9v9.05h4.9c3.69,0,5.62-1.64,5.62-4.52Z" />
+                            <path class="cls-tag" d="m233.52,161.55v2.68c-.23-.03-.43-.03-.63-.03-2.97,0-4.81,1.82-4.81,5.16v7.61h-2.77v-15.27h2.65v2.56c.98-1.79,2.88-2.71,5.56-2.71Z" />
+                            <path class="cls-tag" d="m234.34,169.33c0-4.55,3.37-7.78,7.95-7.78s7.93,3.23,7.93,7.78-3.34,7.81-7.93,7.81-7.95-3.26-7.95-7.81Zm13.08,0c0-3.26-2.19-5.36-5.13-5.36s-5.16,2.1-5.16,5.36,2.22,5.39,5.16,5.39,5.13-2.13,5.13-5.39Z" />
+                            <path class="cls-tag" d="m268.91,169.33c0,4.7-3.26,7.81-7.72,7.81-2.16,0-4.06-.84-5.33-2.48v7.9h-2.77v-20.87h2.65v2.42c1.24-1.7,3.2-2.56,5.45-2.56,4.47,0,7.72,3.11,7.72,7.78Zm-2.8,0c0-3.23-2.22-5.36-5.16-5.36s-5.13,2.13-5.13,5.36,2.22,5.39,5.13,5.39,5.16-2.13,5.16-5.39Z" />
+                            <path class="cls-tag" d="m285.83,170.25h-12.39c.35,2.68,2.51,4.47,5.53,4.47,1.79,0,3.29-.61,4.41-1.84l1.53,1.79c-1.38,1.61-3.49,2.48-6.02,2.48-4.93,0-8.21-3.26-8.21-7.81s3.26-7.78,7.67-7.78,7.55,3.17,7.55,7.87c0,.23-.03.58-.06.84Zm-12.39-1.99h9.8c-.29-2.56-2.22-4.38-4.9-4.38s-4.61,1.79-4.9,4.38Z" />
+                            <path class="cls-tag" d="m296.91,161.55v2.68c-.23-.03-.43-.03-.63-.03-2.97,0-4.81,1.82-4.81,5.16v7.61h-2.77v-15.27h2.65v2.56c.98-1.79,2.88-2.71,5.56-2.71Z" />
+                            <path class="cls-tag" d="m308.96,176.07c-.84.72-2.1,1.07-3.34,1.07-3.08,0-4.84-1.7-4.84-4.78v-8.39h-2.59v-2.28h2.59v-3.34h2.77v3.34h4.38v2.28h-4.38v8.27c0,1.64.86,2.56,2.39,2.56.81,0,1.59-.26,2.16-.72l.86,1.99Z" />
+                            <path class="cls-tag" d="m325.53,161.69l-7.41,16.8c-1.35,3.23-3.11,4.24-5.45,4.24-1.47,0-2.97-.49-3.92-1.41l1.18-2.08c.75.72,1.7,1.12,2.74,1.12,1.33,0,2.16-.61,2.91-2.36l.49-1.07-6.74-15.25h2.88l5.33,12.22,5.27-12.22h2.71Z" />
+                            <path class="cls-tag" d="m342.14,160.94v16.05h-5.13v-16.05h-6.02v-4.15h17.23v4.15h-6.08Z" />
+                            <path class="cls-tag" d="m368.96,168.52c0,5.33-3.54,8.7-9.19,8.7s-9.31-3.37-9.31-8.7v-11.7h5.13v11.7c0,2.74,1.76,4.41,4.21,4.41s4.06-1.67,4.06-4.41v-11.7h5.1v11.7Z" />
+                            <path class="cls-tag" d="m380.38,171.32h-4.03v5.68h-5.13v-20.17h9.02c5.33,0,8.39,2.54,8.39,7.03,0,3.08-1.3,5.3-3.66,6.48l4.24,6.66h-5.82l-3-5.68Zm-.14-4.03c2.22,0,3.52-1.12,3.52-3.26s-1.3-3.17-3.52-3.17h-3.89v6.43h3.89Z" />
+                            <path class="cls-tag" d="m399.22,169.07l-2.68,2.97v4.96h-5.13v-20.17h5.13v8.73l7.72-8.73h5.94l-7.49,8.36,7.98,11.82h-6.14l-5.33-7.93Z" />
+                            <path class="cls-tag" d="m417.18,160.85v4.01h9.63v4.03h-9.63v4.06h10.98v4.03h-16.11v-20.17h15.79v4.03h-10.66Z" />
+                            <path class="cls-tag" d="m441.41,176.99h-5.1v-6.37l-7.46-13.8h5.13l4.87,8.79,4.76-8.79h5.13l-7.32,13.66v6.51Z" />
+                            <path class="cls-tag" d="m76.02,161.63h-5.7l-3.07,15.33h2.19l.93-4.64h4.09c1.48,0,2.75-.24,3.83-.73,1.08-.49,1.91-1.2,2.49-2.12s.87-2.04.87-3.34c0-1.42-.49-2.52-1.47-3.31-.98-.79-2.37-1.18-4.16-1.18Zm2.14,7.74c-.87.69-2.09,1.04-3.65,1.04h-3.75l1.38-6.88h3.68c1.17,0,2.07.23,2.69.7s.94,1.16.94,2.08c0,1.34-.43,2.36-1.3,3.06Z" />
+                            <path class="cls-tag" d="m92.05,165.86c-.82-.41-1.77-.61-2.87-.61-1.31,0-2.49.3-3.52.89-1.03.59-1.84,1.4-2.42,2.43s-.88,2.2-.88,3.52c0,1.01.23,1.89.68,2.64.45.75,1.08,1.34,1.9,1.75.81.42,1.77.62,2.88.62,1.33,0,2.5-.3,3.52-.9,1.01-.6,1.81-1.41,2.4-2.44.58-1.03.88-2.2.88-3.52,0-1.02-.22-1.91-.67-2.65-.45-.74-1.08-1.32-1.9-1.73Zm-.14,7.02c-.39.74-.92,1.32-1.61,1.74-.69.42-1.47.64-2.34.64-1.11,0-1.96-.29-2.56-.88-.6-.58-.9-1.38-.9-2.39s.2-1.81.59-2.55c.39-.74.93-1.31,1.62-1.73.69-.42,1.46-.62,2.32-.62,1.11,0,1.96.29,2.56.86.6.58.9,1.38.9,2.4,0,.95-.19,1.79-.58,2.53Z" />
+                            <polygon class="cls-tag" points="113.92 165.36 108.72 174.57 106.97 165.36 105.18 165.36 99.92 174.57 98.21 165.36 96.3 165.36 98.52 176.97 100.53 176.97 105.56 168.19 107.34 176.97 109.4 176.97 115.91 165.36 113.92 165.36" />
+                            <path class="cls-tag" d="m124.69,165.85c-.77-.4-1.69-.6-2.74-.6-1.26,0-2.38.3-3.36.89-.99.59-1.76,1.4-2.33,2.42-.57,1.02-.85,2.19-.85,3.5,0,1.02.23,1.91.68,2.66.45.75,1.1,1.34,1.93,1.75.83.42,1.82.62,2.96.62.89,0,1.75-.14,2.59-.43s1.53-.7,2.08-1.24l-.9-1.51c-.41.41-.93.73-1.56.97-.63.24-1.31.36-2.04.36-1.24,0-2.17-.29-2.77-.87-.61-.58-.91-1.39-.91-2.44,0-.05,0-.09,0-.13h9.52c.04-.23.08-.49.11-.76.03-.27.04-.54.04-.8,0-1.05-.22-1.95-.65-2.69-.43-.74-1.03-1.32-1.81-1.72Zm-6.68,3.5c.36-.74.88-1.31,1.54-1.73s1.43-.62,2.31-.62c.74,0,1.38.15,1.92.45.53.3.92.73,1.17,1.29.19.44.27.95.23,1.54h-7.51c.09-.33.19-.64.34-.93Z" />
+                            <path class="cls-tag" d="m136.47,167.28l.39-2.04c-1.23,0-2.26.2-3.09.59-.58.27-1.08.7-1.52,1.26l.34-1.74h-2.02l-2.3,11.61h2.1l1.16-5.81c.26-1.34.77-2.33,1.52-2.96s1.71-.94,2.86-.94h.29c.09,0,.18,0,.26.02Z" />
+                            <path class="cls-tag" d="m145.47,165.85c-.77-.4-1.69-.6-2.74-.6-1.26,0-2.38.3-3.36.89-.99.59-1.76,1.4-2.33,2.42-.57,1.02-.85,2.19-.85,3.5,0,1.02.23,1.91.68,2.66.45.75,1.1,1.34,1.93,1.75.83.42,1.82.62,2.96.62.89,0,1.75-.14,2.59-.43s1.53-.7,2.08-1.24l-.9-1.51c-.41.41-.93.73-1.56.97-.63.24-1.31.36-2.04.36-1.24,0-2.17-.29-2.77-.87-.61-.58-.91-1.39-.91-2.44,0-.05,0-.09,0-.13h9.52c.04-.23.08-.49.11-.76.03-.27.04-.54.04-.8,0-1.05-.22-1.95-.65-2.69-.43-.74-1.03-1.32-1.81-1.72Zm-6.68,3.5c.36-.74.88-1.31,1.54-1.73s1.43-.62,2.31-.62c.74,0,1.38.15,1.92.45.53.3.92.73,1.17,1.29.19.44.27.95.23,1.54h-7.51c.09-.33.19-.64.34-.93Z" />
+                            <path class="cls-tag" d="m160.17,167.35s0-.02-.01-.03c-.38-.68-.92-1.19-1.62-1.54s-1.56-.53-2.56-.53c-.93,0-1.8.17-2.61.5-.8.34-1.5.81-2.09,1.42-.59.61-1.05,1.34-1.38,2.17-.33.83-.49,1.75-.49,2.74,0,1.05.22,1.95.67,2.69.45.75,1.06,1.32,1.83,1.72.77.4,1.65.6,2.63.6s1.83-.18,2.58-.53c.58-.27,1.07-.65,1.53-1.09l-.3,1.48h2.02l3.24-16.26h-2.1l-1.32,6.63Zm-2.84,7.28c-.69.42-1.47.64-2.34.64-1.11,0-1.96-.29-2.56-.88-.6-.58-.9-1.38-.9-2.39s.2-1.81.59-2.55c.39-.74.93-1.31,1.62-1.73.69-.42,1.46-.62,2.32-.62,1.11,0,1.96.29,2.56.86.6.58.9,1.38.9,2.4,0,.95-.19,1.79-.58,2.53s-.92,1.32-1.61,1.74Z" />
+                            <path class="cls-tag" d="m183.02,172.98c.33-.83.49-1.75.49-2.74s-.22-1.93-.67-2.68c-.45-.75-1.05-1.33-1.82-1.72s-1.65-.59-2.64-.59-1.83.18-2.59.53c-.53.24-.99.59-1.42.97l1.22-6.04h-2.1l-3.24,16.26h1.99l.43-2.11s.04.1.07.15c.38.68.92,1.2,1.63,1.56s1.56.54,2.55.54c.93,0,1.8-.17,2.61-.51.8-.34,1.5-.82,2.09-1.43.59-.61,1.05-1.34,1.38-2.17Zm-2.22-.1c-.39.74-.93,1.32-1.61,1.74-.68.42-1.46.64-2.33.64-1.11,0-1.96-.29-2.56-.88-.6-.58-.9-1.38-.9-2.39s.19-1.81.58-2.55c.39-.74.93-1.31,1.62-1.73.69-.42,1.47-.62,2.33-.62,1.11,0,1.96.29,2.56.86.6.58.9,1.38.9,2.4,0,.95-.2,1.79-.59,2.53Z" />
+                            <path class="cls-tag" d="m195.11,165.36l-5.86,9.3-2.23-9.3h-2.1l2.81,11.55-.6.92c-.41.64-.81,1.09-1.19,1.35-.39.25-.82.38-1.3.38-.41,0-.78-.07-1.11-.21-.33-.14-.62-.33-.87-.58l-1.1,1.56c.31.32.73.57,1.27.76.54.18,1.09.27,1.64.27.61,0,1.16-.09,1.65-.28.49-.19.96-.51,1.41-.96s.93-1.07,1.45-1.86l8.24-12.88h-2.12Z" />
+                        </g>
+                    </svg>
+                </a>
+            </div>
+        </div>
+        <div class="col-head icon" id="login-menu-cont">
+            <!--
+            <div id="agency-container">
+                <div id="agency-animation"></div>
+            </div>
+            <div class="agency-port-menu menu" id="loginMenu">
+                <div class="list">
+                    <ul>
+                        <li><a href="#"> LOGIN </a></li>
+                        <li><a href="#"> REGISTER </a></li>
+                    </ul>
+                    <div class="ptp-agency-logo">
+                        <svg id="ptp-main-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 518.2 106.62">
+                            <g id="c">
+                                <path d="m415.65,27.36h-64.87c-24.15,0-42.26,16.32-42.26,39.13s18.11,40.13,42.26,40.13,42.37-17.33,42.37-40.13c0-5.45-1.06-10.57-2.98-15.21h-22.75c3.29,4.02,5.28,9.34,5.28,15.33,0,13.19-9.61,23.36-21.69,23.36s-22.14-10.17-22.14-23.36,10.03-23.11,22.08-23.14h64.7v-16.1Z" fill="#801819" stroke-width="0" />
+                                <path d="m195.24,27.47c20.01,0,31.52,9.84,31.52,27.28,0,18.33-11.51,28.95-31.52,28.95h-14.2v22.02h-19.9V27.47h34.1Zm-14.2,40.58h13.19c8.72,0,13.75-4.36,13.75-12.63s-5.03-12.3-13.75-12.3h-13.19v24.93Z" fill="#801819" stroke-width="0" />
+                                <path d="m269.95,83.7h-15.65v22.02h-19.9V27.47h34.99c20.68,0,32.53,9.84,32.53,27.28,0,11.96-5.03,20.57-14.2,25.15l16.43,25.82h-22.58l-11.63-22.02Zm-.56-15.65c8.61,0,13.64-4.36,13.64-12.63s-5.03-12.3-13.64-12.3h-15.09v24.93h15.09Z" fill="#801819" stroke-width="0" />
+                                <path d="m475.61,43.12v15.54h37.34v15.65h-37.34v15.76h42.59v15.65h-62.49V27.47h61.26v15.65h-41.36Z" fill="#801819" stroke-width="0" />
+                                <path d="m425.67,27.36v52.54c0,6.37-3.13,9.61-8.38,9.61-4.55,0-10.77-2.87-16.33-8.62-1.65,5.5-4.23,10.55-7.59,15.01,6.68,6.82,15.06,10.71,25.26,10.71,16.66,0,27.05-9.61,27.05-26.27V27.36h-20.01Z" fill="#801819" stroke-width="0" />
+                                <path d="m35.77,27.36H0v78.25h22.13v-20.46h13.64c21.35,0,34.77-11.07,34.77-28.84s-13.41-28.95-34.77-28.95Zm-1.34,40.36h-12.3v-22.92h12.3c9.17,0,13.75,4.25,13.75,11.51s-4.58,11.4-13.75,11.4Zm29.78-40.36c.72.51,1.42,1.03,2.09,1.59,5.14,4.27,8.72,9.68,10.63,15.96h11.29v60.7h22.13v-60.7h23.92v-17.55h-70.07Z" fill="#e92427" stroke-width="0" />
+                                <polygon points="445.68 20.45 425.34 20.45 425.34 8.18 435.51 0 445.68 8.18 445.68 20.45" fill="#801819" stroke-width="0" />
+                            </g>
+                        </svg>
+                        <p>AGENCY PORTAL</p>
+                    </div>
+                </div>
+            </div>
+          -->
+        </div>
+    </header>
+    <!-- Hero Section -->
+    <section class="common-sec">
+        <p class="title">
+            Discover Your <span>Dream Home,</span></br>Built Beyond Your Imagination.
+        </p>
+    </section>
+    <section class="hero">
+        <picture id="hero-feat">
+            <!-- For high-resolution screens on devices with min-width 768px -->
+            <source media="(min-width: 768px) and (min-resolution: 192dpi)" srcset="img/Reception-Hero/PTP-Reception-BG-sm.webp" type="image/webp">
+            <source media="(min-width: 768px) and (min-resolution: 192dpi)" srcset="img/Reception-Hero/PTP-Reception-BG-sm.jpg" type="image/jpeg">
+            <!-- For devices with min-width 768px -->
+            <source media="(min-width: 768px)" srcset="img/Reception-Hero/PTP-Reception-BG-sm.webp" type="image/webp">
+            <source media="(min-width: 768px)" srcset="img/Reception-Hero/PTP-Reception-BG-sm.jpg" type="image/jpeg">
+            <!-- Default -->
+            <source srcset="img/Reception-Hero/PTP-Reception-BG.webp" type="image/webp">
+            <img id="hero-img" src="img/Reception-Hero/PTP-Reception-BG.jpg" type="image/jpeg" alt="ptp-bodrum-img">
+        </picture>
+        <p class="image-caption">BODRUM, TURKEY</p>
+    </section>
+    <!-- Reception Information -->
+    <section class="info-section">
+        <div class="container-fluid">
+            <h2>Constructing Spaces, Building Relationships</h2>
+            <div class="row">
+                <div class="body-2col">
+                    <p>
+                        Welcome to PT Proje's reception desk—a haven for those seeking their dream homes in Turkey. Step into our world of real estate possibilities, where our team is ready to guide you through every step of the home-buying journey. We understand that buying a home is more than just a transaction; it's a milestone in your life journey. That's why our approach is tailored to meet your unique needs and aspirations. 
+                    </p>
+                    <p>
+                        Our team of experienced professionals is equipped with deep market knowledge and a passion for finding the perfect match for each client. From contemporary urban apartments to serene coastal retreats, our diverse portfolio ensures that your preferences are not just met, but exceeded. We pride ourselves on our ability to navigate the complexities of the real estate market, ensuring a seamless and enjoyable experience for you.
+                    </p>
+                    <p>
+                        Embarking on this journey with PT Proje means you're supported every step of the way. Our comprehensive services include personalized property viewings, legal assistance, and after-sales support, ensuring that every aspect of your purchase is handled with utmost care and professionalism. We believe in building lasting relationships, which is why our commitment to you extends beyond the final transaction. As you settle into your new home, we remain available to assist with any further needs or questions. With PT Proje, you're not just finding a property; you're discovering a place where memories will be made and dreams will flourish.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Autoplay Video Texture -->
+    <section class="video-section">
+        <video id="videoElement" class="video-horizontal" preload="auto">
+            <source src="vid/reception-desk-vid.mp4" type="video/mp4">
+            <source src="vid/reception-desk-vid.webm" type="video/webm">
+            Your browser does not support the video tag.
+        </video>
+    </section>
+    <!-- Reception Accordion -->
+    <section class="global-tagline">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-5 col-12 sec-1 border-gray-r position-relative" data-aos="fade-left">
+                    <h2>
+                        OUR WALK-IN<br />
+                        CLIENT PROCESS
+                    </h2>
+                    <p>
+                        Partner with us and let us guide you through this process through trust, transparency, and prosperity.
+                    </p>
+                    <a class="my-btn toggleInquireModal" href="javascript:void(0);" name="Inquire Form">
+                        More Questions?
+                        <!-- Updated SVG -->
+                        <svg id="PTP-Button-Arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 49.726">
+                            <path d="M24.863,0,0,20V50H49.726V20Z" transform="translate(50) rotate(90)" />
+                        </svg>
+                    </a>
+                </div>
+                <div class="col-md-7 sec-2 col-12" data-aos="fade-up">
+                    <div class="my-accordion accordion accordion-flush" id="accordion1">
+                        <h3>FROM VISION TO VIBRANT COMMUNITIES</h3>
+                        <div class="accordion-item" id="accordion-1">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne1" aria-expanded="false" aria-controls="collapseOne1">
+                                <span>1. WALK IN WITH WARM RECEPTION</span>
+                                <div class="lottie-container" id="plus-1"></div>
+                            </button>
+                            <div id="collapseOne1" class="accordion-collapse collapse" data-bs-parent="#accordion1">
+                                <div class="accordion-body">
+                                    <p>
+                                        Step into PT Proje and experience a warm reception like no other. Our dedicated team is here to make you feel at home from the moment you arrive. Let the journey to your dream home begin with a welcoming atmosphere that sets the tone for a seamless experience.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item" id="accordion-2">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne2" aria-expanded="false" aria-controls="collapseOne2">
+                                <span>2. DISCUSS GOALS WITH AN AGENT</span>
+                                <div class="lottie-container" id="plus-2"></div>
+                            </button>
+                            <div id="collapseOne2" class="accordion-collapse collapse" data-bs-parent="#accordion1">
+                                <div class="accordion-body">
+                                    <p>
+                                        Sit down with one of our experienced agents to discuss your real estate goals. Whether you're envisioning a cozy apartment or a luxurious villa, we're here to understand your unique preferences and guide you toward properties that align with your vision.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item" id="accordion-3">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne3" aria-expanded="false" aria-controls="collapseOne3">
+                                <span>3. TOUR WITH AFTER SALES</span>
+                                <div class="lottie-container" id="plus-3"></div>
+                            </button>
+                            <div id="collapseOne3" class="accordion-collapse collapse" data-bs-parent="#accordion1">
+                                <div class="accordion-body">
+                                    <p>
+                                        Embark on personalized property tours with our After Sales team. Let us walk you through the intricacies of each property, highlighting features that match your requirements. Our goal is to turn your vision into reality by finding a home that perfectly suits your lifestyle.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item" id="accordion-4">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne4" aria-expanded="false" aria-controls="collapseOne4">
+                                <span>4. ASK QUESTIONS WITH OUR MANAGER</span>
+                                <div class="lottie-container" id="plus-4"></div>
+                            </button>
+                            <div id="collapseOne4" class="accordion-collapse collapse" data-bs-parent="#accordion1">
+                                <div class="accordion-body">
+                                    <p>
+                                        Engage in a comprehensive discussion with our manager who is ready to address any questions or concerns you may have. From property details to the intricacies of the buying process, our manager is here to ensure you are well-informed and confident in your decisions.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item" id="accordion-5">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne5" aria-expanded="false" aria-controls="collapseOne5">
+                                <span>5. REVIEW OPPORTUNITIES WITH FINANCE</span>
+                                <div class="lottie-container" id="plus-5"></div>
+                            </button>
+                            <div id="collapseOne5" class="accordion-collapse collapse" data-bs-parent="#accordion1">
+                                <div class="accordion-body">
+                                    <p>
+                                        Explore financing options tailored to your needs. Our finance experts will guide you through the opportunities available, providing clarity on budgeting, mortgages, and investment potential. Your financial journey aligns seamlessly with your real estate aspirations.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item" id="accordion-6">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne6" aria-expanded="false" aria-controls="collapseOne6">
+                                <span>6. TRACK STATUS VIA OUR CRM</span>
+                                <div class="lottie-container" id="plus-6"></div>
+                            </button>
+                            <div id="collapseOne6" class="accordion-collapse collapse" data-bs-parent="#accordion1">
+                                <div class="accordion-body">
+                                    <p>
+                                        Stay informed and connected throughout the entire process. Our Customer Relationship Management (CRM) system keeps you updated on the status of your property search, negotiations, and all essential milestones. Track your journey with PT Proje effortlessly, ensuring transparency and peace of mind.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Projects Feature Section -->
+    <section class="proj-tagline">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 col-lg-7 border-gray-r pe-5 ps-5" data-aos="fade-right">
+                    <div id="slider" class="portfolio-carousel">
+                        <div class="carousel-wrapper">
+                            <div id="slides" class="slides">
+                                <!-- Your building elements go here -->
+                                <a href="little-bosphorus.html" class="building" id="portfolio-1">
+                                    <div class="building-image">
+                                        <picture>
+                                            <source srcset="img/Portfolio-Slider/PortfolioSlider-LittleBosphorus.webp" type="image/webp">
+                                            <source srcset="img/Portfolio-Slider/PortfolioSlider-LittleBosphorus.jpg" type="image/jpeg">
+                                            <img src="img/Portfolio-Slider/PortfolioSlider-LittleBosphorus.jpg" type="image/jpeg" alt="little-bosphorus-cover" />
+                                        </picture>
+                                    </div>
+                                    <h4 class="building-title">LITTLE BOSPHORUS</h4>
+                                    <span class="building-address">Haliç, İstanbul</span>
+                                </a>
+                                <a href="senna-park.html" class="building" id="portfolio-2">
+                                    <div class="building-image">
+                                        <picture>
+                                            <source srcset="img/Portfolio-Slider/PortfolioSlider-SennaPark.webp" type="image/webp">
+                                            <source srcset="img/Portfolio-Slider/PortfolioSlider-SennaPark.jpg" type="image/jpeg">
+                                            <img src="img/Portfolio-Slider/PortfolioSlider-SennaPark.jpg" type="image/jpeg" alt="senna-park-cover" />
+                                        </picture>
+                                    </div>
+                                    <h4 class="building-title">SENNA PARK</h4>
+                                    <span class="building-address">Eyüpsultan, İstanbul</span>
+                                </a>
+                                <a href="marmara-majesty.html" class="building" id="portfolio-3">
+                                    <div class="building-image">
+                                        <picture>
+                                            <source srcset="img/Portfolio-Slider/PortfolioSlider-MarmaraMajesty.webp" type="image/webp">
+                                            <source srcset="img/Portfolio-Slider/PortfolioSlider-MarmaraMajesty.jpg" type="image/jpeg">
+                                            <img src="img/Portfolio-Slider/PortfolioSlider-MarmaraMajesty.jpg" type="image/jpeg" alt="marmara-majesty-cover" />
+                                        </picture>
+                                    </div>
+                                    <h4 class="building-title">MARMARA MAJESTY</h4>
+                                    <span class="building-address">Pendik, İstanbul</span>
+                                </a>
+                                <a href="halic-heights.html" class="building" id="portfolio-4">
+                                    <div class="building-image">
+                                        <picture>
+                                            <source srcset="img/Portfolio-Slider/PortfolioSlider-HalicHeights.webp" type="image/webp">
+                                            <source srcset="img/Portfolio-Slider/PortfolioSlider-HalicHeights.jpg" type="image/jpeg">
+                                            <img src="img/Portfolio-Slider/PortfolioSlider-HalicHeights.jpg" type="image/jpeg" alt="halic-heights-cover" />
+                                        </picture>
+                                    </div>
+                                    <h4 class="building-title">HALİÇ HEIGHTS</h4>
+                                    <span class="building-address">Beyoğlu, İstanbul</span>
+                                </a>
+                                <a href="uhouse.html" class="building" id="portfolio-5">
+                                    <div class="building-image">
+                                        <picture>
+                                            <source srcset="img/Portfolio-Slider/PortfolioSlider-UHouse.webp" type="image/webp">
+                                            <source srcset="img/Portfolio-Slider/PortfolioSlider-UHouse.jpg" type="image/jpeg">
+                                            <img src="img/Portfolio-Slider/PortfolioSlider-UHouse.jpg" type="image/jpeg" alt="uhouse-cover" />
+                                        </picture>
+                                    </div>
+                                    <h4 class="building-title">U HOUSE</h4>
+                                    <span class="building-address">Yalıkavak, Bodrum</span>
+                                </a>
+                                <a href="lhouse.html" class="building" id="portfolio-6">
+                                    <div class="building-image">
+                                        <picture>
+                                            <source srcset="img/Portfolio-Slider/PortfolioSlider-LHouse.webp" type="image/webp">
+                                            <source srcset="img/Portfolio-Slider/PortfolioSlider-LHouse.jpg" type="image/jpeg">
+                                            <img src="img/Portfolio-Slider/PortfolioSlider-LHouse.jpg" type="image/jpeg" alt="lhouse-cover" />
+                                        </picture>
+                                    </div>
+                                    <h4 class="building-title">L HOUSE</h4>
+                                    <span class="building-address">Yalıkavak, Bodrum</span>
+                                </a>
+                            </div>
+                        </div>
+                        <button id="prev" class="carousel-prev">
+                            <svg id="CarouselArrow-Left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                                <circle cx="50" cy="50" r="50" fill="#cbe3e5" stroke-width="0" />
+                                <polygon points="69.48 74.86 69.48 25.14 39.48 25.14 19.48 50 39.48 74.86 69.48 74.86" fill="#80181a" stroke-width="0" />
+                            </svg>
+                        </button>
+                        <button id="next" class="carousel-next">
+                            <svg id="CarouselArrow-Right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                                <circle cx="50" cy="50" r="50" fill="#cbe3e5" stroke-width="0" />
+                                <polygon points="30.52 74.86 30.52 25.14 60.52 25.14 80.52 50 60.52 74.86 30.52 74.86" fill="#80181a" stroke-width="0" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-5 ps-5" data-aos="fade-left">
+                    <h2>
+                        EXPLORE TOMORROW'S TURKISH<br />
+                        REAL ESTATE TODAY
+                    </h2>
+                    <p>
+                        Witness the future of Turkish real estate through our diverse portfolio of prestigious projects.
+                    </p>
+                    <a href="projects.html" class="my-btn">
+                        See Our Projects
+                        <!-- Updated SVG -->
+                        <svg id="PTP-Button-Arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 49.726">
+                            <path d="M24.863,0,0,20V50H49.726V20Z" transform="translate(50) rotate(90)" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer Section -->
+    <footer>
+        <div class="row w-100">
+            <div class="col-lg-7 col-12">
+                <div class="logo d-flex">
+                    <div>
+                        <p class="talk-with">TALK WITH</p>
+                        <a href="index.html" alt="PT Proje Home">
+                            <svg id="ptp-footer-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 518.2 106.62">
+                                <g id="c">
+                                    <path d="m415.65,27.36h-64.87c-24.15,0-42.26,16.32-42.26,39.13s18.11,40.13,42.26,40.13,42.37-17.33,42.37-40.13c0-5.45-1.06-10.57-2.98-15.21h-22.75c3.29,4.02,5.28,9.34,5.28,15.33,0,13.19-9.61,23.36-21.69,23.36s-22.14-10.17-22.14-23.36,10.03-23.11,22.08-23.14h64.7v-16.1Z" fill="#D1AC99" stroke-width="0" />
+                                    <path d="m195.24,27.47c20.01,0,31.52,9.84,31.52,27.28,0,18.33-11.51,28.95-31.52,28.95h-14.2v22.02h-19.9V27.47h34.1Zm-14.2,40.58h13.19c8.72,0,13.75-4.36,13.75-12.63s-5.03-12.3-13.75-12.3h-13.19v24.93Z" fill="#D1AC99" stroke-width="0" />
+                                    <path d="m269.95,83.7h-15.65v22.02h-19.9V27.47h34.99c20.68,0,32.53,9.84,32.53,27.28,0,11.96-5.03,20.57-14.2,25.15l16.43,25.82h-22.58l-11.63-22.02Zm-.56-15.65c8.61,0,13.64-4.36,13.64-12.63s-5.03-12.3-13.64-12.3h-15.09v24.93h15.09Z" fill="#D1AC99" stroke-width="0" />
+                                    <path d="m475.61,43.12v15.54h37.34v15.65h-37.34v15.76h42.59v15.65h-62.49V27.47h61.26v15.65h-41.36Z" fill="#D1AC99" stroke-width="0" />
+                                    <path d="m425.67,27.36v52.54c0,6.37-3.13,9.61-8.38,9.61-4.55,0-10.77-2.87-16.33-8.62-1.65,5.5-4.23,10.55-7.59,15.01,6.68,6.82,15.06,10.71,25.26,10.71,16.66,0,27.05-9.61,27.05-26.27V27.36h-20.01Z" fill="#D1AC99" stroke-width="0" />
+                                    <path d="m35.77,27.36H0v78.25h22.13v-20.46h13.64c21.35,0,34.77-11.07,34.77-28.84s-13.41-28.95-34.77-28.95Zm-1.34,40.36h-12.3v-22.92h12.3c9.17,0,13.75,4.25,13.75,11.51s-4.58,11.4-13.75,11.4Zm29.78-40.36c.72.51,1.42,1.03,2.09,1.59,5.14,4.27,8.72,9.68,10.63,15.96h11.29v60.7h22.13v-60.7h23.92v-17.55h-70.07Z" fill="#D1AC99" stroke-width="0" />
+                                    <polygon points="445.68 20.45 425.34 20.45 425.34 8.18 435.51 0 445.68 8.18 445.68 20.45" fill="#D1AC99" stroke-width="0" />
+                                </g>
+                            </svg>
+                        </a>
+                    </div>
+                    <a class="my-btn toggleInquireModal" href="javascript:void(0);" name="Inquire Form">
+                        INQUIRE
+                        <svg id="PTP-Button-Arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 49.726">
+                            <path d="M24.863,0,0,20V50H49.726V20Z" transform="translate(50) rotate(90)" />
+                        </svg>
+                    </a>
+                </div>
+                <div class="border_h padding_h_20px info">
+                    <p>+90 123 456 78 90</p>
+                    <p>ŞİŞLİ / İSTANBUL</p>
+                </div>
+            </div>
+            <div class="col-lg-5 col-12">
+                <div class="links ms-lg-5">
+                    <div id="footer-page-links" class="padding_h_20px row">
+                        <a href="vision.html" class="col-6" name="Vision Link"> VISION </a>
+                        <a href="projects.html" class="col-6" name="Projects Link"> PROJECTS </a>
+                        <a href="insights.html" class="col-6" name="Insights Link"> INSIGHTS </a>
+                        <a href="reception.html" class="col-6" name="Reception Link"> RECEPTION </a>
+                        <a href="ecosystem.html" class="col-6" name="EcoSystem Link"> ECOSYSTEM </a>
+                        <a class="col-6 toggleInquireModal" href="javascript:void(0);" name="Contact Link">CONTACT</a>
+                    </div>
+                    <div id="footer-social-links" class="padding_h_20px border_h row">
+                        <a href="#" class="col-6" name="Whatsapp link">WHATSAPP</a>
+                        <a href="#" class="col-6" name="LinkedIn link">INSTAGRAM</a>
+                        <a href="#" class="col-6" name="Instagram link">FACEBOOK</a>
+                        <a href="#" class="col-6" name="Instagram link">LINKEDIN</a>
+                    </div>
+                </div>
+                <div class="to_top">
+                    <a href="#top">
+                        <p class="back-to-top">Back To Top</p>
+                        <svg id="back-to-top-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                            <circle cx="50" cy="50" r="50" fill="#cbe3e5" stroke-width="0" />
+                            <polygon points="69.48 74.86 69.48 25.14 39.48 25.14 19.48 50 39.48 74.86 69.48 74.86" fill="#80181a" stroke-width="0" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- INQUIRE MODAL -->
+    <div class="inquire" id="inquireModal">
+        <div class="inquire-header">
+            <h3>INQUIRE</h3>
+            <div id="exitInquireModal" class="button-close">
+                <svg id="fallback-button-close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 707.11 707.11">
+                    <g id="c">
+                        <rect x="-83.95" y="291.05" width="875" height="125" transform="translate(353.55 -146.45) rotate(45)" fill="#a3b6bc" stroke-width="0" />
+                        <rect x="-83.95" y="291.05" width="875" height="125" transform="translate(853.55 353.55) rotate(135)" fill="#a3b6bc" stroke-width="0" />
+                    </g>
+                </svg>
+            </div>
+        </div>
+        <form class="row inquire_form">
+            <div class="col-6">
+                <input type="text" placeholder="First Name*" />
+            </div>
+            <div class="col-6">
+                <input type="text" placeholder="Last Name*" />
+            </div>
+            <div class="col-6">
+                <input type="text" placeholder="Email*" />
+            </div>
+            <div class="col-6">
+                <input type="text" placeholder="Telephone" />
+            </div>
+            <div class="col-6">
+                <input type="text" placeholder="Choose Project" />
+            </div>
+            <div class="col-6">
+                <input type="text" placeholder="Your Company" />
+            </div>
+            <div class="col-12 mt-3">
+                <button type="submit" class="my-btn">
+                    SUBMIT
+                    <svg id="PTP-Button-Arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 49.726">
+                        <path d="M24.863,0,0,20V50H49.726V20Z" transform="translate(50) rotate(90)" />
+                    </svg>
+                </button>
+            </div>
+            <div class="col-12 mt-3">
+                <p>+90 123 456 78 90</p>
+                <p>SISLI / ISTANBUL</p>
+            </div>
+        </form>
+        <div id="thank-you-message" class="thank-you-hidden">
+            <div class="thank-you-message-container">
+                <h4>THANK YOU</h4>
+                <h5>for you inquiry!</h5>
+            </div>
+            <img src="/img/SVG/PTProje_Signature_4C.svg" alt="PTProje-Logo" />
+        </div>
+    </div>
+    <!-- Scripts -->
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/bootstrap-5.3.min.js"></script>
+    <script src="js/aos.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

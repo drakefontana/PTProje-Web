@@ -1633,12 +1633,95 @@ footer #back-to-top-icon {
     /* Standard syntax */
 }
 
+/* ------------------------------ RECEPTION PAGE ---------------------------- */
+
+/* Recpetion Hero Section */
+
+.page-reception #hero-feat {
+    width: 100vw;
+    height: 57.5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    z-index: -1; // To put it behind the content
+}
+
+.page-reception #hero-img {
+    object-fit: cover;
+    min-width: 100%;
+    min-height: auto;
+}
+
+/* Reception Info Section */
+.page-reception .info-section {
+    padding: 6vh 3vw;
+    border-bottom: solid var(--gray) 2px;
+}
+
+.page-reception .info-section h2 {
+    text-align: center;
+    font-weight: 800;
+    font-size: 1.9em;
+    text-transform: uppercase;
+}
+
+.page-reception .body-2col {
+    width: 100%;
+}
+
+.page-reception .info-section .body-2col p {
+    font-size: 1.25em;
+    font-weight: 400;
+    margin-bottom: 1em; /* Adjust this value to control spacing between paragraphs */
+}
+
+.page-reception .info-section .body-2col {
+    margin-top: 5vh; /* Common top margin */
+    -webkit-column-count: 2;
+    /* Chrome, Safari, Opera */
+    -moz-column-count: 2;
+    /* Firefox */
+    column-count: 2;
+    /* Standard syntax */
+    -webkit-column-gap: 4vw;
+    /* Chrome, Safari, Opera */
+    -moz-column-gap: 4vw;
+    /* Firefox */
+    column-gap: 4vw;
+    /* Standard syntax */
+}
+
+/* Autoplay Video Texture */
+
+.page-reception .video-section {
+    height: 60vh;
+    /* Adjust as needed */
+}
+
+.page-reception .video-horizontal {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+}
+
+/* Reception Accordion */
+.page-reception #accordion-4 {
+    margin-bottom: 0vh;
+}
+
+.page-reception #accordion-6 {
+    margin-bottom: 6vh;
+}
+
 /* ------------------------------ PROJECTS PAGE ---------------------------- */
 
 .page-projects .hero {
     /* New flex-direction only for the ecosystem page */
     flex-direction: row-reverse;
-    border-bottom: solid 2px var(--gray);
 }
 
 .page-projects .hero-nav {
