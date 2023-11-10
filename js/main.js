@@ -395,26 +395,77 @@ $(".more-content-toggler").click(function() {
     $("#videoModal").toggleClass("active");
 });
 
-// ============== Ecosystem Page -------------
+// ------------- Ecosystem Page -------------
 
 // Section Link Spacing
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function (e) {
-    // Check if the clicked link is inside the .to_top div
-    if (!this.closest('.to_top')) {
-      e.preventDefault();
-      const targetId = this.getAttribute('href');
-      const targetElement = document.querySelector(targetId);
+    anchor.addEventListener('click', function(e) {
+        // Check if the clicked link is inside the .to_top div
+        if (!this.closest('.to_top')) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href');
+            const targetElement = document.querySelector(targetId);
 
-      // Calculate the position you want to scroll to
-      const offsetTop = targetElement.getBoundingClientRect().top + window.pageYOffset - (window.innerHeight * 0.1);
+            // Calculate the position you want to scroll to
+            const offsetTop = targetElement.getBoundingClientRect().top + window.pageYOffset - (window.innerHeight * 0.1);
 
-      window.scrollTo({
-        top: offsetTop,
-        behavior: 'smooth'
-      });
+            window.scrollTo({
+                top: offsetTop,
+                behavior: 'smooth'
+            });
+        }
+        // If it's inside .to_top, let the default action proceed
+    });
+});
+
+// ---------------- Projects Page --------------
+
+// Hero Nav Background Image Hover
+document.addEventListener('DOMContentLoaded', function() {
+    // Function to change the hero image and caption
+    function changeHeroContent(projectId) {
+        // References to default elements
+        const defaultImage = document.getElementById('default-proj-feat-img');
+        const defaultCaption = document.getElementById('default-caption');
+
+        // Hide all images and captions
+        document.querySelectorAll('.ptp-projects-feat, .image-caption').forEach(element => {
+            element.classList.remove('active');
+            element.classList.remove('default-active');
+        });
+
+        if (projectId === 'default') {
+            // Show default elements
+            defaultImage.classList.add('default-active');
+            defaultCaption.classList.add('default-active');
+        } else {
+            // Show the selected image and caption
+            const selectedImage = document.getElementById(projectId + '-proj-feat-img');
+            const selectedCaption = document.getElementById(projectId + '-caption');
+            if (selectedImage && selectedCaption) {
+                selectedImage.classList.add('active');
+                selectedCaption.classList.add('active');
+            }
+            // Explicitly hide default elements
+            defaultImage.classList.remove('active');
+            defaultCaption.classList.remove('active');
+        }
     }
-    // If it's inside .to_top, let the default action proceed
-  });
+
+    // Initially set the default content
+    changeHeroContent('default');
+
+    // Attach event listeners to each nav item
+    document.querySelectorAll('.nav-item a').forEach(item => {
+        item.addEventListener('mouseenter', function() {
+            const projectId = this.getAttribute('href').split('.')[0];
+            changeHeroContent(projectId);
+        });
+    });
+
+    // Reset to default when not hovering over any nav item
+    document.querySelector('.hero-nav').addEventListener('mouseleave', function() {
+        changeHeroContent('default');
+    });
 });
 

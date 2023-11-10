@@ -363,17 +363,13 @@ header #loginMenu {
     border-left: var(--border-gray);
 }
 
-header .menu.open {
+header .menu .list {
+    padding: 4vh 3vw;
+    text-align: left;
     max-height: 86vh;
     /* You can adjust this value */
     overflow: auto;
     border-bottom: var(--border-gray);
-}
-
-header .menu .list {
-    padding: 4vh 3vw;
-    text-align: left;
-    border-top: var(--border-gray);
 }
 
 header .menu .list .my-btn {
@@ -1639,40 +1635,107 @@ footer #back-to-top-icon {
 
 /* ------------------------------ PROJECTS PAGE ---------------------------- */
 
-.projects {
-    background-image: url("../img/site_imgs/LittleBosphorus_feature_2.jpg");
-    background-size: cover;
-    background-color: var(--light_gray);
-    height: 100vh;
+.page-projects .hero {
+    /* New flex-direction only for the ecosystem page */
+    flex-direction: row-reverse;
+    border-bottom: solid 2px var(--gray);
+}
+
+.page-projects .hero-nav {
+    /* Specific order and alignment for the ecosystem page */
+    order: 1;
+}
+
+.page-projects .hero-nav a {
+    font-size: 2.25em;
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 3vw;
+    width: auto;
+    padding-top: 3vh;
+    padding-bottom: 3vh;
+}
+
+.page-projects section:target {
+  scroll-margin-top: 10vh;
+}
+
+.page-projects .nav-item-container {
+    /* Align items to the left on the ecosystem page */
+    align-items: flex-start;
+    gap: 0;
+    width: 100%;
+}
+
+.page-projects .nav-item {
+    border-bottom: solid 2px var(--gray);
+    width: 100%;
+    justify-content: flex-start;
+}
+
+.page-projects .nav-item:hover {
+    border-bottom: solid 2px var(--dark_red);
+}
+
+.page-projects .mainNav-Arrow {
+    /* Reflect the arrows only on the ecosystem page */
+    transform: scaleX(-1);
+    height: 1.5em;
+}
+
+.page-projects .mainNav-Arrow svg {
+    vertical-align: inherit;
+}
+
+.page-projects #hero-feat {
+    width: 60vw;
+    height: 86vh;
     position: relative;
+    /* This will be the reference for its absolutely positioned children */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
 }
 
-.projects .project-nav {
-    margin-left: 0;
+.page-projects .ptp-projects-feat {
+    /* Ensure the picture element is filling the container on the ecosystem page */
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    overflow: hidden; /* Add this to ensure no overflow if the image is larger than the container */
 }
 
-.project-nav {
-    padding: 80px 0px;
-    text-align: left;
-    margin-right: auto;
+.page-projects .ptp-projects-feat img {
+    object-fit: cover;
+    width: 100%; /* Change to 100% */
+    height: 100%; /* Ensure height is 100% */
+    object-position: center; /* Center the image */
 }
 
-.project-nav a {
-    font-size: 36px;
-    padding: 20px 60px;
-    border-bottom: var(--border-gray);
+.page-projects .image-caption {
+  text-transform: uppercase;
+  z-index: 2;
 }
 
-.project-nav a.active {
-    direction: rtl;
-    border-color: var(--dark_red);
+.page-projects .ptp-projects-feat,
+.page-projects .image-caption {
+    display: none;
+    /* Additional styling as needed */
 }
 
-.project-nav a:hover {
-    color: var(--dark_red);
-    border-color: var(--dark_red);
+.page-projects .ptp-projects-feat.active,
+.page-projects .image-caption.active,
+.page-projects .default-active {
+    display: block;
+    /* Adjust styles for active state as needed */
 }
 
+
+/* ------------------------------ PROJECT 1 PAGE ---------------------------- */
 
 /* Project Caorusel  */
 .project .carousel-indicators {
@@ -1701,8 +1764,6 @@ footer #back-to-top-icon {
     height: -moz-fit-content;
     height: fit-content;
 }
-
-/* ------------------------------ PROJECT 1 PAGE ---------------------------- */
 
 .project {
     background-color: var(--light_gray);
