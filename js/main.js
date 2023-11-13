@@ -469,3 +469,34 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+// ---------------- Individual Project Carousel Menu ----------
+document.addEventListener('DOMContentLoaded', function() {
+    // Function to change the displayed carousel
+    function changeDisplayedCarousel(carouselId) {
+        // Hide all carousels
+        document.querySelectorAll('.carousel').forEach(carousel => {
+            carousel.style.display = 'none';
+        });
+
+        // Show the selected carousel
+        const selectedCarousel = document.getElementById(carouselId);
+        if (selectedCarousel) {
+            selectedCarousel.style.display = 'block';
+        }
+    }
+
+    // Attach event listeners to each nav item
+    document.querySelectorAll('.nav-item a').forEach(item => {
+        item.addEventListener('click', function(event) {
+            event.preventDefault();
+            const carouselType = this.textContent.trim().toLowerCase().replace(/\s+/g, '-'); // Replace spaces with hyphens
+            const carouselId = `${carouselType}-carousel`;
+            changeDisplayedCarousel(carouselId);
+        });
+    });
+
+    // Initially display the exterior carousel
+    changeDisplayedCarousel('exterior-carousel');
+});
+
+
