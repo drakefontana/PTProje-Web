@@ -590,6 +590,7 @@ header .ptp-agency-logo p {
 
 .global-tagline .sec-1 {
     padding-right: 2vw;
+    min-height: 40vh;
 }
 
 .global-tagline .sec-1 h2 {
@@ -927,18 +928,6 @@ header .ptp-agency-logo p {
 .info-section {
     color: var(--brown);
 }
-
-.images-sec {
-    height: 300px;
-    overflow: hidden;
-}
-
-.images-sec img {
-    top: -280px;
-    position: relative;
-}
-
-.images-sec {}
 
 /* Bar Graph */
 .bar-graph {
@@ -1635,7 +1624,7 @@ footer #back-to-top-icon {
 
 /* ------------------------------ RECEPTION PAGE ---------------------------- */
 
-/* Recpetion Hero Section */
+/* Reception Hero Section */
 
 .page-reception #hero-feat {
     width: 100vw;
@@ -1715,6 +1704,158 @@ footer #back-to-top-icon {
 
 .page-reception #accordion-6 {
     margin-bottom: 6vh;
+}
+
+/* ------------------------------ Insights Page--------------------------- */
+
+/* Insights Hero Section */
+
+.page-insights #hero-feat {
+    width: 100vw;
+    height: 57.5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    z-index: -1; // To put it behind the content
+}
+
+.page-insights #hero-img {
+    object-fit: cover;
+    min-width: 100%;
+    min-height: auto;
+}
+
+/* Insights Image Texture */
+
+.page-insights #img-texture-cont {
+    width: 100vw;
+    height: 33vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.page-insights #text-img-item {
+    object-fit: cover;
+    min-width: 100%;
+    height: auto;
+    transform: translateY(16vh);
+}
+
+/* Insights Info Section */
+.page-insights .info-section {
+    padding: 6vh 3vw;
+    border-bottom: solid var(--gray) 2px;
+}
+
+.page-insights .info-section h2 {
+    text-align: center;
+    font-weight: 800;
+    font-size: 1.9em;
+    text-transform: uppercase;
+}
+
+.page-insights .body-2col {
+    width: 100%;
+}
+
+.page-insights .info-section .body-2col p {
+    font-size: 1.25em;
+    font-weight: 400;
+    margin-bottom: 1em; /* Adjust this value to control spacing between paragraphs */
+}
+
+.page-insights .info-section .body-2col {
+    margin-top: 5vh; /* Common top margin */
+    -webkit-column-count: 2;
+    /* Chrome, Safari, Opera */
+    -moz-column-count: 2;
+    /* Firefox */
+    column-count: 2;
+    /* Standard syntax */
+    -webkit-column-gap: 4vw;
+    /* Chrome, Safari, Opera */
+    -moz-column-gap: 4vw;
+    /* Firefox */
+    column-gap: 4vw;
+    /* Standard syntax */
+}
+
+/* Insights Accordion */
+.page-insights #accordion-1 {
+    margin-bottom: 6vh;
+}
+
+.page-insights .my-accordion .accordion-collapse {
+    display: block !important; /* Always show the content */
+}
+
+
+/* Agent Team Section */
+.agents {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 70px;
+    flex-wrap: wrap;
+}
+
+.agent {
+    background-color: white;
+    padding: 20px;
+    width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    color: var(--brown);
+}
+
+.agent h4 {
+    margin-top: 40px;
+    margin-bottom: 15px;
+    font-size: 30px;
+}
+
+.agent hr {
+    border: 0;
+    border-bottom: var(--border-gray);
+    padding: 0;
+    opacity: 1;
+    width: 60%;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+.agent span {
+    font-style: italic;
+    font-size: 22px;
+}
+
+.agent img {
+    margin: auto;
+}
+
+/* Stats Section */
+.page-insights #biz-insights-cont {
+    padding: 6vh 3vw;
+    color: var(--brown);
+}
+
+.page-insights #biz-insights-sect {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-right: 2vw;
+}
+
+.page-insights .bar-graph {
+    transform: translateX(0vw);
+    transform: translateY(2vh);
 }
 
 /* ------------------------------ PROJECTS PAGE ---------------------------- */
@@ -2157,76 +2298,6 @@ section {
     margin-top: auto;
     margin-bottom: 5vh;
     /* Positioning the logo 5vh from the bottom */
-}
-
-/* ------------------------------info Page--------------------------- */
-
-.common-sec .carousel-control-next,
-.common-sec .carousel-control-prev {
-    top: 200px;
-    height: fit-content;
-}
-
-.carousel-item,
-.carousel,
-.carousel-inner {
-    height: 100%;
-}
-
-/* agents */
-.agents {
-    padding: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 70px;
-    flex-wrap: wrap;
-}
-
-.agent {
-    background-color: white;
-    padding: 20px;
-    width: 300px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    text-align: center;
-    color: var(--brown);
-}
-
-.agent h4 {
-    margin-top: 40px;
-    margin-bottom: 15px;
-    font-size: 30px;
-}
-
-.agent hr {
-    border: 0;
-    border-bottom: var(--border-gray);
-    padding: 0;
-    opacity: 1;
-    width: 60%;
-    margin: auto;
-    margin-bottom: 20px;
-}
-
-.agent span {
-    font-style: italic;
-    font-size: 22px;
-}
-
-.agent img {
-    margin: auto;
-}
-
-/* -------------------BUSINESS PAGE--------------------- */
-
-.b2b-text {
-    margin: 0;
-    padding-bottom: 20px;
-    font-size: 20px;
-    line-height: 1.2;
 }
 
 /* ------------------- MEDIA QUERIES ------------------ */
