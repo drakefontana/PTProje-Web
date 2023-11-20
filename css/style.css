@@ -522,7 +522,7 @@ header .ptp-agency-logo p {
     flex-direction: column;
 }
 
-.hero-nav a {
+.hero-nav span {
     display: block;
     height: fit-content;
     font-size: 4em;
@@ -533,17 +533,22 @@ header .ptp-agency-logo p {
     color: var(--gray);
 }
 
+.hero-nav a {
+    display: flex;
+    align-items: center;
+}
+
 .nav-item {
     display: flex;
     align-items: center;
     justify-content: flex-end;
 }
 
-.hero-nav a:hover {
+.hero-nav span:hover {
     color: var(--dark_red);
 }
 
-.hero-nav a.active {
+.hero-nav span.active {
     color: var(--dark_red);
 }
 
@@ -1291,7 +1296,7 @@ footer #back-to-top-icon {
     order: 1;
 }
 
-.page-ecosystem .hero-nav a {
+.page-ecosystem .hero-nav span {
     font-size: 2.25em;
     display: flex;
     justify-content: flex-start;
@@ -1299,6 +1304,12 @@ footer #back-to-top-icon {
     width: auto;
     padding-top: 3vh;
     padding-bottom: 3vh;
+}
+
+.page-ecosystem .hero-nav a {
+    display: flex;
+    align-items: center;
+    width: 100%;
 }
 
 .page-ecosystem section:target {

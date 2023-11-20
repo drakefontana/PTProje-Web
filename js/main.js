@@ -4,6 +4,153 @@ $("a[href='#top']").click(function() {
     return false;
 });
 
+// Form Submission
+var ptrn = [];
+
+ptrn['isEmail'] = /^[a-zA-Z]+[a-zA-Z0-9._]+@[a-zA-Z]+\.[a-zA-Z.]{2,7}$/;
+ptrn['isNumber'] = /^[0-9]$/;
+ptrn['isInteger'] = /^[\s\d]$/;
+ptrn['isFloat'] = /^[0-9]?\d+(\.\d+)?$/;
+ptrn['isVersion'] = /^(?:(\d+)\.)?(?:(\d+)\.)?(\*|\d+)$/
+ptrn['isPassword'] = /^[A-Za-z0-9@#$%^&*()!_-]{4,32}$/;
+ptrn['isParagraph'] = /^[^()]{40,255}$/;
+ptrn['isEmpty'] = /^[^()]{3,255}$/; ///^((?!undefined).){3,255}$/;
+ptrn['isSelectEmpty'] = /^[^()]{1,255}$/;
+ptrn['isZipcode'] = /^\+[0-9]{1,4}$/;
+ptrn['isPhone'] = /^[\s\d]{9,11}$/;
+ptrn['setNumber'] = /^[^\d|\-+|\.+]$/;
+
+var errorMsg = [];
+
+errorMsg['isEmail'] = 'Please enter a valid Email';
+errorMsg['isNumber'] = 'Please enter a valid number';
+errorMsg['isInteger'] = 'Please enter a valid number';
+errorMsg['isFloat'] = 'Please enter a number with a comma';
+errorMsg['isVersion'] = 'Please enter a valid version number';
+errorMsg['isPassword'] = 'A password can contain numbers, letters and @ # $% ^ & * ()! _ -'; //Only Alphabet, Numbers and symboles @ # $ % ^ & * ( ) ! _ - allowed;
+errorMsg['isParagraph'] = 'Text is too short or longer than 255 characters'; //Paragraph should be between 40 and 255 character;
+errorMsg['isEmpty'] = 'This field cannot be empty';
+errorMsg['isSelectEmpty'] = 'Please select an item from the list';
+errorMsg['isZipcode'] = 'Code';
+errorMsg['isPhone'] = 'Please enter a valid phone number';
+errorMsg['setNumber'] = 'Please enter a valid number';
+
+function _setCvrBtn(tar, param) {
+    $(tar).attr("disabled", param);
+}
+
+function chk(e, tar, form) {
+    var isError = '';
+    if (typeof tar === 'object') {
+        for (var key in tar) {
+            var elm = $(form + ' #' + key);
+            if (ptrn[tar[key]].test($(elm).val())) {
+                _setError(elm, '', true);
+            } else {
+                _setError(elm, errorMsg[tar[key]]);
+                isError += tar[key]
+            }
+        }
+    } else {
+        if (ptrn[tar].test(e.value)) {
+            _setError(e, '', true);
+        } else {
+            _setError(e, errorMsg[tar]);
+            isError += tar
+        }
+    }
+    return isError.length > 0 ? false : true;
+}
+
+
+function _setError(elm, msg, clr) {
+
+    !msg ? msg = "" : msg;
+    !clr ? clr = false : clr;
+
+    var tar = $(elm).parent();
+    if (elm.type == "checkbox") {
+        tar = $(elm).parent().parent().parent()
+    }
+    if ($('.error-message', tar).html() == undefined) {
+        $(tar).append('<div class="error-message"></div>');
+    }
+    $('.error-message', tar).text(msg)
+}
+
+function _getErrors(obj, form_name) {
+    (form_name[0] == '#' || form_name[0] == '.') ? form_name: form_name = '#' + form_name;
+    $(".error-message").text('');
+    for (var prop in obj) {
+        var value = obj[prop];
+        if (typeof obj[prop] !== 'object') {
+            continue;
+        }
+        var arr = $.map(value, function(val, index) {
+            return [val];
+        });
+        var elm = $(form_name + ' [name="' + prop + '"]');
+        if (Array.isArray(elm)) {
+            _setError($(form_name + ' [name="' + prop + '"]')[0], arr[0])
+        } else {
+            _setError($(form_name + ' [name="' + prop + '"]'), arr[0])
+        }
+    }
+}
+function doSend(form) {
+    
+    !form ? form = '#form' : form;
+
+    var isValid = chk(false, {
+        'first-name-input': 'isEmpty',
+        'last-name-input': 'isEmpty',
+        'email-input': 'isEmail',
+    }, form);
+
+    if (isValid) {
+        _setCvrBtn('#form_btn', true);
+        $.ajax({
+            url: 'send.php',
+            method: "POST",
+            data: {
+                first_name: $(form + ' #first-name-input').val(),
+                last_name: $(form + ' #last-name-input').val(),
+                telephone: $(form + ' #telephone-input').val(),
+                email: $(form + ' #email-input').val().toLowerCase(),
+                project: $(form + ' #project-input').val(),
+                company: $(form + ' #company-input').val(),
+                id: 1,
+            },
+        })
+        .done(function(res) {
+            _setCvrBtn('#form_btn', false);
+            var response = JSON.parse(res)
+            if (response.status == 'SUCCESS') {
+                
+                // On successful "submission"
+                $('.inquire_form').hide(); // Hide the form
+                $('#thank-you-message').removeClass('thank-you-hidden').addClass('thank-you-visible'); // Show thank-you message
+
+                setTimeout(function() {
+                    $('#thank-you-message').removeClass('thank-you-visible').addClass('thank-you-hidden'); // Hide thank-you message
+                    $('.inquire_form').show(); // Show the form again
+                    $('.inquire_form')[0].reset(); // Clear the form
+                    $("#inquireModal").removeClass("active"); // Close the form automatically
+                }, 2000); // 2 seconds
+
+            } else {
+                alert('Sending failed, please try again.');
+            }
+        })
+        .fail(function(err) {
+            _setCvrBtn('#form_btn', false);
+            console.log("error " + err);
+        })
+    }else{
+        alert('Please fill required field and try again')
+    }
+}
+
 // Inquire Modal Toggle
 $(document).ready(function() {
     // Initialize Lottie animation for 'x' close button
@@ -59,25 +206,23 @@ $(document).ready(function() {
     // Form submission logic
     $('.inquire_form').submit(function(e) {
         e.preventDefault();
-        // Simulate AJAX call or other form submission logic here
-        // ...
+        return doSend();
+    //     // Simulate AJAX call or other form submission logic here
+    //     // ...
 
-        // On successful "submission"
-        $('.inquire_form').hide(); // Hide the form
-        $('#thank-you-message').removeClass('thank-you-hidden').addClass('thank-you-visible'); // Show thank-you message
+    //     // On successful "submission"
+    //     $('.inquire_form').hide(); // Hide the form
+    //     $('#thank-you-message').removeClass('thank-you-hidden').addClass('thank-you-visible'); // Show thank-you message
 
-        setTimeout(function() {
-            $('#thank-you-message').removeClass('thank-you-visible').addClass('thank-you-hidden'); // Hide thank-you message
-            $('.inquire_form').show(); // Show the form again
-            $('.inquire_form')[0].reset(); // Clear the form
-            $("#inquireModal").removeClass("active"); // Close the form automatically
-        }, 2000); // 2 seconds
+    //     setTimeout(function() {
+    //         $('#thank-you-message').removeClass('thank-you-visible').addClass('thank-you-hidden'); // Hide thank-you message
+    //         $('.inquire_form').show(); // Show the form again
+    //         $('.inquire_form')[0].reset(); // Clear the form
+    //         $("#inquireModal").removeClass("active"); // Close the form automatically
+    //     }, 2000); // 2 seconds
     });
 
 });
-
-// Form Submission
-
 
 // AOS Init
 AOS.init();

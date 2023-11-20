@@ -130,42 +130,68 @@
     <!-- Hero Section -->
     <section class="hero">
         <picture id="hero-feat">
-            <!-- For high-resolution screens on devices with min-width 768px -->
-            <source media="(min-width: 768px) and (min-resolution: 192dpi)" srcset="/img/PTP-Home-Feat/PTP-Istanbul-Feat.webp" type="image/webp">
-            <source media="(min-width: 768px) and (min-resolution: 192dpi)" srcset="/img/PTP-Home-Feat/PTP-Istanbul-Feat.jpg" type="image/jpeg">
-            <!-- For devices with min-width 768px -->
-            <source media="(min-width: 768px)" srcset="/img/PTP-Home-Feat/PTP-Istanbul-Feat.webp" type="image/webp">
-            <source media="(min-width: 768px)" srcset="/img/PTP-Home-Feat/PTP-Istanbul-Feat.jpg" type="image/jpeg">
-            <!-- Default -->
-            <source srcset="/img/PTP-Home-Feat/PTP-Istanbul-Feat-Sm.webp" type="image/webp">
-            <img id="hero-img" src="/img/PTP-Home-Feat/PTP-Istanbul-Feat-Sm.jpg" type="image/jpeg" alt="ptp-istanbul-img">
+            <!-- For very large screens (e.g., 4K) -->
+            <source media="(min-width: 2560px)" srcset="/img/PTP-Home-Feat/PTP-Istanbul-Feat-4k.webp" type="image/webp" sizes="60vw">
+            <source media="(min-width: 2560px)" srcset="/img/PTP-Home-Feat/PTP-Istanbul-Feat-4k.jpg" type="image/jpeg" sizes="60vw">
+            <!-- For large desktop screens -->
+            <source media="(min-width: 1920px)" srcset="/img/PTP-Home-Feat/PTP-Istanbul-Feat-Lg.webp" type="image/webp" sizes="60vw">
+            <source media="(min-width: 1920px)" srcset="/img/PTP-Home-Feat/PTP-Istanbul-Feat-Lg.jpg" type="image/jpeg" sizes="60vw">
+            <!-- For standard desktop screens -->
+            <source media="(min-width: 1440px)" srcset="/img/PTP-Home-Feat/PTP-Istanbul-Feat-Md.webp" type="image/webp" sizes="60vw">
+            <source media="(min-width: 1440px)" srcset="/img/PTP-Home-Feat/PTP-Istanbul-Feat-Md.jpg" type="image/jpeg" sizes="60vw">
+            <!-- For small desktop / large tablet -->
+            <source media="(min-width: 1024px)" srcset="/img/PTP-Home-Feat/PTP-Istanbul-Feat-Sm.webp" type="image/webp" sizes="60vw">
+            <source media="(min-width: 1024px)" srcset="/img/PTP-Home-Feat/PTP-Istanbul-Feat-Sm.jpg" type="image/jpeg" sizes="60vw">
+            <!-- For tablets -->
+            <source media="(min-width: 768px)" srcset="/img/PTP-Home-Feat/PTP-Istanbul-Feat-Tab.webp" type="image/webp" sizes="60vw">
+            <source media="(min-width: 768px)" srcset="/img/PTP-Home-Feat/PTP-Istanbul-Feat-Tab.jpg" type="image/jpeg" sizes="60vw">
+            <!-- For large phones -->
+            <source media="(min-width: 600px)" srcset="/img/PTP-Home-Feat/PTP-Istanbul-Feat-LgPhone.webp" type="image/webp" sizes="100vw">
+            <source media="(min-width: 600px)" srcset="/img/PTP-Home-Feat/PTP-Istanbul-Feat-LgPhone.jpg" type="image/jpeg" sizes="100vw">
+            <!-- For small phones -->
+            <source media="(min-width: 320px)" srcset="/img/PTP-Home-Feat/PTP-Istanbul-Feat-SmPhone.webp" type="image/webp" sizes="100vw">
+            <source media="(min-width: 320px)" srcset="/img/PTP-Home-Feat/PTP-Istanbul-Feat-SmPhone.jpg" type="image/jpeg" sizes="100vw">
+            <!-- Default for mobile and fallback -->
+            <img id="hero-img" src="/img/PTP-Home-Feat/PTP-Istanbul-Feat-Def.jpg" srcset="/img/PTP-Home-Feat/PTP-Istanbul-Feat-Def.webp" type="image/webp" alt="ptp-istanbul-img">
         </picture>
         <div class="hero-nav">
             <div class="nav-item-container">
-                <div class="nav-item">
-                    <div class="mainNav-Arrow" id="mainNav-Arrow-1"></div>
-                    <a href="vision.html">Vision</a>
-                </div>
-                <div class="nav-item">
-                    <div class="mainNav-Arrow" id="mainNav-Arrow-2"></div>
-                    <a href="projects.html">PROJECTS</a>
-                </div>
-                <div class="nav-item">
-                    <div class="mainNav-Arrow" id="mainNav-Arrow-3"></div>
-                    <a href="insights.html">INSIGHTS</a>
-                </div>
-                <div class="nav-item">
-                    <div class="mainNav-Arrow" id="mainNav-Arrow-4"></div>
-                    <a href="reception.html">RECEPTION</a>
-                </div>
-                <div class="nav-item">
-                    <div class="mainNav-Arrow" id="mainNav-Arrow-5"></div>
-                    <a href="ecosystem.html">ECOSYSTEM</a>
-                </div>
-                <div class="nav-item">
-                    <div class="mainNav-Arrow" id="mainNav-Arrow-6"></div>
-                    <a class="toggleInquireModal" href="javascript:void(0);" name="Contact Link">CONTACT</a>
-                </div>
+                <a href="vision.html">
+                    <div class="nav-item">
+                        <div class="mainNav-Arrow" id="mainNav-Arrow-1"></div>
+                        <span>Vision</span>
+                    </div>
+                </a>
+                <a href="projects.html">
+                    <div class="nav-item">
+                        <div class="mainNav-Arrow" id="mainNav-Arrow-2"></div>
+                        <span>PROJECTS</span>
+                    </div>
+                </a>
+                <a href="insights.html">
+                    <div class="nav-item">
+                        <div class="mainNav-Arrow" id="mainNav-Arrow-3"></div>
+                        <span>INSIGHTS</span>
+                    </div>
+                </a>
+                <a href="reception.html">
+                    <div class="nav-item">
+                        <div class="mainNav-Arrow" id="mainNav-Arrow-4"></div>
+                        <span>RECEPTION</span>
+                    </div>
+                </a>
+                <a href="ecosystem.html">
+                    <div class="nav-item">
+                        <div class="mainNav-Arrow" id="mainNav-Arrow-5"></div>
+                        <span>ECOSYSTEM</span>
+                    </div>
+                </a>
+                <a class="toggleInquireModal" href="javascript:void(0);" name="Contact Link">
+                    <div class="nav-item">
+                        <div class="mainNav-Arrow" id="mainNav-Arrow-6"></div>
+                        <span>CONTACT</span>
+                    </div>
+                </a>
             </div>
         </div>
         <p class="image-caption">HALIC, İSTANBUL</p>
@@ -270,9 +296,27 @@
                                 <a href="little-bosphorus.html" class="building" id="portfolio-1">
                                     <div class="building-image">
                                         <picture>
-                                            <source srcset="img/Portfolio-Slider/PortfolioSlider-LittleBosphorus.webp" type="image/webp">
-                                            <source srcset="img/Portfolio-Slider/PortfolioSlider-LittleBosphorus.jpg" type="image/jpeg">
-                                            <img src="img/Portfolio-Slider/PortfolioSlider-LittleBosphorus.jpg" type="image/jpeg" alt="little-bosphorus-cover" />
+                                            <!-- For very large screens (e.g., 4K) -->
+                                            <!-- For large desktop screens -->
+                                            <source media="(min-width: 1920px)" srcset="/img/Portfolio-Slider/PortfolioSlider-LittleBosphorus-Lg.webp" type="image/webp" sizes="40vw">
+                                            <source media="(min-width: 1920px)" srcset="/img/Portfolio-Slider/PortfolioSlider-LittleBosphorus-Lg.jpg" type="image/jpeg" sizes="40vw">
+                                            <!-- For standard desktop screens -->
+                                            <source media="(min-width: 1440px)" srcset="/img/Portfolio-Slider/PortfolioSlider-LittleBosphorus-Md.webp" type="image/webp" sizes="40vw">
+                                            <source media="(min-width: 1440px)" srcset="/img/Portfolio-Slider/PortfolioSlider-LittleBosphorus-Md.jpg" type="image/jpeg" sizes="40vw">
+                                            <!-- For small desktop / large tablet -->
+                                            <source media="(min-width: 1024px)" srcset="/img/Portfolio-Slider/PortfolioSlider-LittleBosphorus-Sm.webp" type="image/webp" sizes="40vw">
+                                            <source media="(min-width: 1024px)" srcset="/img/Portfolio-Slider/PortfolioSlider-LittleBosphorus-Sm.jpg" type="image/jpeg" sizes="40vw">
+                                            <!-- For tablets -->
+                                            <source media="(min-width: 768px)" srcset="/img/Portfolio-Slider/PortfolioSlider-LittleBosphorus-Tab.webp" type="image/webp" sizes="60vw">
+                                            <source media="(min-width: 768px)" srcset="/img/Portfolio-Slider/PortfolioSlider-LittleBosphorus-Tab.jpg" type="image/jpeg" sizes="40vw">
+                                            <!-- For large phones -->
+                                            <source media="(min-width: 600px)" srcset="/img/Portfolio-Slider/PortfolioSlider-LittleBosphorus-LgPhone.webp" type="image/webp" sizes="80vw">
+                                            <source media="(min-width: 600px)" srcset="/img/Portfolio-Slider/PortfolioSlider-LittleBosphorus-LgPhone.jpg" type="image/jpeg" sizes="80vw">
+                                            <!-- For small phones -->
+                                            <source media="(min-width: 320px)" srcset="/img/Portfolio-Slider/PortfolioSlider-LittleBosphorus-SmPhone.webp" type="image/webp" sizes="80vw">
+                                            <source media="(min-width: 320px)" srcset="/img/Portfolio-Slider/PortfolioSlider-LittleBosphorus-SmPhone.jpg" type="image/jpeg" sizes="80vw">
+                                            <!-- Default for mobile and fallback -->
+                                            <img id="hero-img" src="/img/Portfolio-Slider/PortfolioSlider-LittleBosphorus-Def.jpg" srcset="/img/Portfolio-Slider/PortfolioSlider-LittleBosphorus-Def.webp" type="image/webp" alt="little-bosphorus-cover">
                                         </picture>
                                     </div>
                                     <h4 class="building-title">LITTLE BOSPHORUS</h4>
@@ -281,9 +325,27 @@
                                 <a href="senna-park.html" class="building" id="portfolio-2">
                                     <div class="building-image">
                                         <picture>
-                                            <source srcset="img/Portfolio-Slider/PortfolioSlider-SennaPark.webp" type="image/webp">
-                                            <source srcset="img/Portfolio-Slider/PortfolioSlider-SennaPark.jpg" type="image/jpeg">
-                                            <img src="img/Portfolio-Slider/PortfolioSlider-SennaPark.jpg" type="image/jpeg" alt="senna-park-cover" />
+                                            <!-- For very large screens (e.g., 4K) -->
+                                            <!-- For large desktop screens -->
+                                            <source media="(min-width: 1920px)" srcset="/img/Portfolio-Slider/PortfolioSlider-SennaPark-Lg.webp" type="image/webp" sizes="40vw">
+                                            <source media="(min-width: 1920px)" srcset="/img/Portfolio-Slider/PortfolioSlider-SennaPark-Lg.jpg" type="image/jpeg" sizes="40vw">
+                                            <!-- For standard desktop screens -->
+                                            <source media="(min-width: 1440px)" srcset="/img/Portfolio-Slider/PortfolioSlider-SennaPark-Md.webp" type="image/webp" sizes="40vw">
+                                            <source media="(min-width: 1440px)" srcset="/img/Portfolio-Slider/PortfolioSlider-SennaPark-Md.jpg" type="image/jpeg" sizes="40vw">
+                                            <!-- For small desktop / large tablet -->
+                                            <source media="(min-width: 1024px)" srcset="/img/Portfolio-Slider/PortfolioSlider-SennaPark-Sm.webp" type="image/webp" sizes="40vw">
+                                            <source media="(min-width: 1024px)" srcset="/img/Portfolio-Slider/PortfolioSlider-SennaPark-Sm.jpg" type="image/jpeg" sizes="40vw">
+                                            <!-- For tablets -->
+                                            <source media="(min-width: 768px)" srcset="/img/Portfolio-Slider/PortfolioSlider-SennaPark-Tab.webp" type="image/webp" sizes="60vw">
+                                            <source media="(min-width: 768px)" srcset="/img/Portfolio-Slider/PortfolioSlider-SennaPark-Tab.jpg" type="image/jpeg" sizes="40vw">
+                                            <!-- For large phones -->
+                                            <source media="(min-width: 600px)" srcset="/img/Portfolio-Slider/PortfolioSlider-SennaPark-LgPhone.webp" type="image/webp" sizes="80vw">
+                                            <source media="(min-width: 600px)" srcset="/img/Portfolio-Slider/PortfolioSlider-SennaPark-LgPhone.jpg" type="image/jpeg" sizes="80vw">
+                                            <!-- For small phones -->
+                                            <source media="(min-width: 320px)" srcset="/img/Portfolio-Slider/PortfolioSlider-SennaPark-SmPhone.webp" type="image/webp" sizes="80vw">
+                                            <source media="(min-width: 320px)" srcset="/img/Portfolio-Slider/PortfolioSlider-SennaPark-SmPhone.jpg" type="image/jpeg" sizes="80vw">
+                                            <!-- Default for mobile and fallback -->
+                                            <img id="hero-img" src="/img/Portfolio-Slider/PortfolioSlider-SennaPark-Def.jpg" srcset="/img/Portfolio-Slider/PortfolioSlider-SennaPark-Def.webp" type="image/webp" alt="senna-park-cover">
                                         </picture>
                                     </div>
                                     <h4 class="building-title">SENNA PARK</h4>
@@ -292,9 +354,27 @@
                                 <a href="marmara-majesty.html" class="building" id="portfolio-3">
                                     <div class="building-image">
                                         <picture>
-                                            <source srcset="img/Portfolio-Slider/PortfolioSlider-MarmaraMajesty.webp" type="image/webp">
-                                            <source srcset="img/Portfolio-Slider/PortfolioSlider-MarmaraMajesty.jpg" type="image/jpeg">
-                                            <img src="img/Portfolio-Slider/PortfolioSlider-MarmaraMajesty.jpg" type="image/jpeg" alt="marmara-majesty-cover" />
+                                            <!-- For very large screens (e.g., 4K) -->
+                                            <!-- For large desktop screens -->
+                                            <source media="(min-width: 1920px)" srcset="/img/Portfolio-Slider/PortfolioSlider-MarmaraMajesty-Lg.webp" type="image/webp" sizes="40vw">
+                                            <source media="(min-width: 1920px)" srcset="/img/Portfolio-Slider/PortfolioSlider-MarmaraMajesty-Lg.jpg" type="image/jpeg" sizes="40vw">
+                                            <!-- For standard desktop screens -->
+                                            <source media="(min-width: 1440px)" srcset="/img/Portfolio-Slider/PortfolioSlider-MarmaraMajesty-Md.webp" type="image/webp" sizes="40vw">
+                                            <source media="(min-width: 1440px)" srcset="/img/Portfolio-Slider/PortfolioSlider-MarmaraMajesty-Md.jpg" type="image/jpeg" sizes="40vw">
+                                            <!-- For small desktop / large tablet -->
+                                            <source media="(min-width: 1024px)" srcset="/img/Portfolio-Slider/PortfolioSlider-MarmaraMajesty-Sm.webp" type="image/webp" sizes="40vw">
+                                            <source media="(min-width: 1024px)" srcset="/img/Portfolio-Slider/PortfolioSlider-MarmaraMajesty-Sm.jpg" type="image/jpeg" sizes="40vw">
+                                            <!-- For tablets -->
+                                            <source media="(min-width: 768px)" srcset="/img/Portfolio-Slider/PortfolioSlider-MarmaraMajesty-Tab.webp" type="image/webp" sizes="60vw">
+                                            <source media="(min-width: 768px)" srcset="/img/Portfolio-Slider/PortfolioSlider-MarmaraMajesty-Tab.jpg" type="image/jpeg" sizes="40vw">
+                                            <!-- For large phones -->
+                                            <source media="(min-width: 600px)" srcset="/img/Portfolio-Slider/PortfolioSlider-MarmaraMajesty-LgPhone.webp" type="image/webp" sizes="80vw">
+                                            <source media="(min-width: 600px)" srcset="/img/Portfolio-Slider/PortfolioSlider-MarmaraMajesty-LgPhone.jpg" type="image/jpeg" sizes="80vw">
+                                            <!-- For small phones -->
+                                            <source media="(min-width: 320px)" srcset="/img/Portfolio-Slider/PortfolioSlider-MarmaraMajesty-SmPhone.webp" type="image/webp" sizes="80vw">
+                                            <source media="(min-width: 320px)" srcset="/img/Portfolio-Slider/PortfolioSlider-MarmaraMajesty-SmPhone.jpg" type="image/jpeg" sizes="80vw">
+                                            <!-- Default for mobile and fallback -->
+                                            <img id="hero-img" src="/img/Portfolio-Slider/PortfolioSlider-MarmaraMajesty-Def.jpg" srcset="/img/Portfolio-Slider/PortfolioSlider-MarmaraMajesty-Def.webp" type="image/webp" alt="marmara-majesty-cover">
                                         </picture>
                                     </div>
                                     <h4 class="building-title">MARMARA MAJESTY</h4>
@@ -303,9 +383,27 @@
                                 <a href="halic-heights.html" class="building" id="portfolio-4">
                                     <div class="building-image">
                                         <picture>
-                                            <source srcset="img/Portfolio-Slider/PortfolioSlider-HalicHeights.webp" type="image/webp">
-                                            <source srcset="img/Portfolio-Slider/PortfolioSlider-HalicHeights.jpg" type="image/jpeg">
-                                            <img src="img/Portfolio-Slider/PortfolioSlider-HalicHeights.jpg" type="image/jpeg" alt="halic-heights-cover" />
+                                            <!-- For very large screens (e.g., 4K) -->
+                                            <!-- For large desktop screens -->
+                                            <source media="(min-width: 1920px)" srcset="/img/Portfolio-Slider/PortfolioSlider-HalicHeights-Lg.webp" type="image/webp" sizes="40vw">
+                                            <source media="(min-width: 1920px)" srcset="/img/Portfolio-Slider/PortfolioSlider-HalicHeights-Lg.jpg" type="image/jpeg" sizes="40vw">
+                                            <!-- For standard desktop screens -->
+                                            <source media="(min-width: 1440px)" srcset="/img/Portfolio-Slider/PortfolioSlider-HalicHeights-Md.webp" type="image/webp" sizes="40vw">
+                                            <source media="(min-width: 1440px)" srcset="/img/Portfolio-Slider/PortfolioSlider-HalicHeights-Md.jpg" type="image/jpeg" sizes="40vw">
+                                            <!-- For small desktop / large tablet -->
+                                            <source media="(min-width: 1024px)" srcset="/img/Portfolio-Slider/PortfolioSlider-HalicHeights-Sm.webp" type="image/webp" sizes="40vw">
+                                            <source media="(min-width: 1024px)" srcset="/img/Portfolio-Slider/PortfolioSlider-HalicHeights-Sm.jpg" type="image/jpeg" sizes="40vw">
+                                            <!-- For tablets -->
+                                            <source media="(min-width: 768px)" srcset="/img/Portfolio-Slider/PortfolioSlider-HalicHeights-Tab.webp" type="image/webp" sizes="60vw">
+                                            <source media="(min-width: 768px)" srcset="/img/Portfolio-Slider/PortfolioSlider-HalicHeights-Tab.jpg" type="image/jpeg" sizes="40vw">
+                                            <!-- For large phones -->
+                                            <source media="(min-width: 600px)" srcset="/img/Portfolio-Slider/PortfolioSlider-HalicHeights-LgPhone.webp" type="image/webp" sizes="80vw">
+                                            <source media="(min-width: 600px)" srcset="/img/Portfolio-Slider/PortfolioSlider-HalicHeights-LgPhone.jpg" type="image/jpeg" sizes="80vw">
+                                            <!-- For small phones -->
+                                            <source media="(min-width: 320px)" srcset="/img/Portfolio-Slider/PortfolioSlider-HalicHeights-SmPhone.webp" type="image/webp" sizes="80vw">
+                                            <source media="(min-width: 320px)" srcset="/img/Portfolio-Slider/PortfolioSlider-HalicHeights-SmPhone.jpg" type="image/jpeg" sizes="80vw">
+                                            <!-- Default for mobile and fallback -->
+                                            <img id="hero-img" src="/img/Portfolio-Slider/PortfolioSlider-HalicHeights-Def.jpg" srcset="/img/Portfolio-Slider/PortfolioSlider-HalicHeights-Def.webp" type="image/webp" alt="halic-heights-cover">
                                         </picture>
                                     </div>
                                     <h4 class="building-title">HALİÇ HEIGHTS</h4>
@@ -314,9 +412,27 @@
                                 <a href="uhouse.html" class="building" id="portfolio-5">
                                     <div class="building-image">
                                         <picture>
-                                            <source srcset="img/Portfolio-Slider/PortfolioSlider-UHouse.webp" type="image/webp">
-                                            <source srcset="img/Portfolio-Slider/PortfolioSlider-UHouse.jpg" type="image/jpeg">
-                                            <img src="img/Portfolio-Slider/PortfolioSlider-UHouse.jpg" type="image/jpeg" alt="uhouse-cover" />
+                                            <!-- For very large screens (e.g., 4K) -->
+                                            <!-- For large desktop screens -->
+                                            <source media="(min-width: 1920px)" srcset="/img/Portfolio-Slider/PortfolioSlider-UHouse-Lg.webp" type="image/webp" sizes="40vw">
+                                            <source media="(min-width: 1920px)" srcset="/img/Portfolio-Slider/PortfolioSlider-UHouse-Lg.jpg" type="image/jpeg" sizes="40vw">
+                                            <!-- For standard desktop screens -->
+                                            <source media="(min-width: 1440px)" srcset="/img/Portfolio-Slider/PortfolioSlider-UHouse-Md.webp" type="image/webp" sizes="40vw">
+                                            <source media="(min-width: 1440px)" srcset="/img/Portfolio-Slider/PortfolioSlider-UHouse-Md.jpg" type="image/jpeg" sizes="40vw">
+                                            <!-- For small desktop / large tablet -->
+                                            <source media="(min-width: 1024px)" srcset="/img/Portfolio-Slider/PortfolioSlider-UHouse-Sm.webp" type="image/webp" sizes="40vw">
+                                            <source media="(min-width: 1024px)" srcset="/img/Portfolio-Slider/PortfolioSlider-UHouse-Sm.jpg" type="image/jpeg" sizes="40vw">
+                                            <!-- For tablets -->
+                                            <source media="(min-width: 768px)" srcset="/img/Portfolio-Slider/PortfolioSlider-UHouse-Tab.webp" type="image/webp" sizes="60vw">
+                                            <source media="(min-width: 768px)" srcset="/img/Portfolio-Slider/PortfolioSlider-UHouse-Tab.jpg" type="image/jpeg" sizes="40vw">
+                                            <!-- For large phones -->
+                                            <source media="(min-width: 600px)" srcset="/img/Portfolio-Slider/PortfolioSlider-UHouse-LgPhone.webp" type="image/webp" sizes="80vw">
+                                            <source media="(min-width: 600px)" srcset="/img/Portfolio-Slider/PortfolioSlider-UHouse-LgPhone.jpg" type="image/jpeg" sizes="80vw">
+                                            <!-- For small phones -->
+                                            <source media="(min-width: 320px)" srcset="/img/Portfolio-Slider/PortfolioSlider-UHouse-SmPhone.webp" type="image/webp" sizes="80vw">
+                                            <source media="(min-width: 320px)" srcset="/img/Portfolio-Slider/PortfolioSlider-UHouse-SmPhone.jpg" type="image/jpeg" sizes="80vw">
+                                            <!-- Default for mobile and fallback -->
+                                            <img id="hero-img" src="/img/Portfolio-Slider/PortfolioSlider-UHouse-Def.jpg" srcset="/img/Portfolio-Slider/PortfolioSlider-UHouse-Def.webp" type="image/webp" alt="uhouse-cover">
                                         </picture>
                                     </div>
                                     <h4 class="building-title">U HOUSE</h4>
@@ -325,9 +441,27 @@
                                 <a href="lhouse.html" class="building" id="portfolio-6">
                                     <div class="building-image">
                                         <picture>
-                                            <source srcset="img/Portfolio-Slider/PortfolioSlider-LHouse.webp" type="image/webp">
-                                            <source srcset="img/Portfolio-Slider/PortfolioSlider-LHouse.jpg" type="image/jpeg">
-                                            <img src="img/Portfolio-Slider/PortfolioSlider-LHouse.jpg" type="image/jpeg" alt="lhouse-cover" />
+                                            <!-- For very large screens (e.g., 4K) -->
+                                            <!-- For large desktop screens -->
+                                            <source media="(min-width: 1920px)" srcset="/img/Portfolio-Slider/PortfolioSlider-LHouse-Lg.webp" type="image/webp" sizes="40vw">
+                                            <source media="(min-width: 1920px)" srcset="/img/Portfolio-Slider/PortfolioSlider-LHouse-Lg.jpg" type="image/jpeg" sizes="40vw">
+                                            <!-- For standard desktop screens -->
+                                            <source media="(min-width: 1440px)" srcset="/img/Portfolio-Slider/PortfolioSlider-LHouse-Md.webp" type="image/webp" sizes="40vw">
+                                            <source media="(min-width: 1440px)" srcset="/img/Portfolio-Slider/PortfolioSlider-LHouse-Md.jpg" type="image/jpeg" sizes="40vw">
+                                            <!-- For small desktop / large tablet -->
+                                            <source media="(min-width: 1024px)" srcset="/img/Portfolio-Slider/PortfolioSlider-LHouse-Sm.webp" type="image/webp" sizes="40vw">
+                                            <source media="(min-width: 1024px)" srcset="/img/Portfolio-Slider/PortfolioSlider-LHouse-Sm.jpg" type="image/jpeg" sizes="40vw">
+                                            <!-- For tablets -->
+                                            <source media="(min-width: 768px)" srcset="/img/Portfolio-Slider/PortfolioSlider-LHouse-Tab.webp" type="image/webp" sizes="60vw">
+                                            <source media="(min-width: 768px)" srcset="/img/Portfolio-Slider/PortfolioSlider-LHouse-Tab.jpg" type="image/jpeg" sizes="40vw">
+                                            <!-- For large phones -->
+                                            <source media="(min-width: 600px)" srcset="/img/Portfolio-Slider/PortfolioSlider-LHouse-LgPhone.webp" type="image/webp" sizes="80vw">
+                                            <source media="(min-width: 600px)" srcset="/img/Portfolio-Slider/PortfolioSlider-LHouse-LgPhone.jpg" type="image/jpeg" sizes="80vw">
+                                            <!-- For small phones -->
+                                            <source media="(min-width: 320px)" srcset="/img/Portfolio-Slider/PortfolioSlider-LHouse-SmPhone.webp" type="image/webp" sizes="80vw">
+                                            <source media="(min-width: 320px)" srcset="/img/Portfolio-Slider/PortfolioSlider-LHouse-SmPhone.jpg" type="image/jpeg" sizes="80vw">
+                                            <!-- Default for mobile and fallback -->
+                                            <img id="hero-img" src="/img/Portfolio-Slider/PortfolioSlider-LHouse-Def.jpg" srcset="/img/Portfolio-Slider/PortfolioSlider-LHouse-Def.webp" type="image/webp" alt="lhouse-cover">
                                         </picture>
                                     </div>
                                     <h4 class="building-title">L HOUSE</h4>
@@ -1047,7 +1181,7 @@
                 </svg>
             </div>
         </div>
-        <form class="row inquire_form">
+        <form class="row inquire_form" id="form">
             <div class="col-6">
                 <input type="text" name="first-name" id="first-name-input" placeholder="First Name*" />
             </div>
@@ -1067,7 +1201,7 @@
                 <input type="text" name="company" id="company-input" placeholder="Your Company" />
             </div>
             <div class="col-12 mt-3">
-                <button type="submit" class="my-btn">
+                <button type="submit" class="my-btn" id="form_btn">
                     SUBMIT
                     <svg id="PTP-Button-Arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 49.726">
                         <path d="M24.863,0,0,20V50H49.726V20Z" transform="translate(50) rotate(90)" />
