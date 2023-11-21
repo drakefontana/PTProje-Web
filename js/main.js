@@ -4,41 +4,44 @@ $("a[href='#top']").click(function() {
     return false;
 });
 
-// Form Submission
-var ptrn = [];
+// Form Submission Patterns
+var ptrn = {
+    'isEmail': /^[a-zA-Z]+[a-zA-Z0-9._]+@[a-zA-Z]+\.[a-zA-Z.]{2,7}$/,
+    'isNumber': /^[0-9]$/,
+    'isInteger': /^[\s\d]$/,
+    'isFloat': /^[0-9]?\d+(\.\d+)?$/,
+    'isVersion': /^(?:(\d+)\.)?(?:(\d+)\.)?(\*|\d+)$/,
+    'isPassword': /^[A-Za-z0-9@#$%^&*()!_-]{4,32}$/,
+    'isParagraph': /^[^()]{40,255}$/,
+    'isEmpty': /^[^()]{3,255}$/,
+    'isSelectEmpty': /^[^()]{1,255}$/,
+    'isZipcode': /^\+[0-9]{1,4}$/,
+    'isPhone': /^[\s\d]{9,11}$/,
+    'setNumber': /^[^\d|\-+|\.+]$/
+};
 
-ptrn['isEmail'] = /^[a-zA-Z]+[a-zA-Z0-9._]+@[a-zA-Z]+\.[a-zA-Z.]{2,7}$/;
-ptrn['isNumber'] = /^[0-9]$/;
-ptrn['isInteger'] = /^[\s\d]$/;
-ptrn['isFloat'] = /^[0-9]?\d+(\.\d+)?$/;
-ptrn['isVersion'] = /^(?:(\d+)\.)?(?:(\d+)\.)?(\*|\d+)$/
-ptrn['isPassword'] = /^[A-Za-z0-9@#$%^&*()!_-]{4,32}$/;
-ptrn['isParagraph'] = /^[^()]{40,255}$/;
-ptrn['isEmpty'] = /^[^()]{3,255}$/; ///^((?!undefined).){3,255}$/;
-ptrn['isSelectEmpty'] = /^[^()]{1,255}$/;
-ptrn['isZipcode'] = /^\+[0-9]{1,4}$/;
-ptrn['isPhone'] = /^[\s\d]{9,11}$/;
-ptrn['setNumber'] = /^[^\d|\-+|\.+]$/;
+// Error Messages
+var errorMsg = {
+    'isEmail': 'Please enter a valid Email',
+    'isNumber': 'Please enter a valid number',
+    'isInteger': 'Please enter a valid number',
+    'isFloat': 'Please enter a number with a comma',
+    'isVersion': 'Please enter a valid version number',
+    'isPassword': 'A password can contain numbers, letters and @ # $% ^ & * ()! _ -',
+    'isParagraph': 'Text is too short or longer than 255 characters',
+    'isEmpty': 'This field cannot be empty',
+    'isSelectEmpty': 'Please select an item from the list',
+    'isZipcode': 'Please enter a valid zipcode',
+    'isPhone': 'Please enter a valid phone number',
+    'setNumber': 'Please enter a valid number'
+};
 
-var errorMsg = [];
-
-errorMsg['isEmail'] = 'Please enter a valid Email';
-errorMsg['isNumber'] = 'Please enter a valid number';
-errorMsg['isInteger'] = 'Please enter a valid number';
-errorMsg['isFloat'] = 'Please enter a number with a comma';
-errorMsg['isVersion'] = 'Please enter a valid version number';
-errorMsg['isPassword'] = 'A password can contain numbers, letters and @ # $% ^ & * ()! _ -'; //Only Alphabet, Numbers and symboles @ # $ % ^ & * ( ) ! _ - allowed;
-errorMsg['isParagraph'] = 'Text is too short or longer than 255 characters'; //Paragraph should be between 40 and 255 character;
-errorMsg['isEmpty'] = 'This field cannot be empty';
-errorMsg['isSelectEmpty'] = 'Please select an item from the list';
-errorMsg['isZipcode'] = 'Code';
-errorMsg['isPhone'] = 'Please enter a valid phone number';
-errorMsg['setNumber'] = 'Please enter a valid number';
-
+// Set Cover Button State
 function _setCvrBtn(tar, param) {
     $(tar).attr("disabled", param);
 }
 
+// Check Form Fields
 function chk(e, tar, form) {
     var isError = '';
     if (typeof tar === 'object') {
@@ -48,7 +51,7 @@ function chk(e, tar, form) {
                 _setError(elm, '', true);
             } else {
                 _setError(elm, errorMsg[tar[key]]);
-                isError += tar[key]
+                isError += tar[key];
             }
         }
     } else {
@@ -56,28 +59,28 @@ function chk(e, tar, form) {
             _setError(e, '', true);
         } else {
             _setError(e, errorMsg[tar]);
-            isError += tar
+            isError += tar;
         }
     }
     return isError.length > 0 ? false : true;
 }
 
-
+// Set Error Message
 function _setError(elm, msg, clr) {
-
     !msg ? msg = "" : msg;
     !clr ? clr = false : clr;
 
     var tar = $(elm).parent();
     if (elm.type == "checkbox") {
-        tar = $(elm).parent().parent().parent()
+        tar = $(elm).parent().parent().parent();
     }
     if ($('.error-message', tar).html() == undefined) {
         $(tar).append('<div class="error-message"></div>');
     }
-    $('.error-message', tar).text(msg)
+    $('.error-message', tar).text(msg);
 }
 
+// Get Errors from Server Response
 function _getErrors(obj, form_name) {
     (form_name[0] == '#' || form_name[0] == '.') ? form_name: form_name = '#' + form_name;
     $(".error-message").text('');
@@ -91,63 +94,56 @@ function _getErrors(obj, form_name) {
         });
         var elm = $(form_name + ' [name="' + prop + '"]');
         if (Array.isArray(elm)) {
-            _setError($(form_name + ' [name="' + prop + '"]')[0], arr[0])
+            _setError($(form_name + ' [name="' + prop + '"]')[0], arr[0]);
         } else {
-            _setError($(form_name + ' [name="' + prop + '"]'), arr[0])
+            _setError($(form_name + ' [name="' + prop + '"]'), arr[0]);
         }
     }
 }
+
+// Send Form Data
 function doSend(form) {
-    
     !form ? form = '#form' : form;
 
     var isValid = chk(false, {
         'first-name-input': 'isEmpty',
         'last-name-input': 'isEmpty',
-        'email-input': 'isEmail',
+        'email-input': 'isEmail'
     }, form);
+
 
     if (isValid) {
         _setCvrBtn('#form_btn', true);
         $.ajax({
-            url: 'send.php',
-            method: "POST",
-            data: {
-                first_name: $(form + ' #first-name-input').val(),
-                last_name: $(form + ' #last-name-input').val(),
-                telephone: $(form + ' #telephone-input').val(),
-                email: $(form + ' #email-input').val().toLowerCase(),
-                project: $(form + ' #project-input').val(),
-                company: $(form + ' #company-input').val(),
-                id: 1,
-            },
-        })
-        .done(function(res) {
-            _setCvrBtn('#form_btn', false);
-            var response = JSON.parse(res)
-            if (response.status == 'SUCCESS') {
-                
-                // On successful "submission"
-                $('.inquire_form').hide(); // Hide the form
-                $('#thank-you-message').removeClass('thank-you-hidden').addClass('thank-you-visible'); // Show thank-you message
-
-                setTimeout(function() {
-                    $('#thank-you-message').removeClass('thank-you-visible').addClass('thank-you-hidden'); // Hide thank-you message
-                    $('.inquire_form').show(); // Show the form again
-                    $('.inquire_form')[0].reset(); // Clear the form
-                    $("#inquireModal").removeClass("active"); // Close the form automatically
-                }, 2000); // 2 seconds
-
-            } else {
-                alert('Sending failed, please try again.');
-            }
-        })
-        .fail(function(err) {
-            _setCvrBtn('#form_btn', false);
-            console.log("error " + err);
-        })
-    }else{
-        alert('Please fill required field and try again')
+                url: 'send.php',
+                method: "POST",
+                data: {
+                    first_name: $(form + ' #first-name-input').val(),
+                    last_name: $(form + ' #last-name-input').val(),
+                    telephone: $(form + ' #telephone-input').val(),
+                    email: $(form + ' #email-input').val().toLowerCase(),
+                    project: $(form + ' #project-input').val(),
+                    company: $(form + ' #company-input').val(),
+                    id: 1,
+                },
+            })
+            .done(function(res) {
+                _setCvrBtn('#form_btn', false);
+                var response = JSON.parse(res);
+                if (response.status == 'SUCCESS') {
+                    // ... [handling successful response] ...
+                } else {
+                    alert('Sending failed, please try again.');
+                }
+            })
+            .fail(function(jqXHR, textStatus, errorThrown) {
+                _setCvrBtn('#form_btn', false);
+                console.error("AJAX request failed:", textStatus, errorThrown, jqXHR.responseText);
+                console.log("Full server response:", jqXHR); // More detailed logging
+                alert('Error in form submission. Please try again.');
+            });
+    } else {
+        alert('Please fill required fields and try again.');
     }
 }
 
@@ -201,25 +197,33 @@ $(document).ready(function() {
     // Event handler for 'x' close button click
     $('#exitInquireModal').click(function() {
         $("#inquireModal").removeClass("active");
+        resetFormFields(); // Call to reset form fields
     });
+
+    // Function to reset form fields
+    function resetFormFields() {
+        $('#form')[0].reset(); // Resets the form
+        $(".error-message").text(''); // Clears any error messages
+    }
+
 
     // Form submission logic
     $('.inquire_form').submit(function(e) {
         e.preventDefault();
         return doSend();
-    //     // Simulate AJAX call or other form submission logic here
-    //     // ...
+        //     // Simulate AJAX call or other form submission logic here
+        //     // ...
 
-    //     // On successful "submission"
-    //     $('.inquire_form').hide(); // Hide the form
-    //     $('#thank-you-message').removeClass('thank-you-hidden').addClass('thank-you-visible'); // Show thank-you message
+        //     // On successful "submission"
+        //     $('.inquire_form').hide(); // Hide the form
+        //     $('#thank-you-message').removeClass('thank-you-hidden').addClass('thank-you-visible'); // Show thank-you message
 
-    //     setTimeout(function() {
-    //         $('#thank-you-message').removeClass('thank-you-visible').addClass('thank-you-hidden'); // Hide thank-you message
-    //         $('.inquire_form').show(); // Show the form again
-    //         $('.inquire_form')[0].reset(); // Clear the form
-    //         $("#inquireModal").removeClass("active"); // Close the form automatically
-    //     }, 2000); // 2 seconds
+        //     setTimeout(function() {
+        //         $('#thank-you-message').removeClass('thank-you-visible').addClass('thank-you-hidden'); // Hide thank-you message
+        //         $('.inquire_form').show(); // Show the form again
+        //         $('.inquire_form')[0].reset(); // Clear the form
+        //         $("#inquireModal").removeClass("active"); // Close the form automatically
+        //     }, 2000); // 2 seconds
     });
 
 });
@@ -604,7 +608,7 @@ document.addEventListener('DOMContentLoaded', function() {
     changeHeroContent('default');
 
     // Attach event listeners to each nav item
-    document.querySelectorAll('.nav-item a').forEach(item => {
+    document.querySelectorAll('.nav-item-container a').forEach(item => {
         item.addEventListener('mouseenter', function() {
             const projectId = this.getAttribute('href').split('.')[0];
             changeHeroContent(projectId);
@@ -646,5 +650,3 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initially display the exterior carousel
     changeDisplayedCarousel('exterior-carousel');
 });
-
-
