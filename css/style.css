@@ -596,6 +596,7 @@ header .ptp-agency-logo p {
 .global-tagline .sec-1 {
     padding-right: 2vw;
     min-height: 40vh;
+    padding-left: 3rem;
 }
 
 .global-tagline .sec-1 h2 {
@@ -730,6 +731,14 @@ header .ptp-agency-logo p {
     bottom: 4vh;
 }
 
+.proj-tagline #project-tagline-slider {
+    padding-left: 3rem;
+}
+
+.proj-tagline #project-tagline-cont {
+    padding-left: 3rem;
+}
+
 .carousel-wrapper {
     justify-content: center;
     /* Add this to center the active item */
@@ -826,10 +835,6 @@ header .ptp-agency-logo p {
 
 /* Stats */
 
-#reception-desk-sect {
-    padding-left: 3vw;
-}
-
 #biz-insights-cont,
 #reception-desk-cont {
     height: auto;
@@ -860,6 +865,7 @@ header .ptp-agency-logo p {
     flex-direction: column;
     justify-content: space-between;
     /* This will push the button to the bottom */
+    padding-left: 3rem;
 }
 
 .stat-small div {
@@ -907,10 +913,16 @@ header .ptp-agency-logo p {
     margin-bottom: 0;
 }
 
+.stat-big picture,
+.stat-small picture {
+    display: flex;
+    align-items: center;
+}
+
 .nation-flag {
     height: 1em;
     /* Set the height relative to the font size of the text */
-    width: 100%;
+    width: auto;
     padding-right: 1vw;
 }
 
@@ -2355,196 +2367,9 @@ section {
 /* ------------------- MEDIA QUERIES ------------------ */
 
 /* <576px Small ≥576px Medium ≥768px Large ≥992px Extra large ≥1200px */
+@media (min-width: 2160px) {
 
-@media (max-width: 992px) {
-    .no-border-on-sm {
-        border: 0;
-    }
-
-    header .logo img,
-    header .header-btn img {
-        max-height: 29px;
-        margin: 20px 0;
-    }
-
-    .global-tagline {
-        padding: 30px 0px;
-    }
-
-    .global-tagline .sec-1 .my-btn {
-        position: relative;
-        bottom: unset;
-        margin-bottom: 30px;
-    }
-
-    .my-accordion .accordion-button {
-        font-size: 20px;
-    }
-
-    .global-tagline h3 {
-        font-size: 23px;
-    }
-
-    .stats .stat-small div {
-        font-size: 20px;
-    }
-
-    .stats .stat-big div {
-        padding: 10px 0;
-        font-size: 40px;
-    }
-
-    footer .links a {
-        font-size: 19px;
-        text-align: left;
-    }
-
-    footer .info p {
-        font-size: 20px;
-    }
-
-    footer .info .social a img {
-        width: 30px;
-    }
-
-    footer .contact-form {
-        max-width: 1000px;
-        padding: 25px 0;
-    }
-
-    .companies img:not(.pt-group) {
-        display: none;
-    }
-
-    .about p {
-        font-size: 16px;
-        line-height: 20px;
-    }
-
-    footer .to_top a {
-        font-size: 17px;
-    }
-
-    footer .logo div {
-        font-size: 45px;
-    }
-
-    footer .logo .my-btn {
-        display: none;
-    }
-
-    .projects,
-    .project,
-    .hero {
-        height: auto;
-    }
-
-    .hero-feat {
-        max-width: 100%;
-        height: 180px;
-    }
-
-    .hero,
-    .project {
-        flex-wrap: wrap;
-    }
-
-    .project-name {
-        font-size: 50px;
-        margin-top: 20px;
-        margin-bottom: 20px;
-    }
-
-    .image-caption {
-        display: none;
-    }
-
-    .nav {
-        width: 100%;
-        padding: 50px 40px;
-    }
-
-    .project-nav {
-        padding: 20px 0;
-    }
-
-    .nav a {
-        font-size: 23px;
-    }
-
-    .building img {
-        height: 200px;
-    }
-
-    .building .building-title {
-        font-size: 20px;
-    }
-
-    .building .building-address {
-        font-size: 14px;
-    }
-
-    .content-sec {
-        overflow: hidden;
-    }
-
-    .content-sec .video {
-        height: 200px;
-    }
-
-    .content-sec .video i {
-        font-size: 50px;
-    }
-
-    .more-content-toggler img {
-        width: 30px;
-    }
-
-    .videos-list {
-        height: 100%;
-    }
-
-    .common-sec {
-        height: 25vh;
-    }
-
-    .common-sec .text {
-        font-size: 19px;
-    }
-
-    .mission-statment {
-        font-size: 11px;
-        margin-top: 20px;
-        max-width: 95%;
-    }
-
-    .features {
-        padding: 0px;
-    }
-
-    .features .feat h4 {
-        font-size: 20px;
-        margin: 20px 0;
-    }
-
-    .features .feat p {
-        font-size: 14px;
-        padding: 0 12px;
-    }
-
-    .common-sec .hero-feat {
-        top: unset;
-    }
-
-    .images-sec {
-        height: unset;
-    }
-
-    .images-sec img {
-        top: unset;
-    }
-
-    /* Default styles for smaller viewports */
+    /* 2-Column Text Layout */
     .info-section .body-2col {
         -webkit-column-count: 1;
         /* Chrome, Safari, Opera */
@@ -2554,29 +2379,763 @@ section {
         /* Standard syntax */
     }
 
-    .ecosystem-item .info {
-        padding: 0px;
+    header .menu ul {
+    font-size: 2.75em;
     }
 
-    .ecosystem {
-        flex-wrap: wrap;
-        border: 0;
+    header .menu .social {
+    font-size: 1.25em;
     }
 
-    .ecosystem .nav {
-        order: 2;
-        padding: 0;
+    header .menu .info p {
+    font-size: 1.75em;
     }
 
-    .ecosystem .hero-feat {
-        height: 250px;
+    header .menu .info span {
+    font-size: 1.5em;
     }
 
-    .ecosystem-item .image {
-        height: 240px;
+    .my-btn {
+    font-size: 1.33em;
     }
 
-    .ecosystem-item .logo-image img {
-        width: 150px;
+    .my-btn svg {
+    width: 1.25vw;
+    }
+
+    /* ------------------------------ HOME PAGE ---------------------------- */
+    /* Hero Section */
+    .hero-nav span {
+    font-size: 5em;
+    line-height: 1.125;
+    }
+
+    .image-caption {
+    font-size: 1.75em;
+    }
+
+    /* Global Section */
+    .global-tagline .sec-1 h2 {
+    font-size: 2.33em;
+    }
+
+    .global-tagline .sec-1 p {
+    font-size: 1.33em;
+    }
+
+    .my-accordion h3 {
+    font-size: 2.125em;
+    }
+
+    .my-accordion .accordion-button {
+    font-size: 1.85em;
+    }
+
+    /* Project Section */
+
+    .proj-tagline h2 {
+    font-size: 2.33em;
+    }
+
+    .proj-tagline p {
+    font-size: 1.33em;
+    }
+
+    .building {
+    flex: 0 0 calc(100% / 2.5);
+    }
+
+    .building .building-title {
+    font-size: 1.75rem;
+    }
+
+    .building .building-address {
+    font-size: 1.33em;
+    }
+
+    /* Stats Section */
+    .stats h2 {
+    font-size: 2.33em;
+    }
+
+    .bar-graph {
+    height: 45vh;
+    }
+
+    .stat-big .stat-title {
+    font-size: 1.35em;
+    }
+
+    .stat-small div {
+    padding: 1.5vw;
+    font-size: 2.5em;
+    }
+
+    .stat-small .stat-title {
+    font-size: 1em;
+    }
+
+    .nation-flag {
+    height: 1.5em;
+    }
+
+    /* Partners */
+    .logo-container p {
+    font-size: .9em;
+    }
+
+    /* Footer */
+    footer .logo div {
+    font-size: 4.67em;
+    line-height: .75;
+    }
+
+    footer .my-btn {
+    min-width: 16vw;
+    }
+}
+
+@media (max-width: 1024px) {
+
+    /* 2-Column Text Layout */
+    .info-section .body-2col {
+        -webkit-column-count: 1;
+        /* Chrome, Safari, Opera */
+        -moz-column-count: 1;
+        /* Firefox */
+        column-count: 1;
+        /* Standard syntax */
+    }
+
+    header .col-head.logo {
+    flex-basis: 33%;
+    }
+
+    header .col-head.icon {
+    flex-basis: 33%;
+    }
+
+    .my-btn {
+    font-size: 1.2em;
+    }
+
+    /* ------------------------------ HOME PAGE ---------------------------- */
+    /* Hero Section */
+    .hero-nav span {
+    font-size: 3.06125em;
+    line-height: 1.125;
+    }
+
+    .image-caption {
+    font-size: 1.125em;
+    }
+
+    /* Info Section */
+    .global-tagline .sec-1 h2 {
+    font-size: 1.67em;
+    }
+
+    .global-tagline .sec-1 p {
+    font-size: 1.125em;
+    }
+
+    .my-accordion h3 {
+    font-size: 1.67em;
+    }
+
+    .my-accordion .accordion-button {
+    font-size: 1.5em;
+    }
+
+    /* Project Section */
+    .proj-tagline h2 {
+    font-size: 1.67em;
+    }
+
+    .proj-tagline p {
+    font-size: 1.125em;
+    }
+
+    .building {
+    flex: 0 0 calc(100% / 1.9);
+    }
+
+    .building .building-title {
+    font-size: 1.125rem;
+    }
+
+    .building .building-address {
+    font-size: .95em;
+    }
+
+    .carousel-prev svg, .carousel-next svg {
+    height: 4vw;
+    width: 4vw;
+    }
+
+    /* Stats Section */
+    .stats h2 {
+    font-size: 1.67em;
+    }
+
+    .stat-big div {
+    font-size: 2.75em;
+    }
+
+    .stat-small div {
+    font-size: 1.75em;
+    }
+
+    .bar-graph {
+    height: 30vh;
+    }
+
+    /* Partners Section */
+    .partners {
+    padding: 1vh 0;
+    }
+
+    /* Form */
+    .inquire {
+    width: 67vw;
+    right: -67vw;
+    }
+
+    /* Footer */
+    footer .logo div {
+    font-size: 2.67em;
+    line-height: .75;
+    }
+
+    footer .info p {
+    font-size: 1.33em;
+    }
+
+    footer .links a {
+    font-size: 1.33em;
+    }
+
+    footer .back-to-top {
+    font-size: 1.25em;
+    }
+
+    footer .my-btn {
+    min-width: 20vw;
+    }
+}
+
+@media (max-width: 768px) {
+
+    /* 2-Column Text Layout */
+    .info-section .body-2col {
+        -webkit-column-count: 1;
+        /* Chrome, Safari, Opera */
+        -moz-column-count: 1;
+        /* Firefox */
+        column-count: 1;
+        /* Standard syntax */
+    }
+
+    header .col-head.logo {
+    flex-basis: 33%;
+    }
+
+    header .col-head.icon {
+    flex-basis: 33%;
+    }
+
+    header .menu {
+    width: 125%;
+    left: 0;
+    }
+
+    header .menu ul {
+    font-size: 1.85em;
+    }
+
+    header .menu .social {
+    font-size: .95em;
+    width: 67%;
+    }
+
+    header .menu .info p {
+    font-size: 1.33em;
+    }
+
+    header .menu .info span {
+    font-size: 1em;
+    }
+
+    .my-btn {
+    font-size: .95em;
+    padding: 0.75vw 1.5vw;
+    min-width: 40vw;
+    }
+
+    .my-btn svg {
+    width: 2vw;
+    }
+
+    /* ------------------------------ HOME PAGE ---------------------------- */
+    /* Hero Section */
+    .hero-nav {
+    width: 50vw;
+    padding-right: 2vw;
+    }
+
+    .hero-nav span {
+    font-size: 2.85em;
+    line-height: 1.125;
+    }
+
+    .image-caption {
+    font-size: 1.25em;
+    transform: translateX(-100%);
+    }
+
+    /* Info Section */
+    #global-tagline-cont {
+    width: 100%;
+    padding-left: 1.5rem;
+    padding-bottom: 5vh;
+    }
+
+    .global-tagline .border-gray-r {
+    border-right: none;
+    border-bottom: var(--border-gray);
+    }
+
+    .global-tagline .sec-1 h2 {
+    font-size: 1.33em;
+    }
+
+    .global-tagline .sec-1 p {
+    font-size: 1.03875em;
+    }
+
+    #global-tagline-accordion {
+    min-height: 40vh;
+    margin-top: 5vh;
+    width: 100%;
+    padding-left: 1.5rem;
+    }
+
+    .my-accordion h3 {
+    font-size: 1.33em;
+    margin-left: 0;
+    }
+
+    .my-accordion .accordion-item {
+    margin-left: 0;
+    }
+
+    .my-accordion .accordion-button {
+    font-size: 1.125em;
+    }
+
+    .my-accordion p {
+    font-size: .85em;
+    }
+
+    #accordion-4 {
+    margin-bottom: 4vh;
+    }
+
+    .global-tagline .sec-1 .my-btn {
+    bottom: 5vh;
+    }
+
+    /* Video Section */
+    .video-section {
+    height: 33vh;
+    }
+
+    /* Project Section */
+    .proj-tagline .border-gray-r {
+    border-right: none;
+    border-bottom: var(--border-gray);
+    }
+
+    .proj-tagline #project-tagline-cont {
+    padding-left: 1.5rem;
+    }
+
+    #project-tagline-cont {
+    min-height: 40vh;
+    padding: 5vh 0 3vh 0;
+    }
+
+    .proj-tagline h2 {
+    font-size: 1.33em;
+    }
+
+    .proj-tagline p {
+    font-size: 1.03875em;
+    }
+
+    .proj-tagline .my-btn {
+    bottom: 1vh;
+    }
+
+    .building {
+    flex: 0 0 calc(100% / 1.85);
+    margin: 0 0 5vh 0;
+    }
+
+    .building .building-title {
+    font-size: 1.25rem;
+    }
+
+    .building .building-address {
+    font-size: 1.03875em;
+    }
+
+    .carousel-prev svg, .carousel-next svg {
+    height: 5vw;
+    width: 5vw;
+    }
+
+    /* Stats Section */
+    #biz-insights-sect, #reception-desk-sect {
+    padding-left: 1.5rem;
+    width: 100%;
+    }
+
+    .stats .row .border-gray-r {
+    border-right: none;
+    border-bottom: var(--border-gray);
+    }
+
+    #reception-desk-sect {
+    padding-top: 6vh;
+    }
+
+    #reception-desk-sect #rus-stat {
+    border-right: var(--border-gray);
+    }
+
+    .stats h2 {
+    font-size: 1.33em;
+    }
+
+    .stat-big div {
+    font-size: 3em;
+    }
+
+    .stat-small div {
+    font-size: 2.25em;
+    }
+
+    .bar-graph {
+    height: 45vh;
+    }
+
+    .stats .my-btn {
+    margin-top: 3vh;
+    }
+
+    /* Partners Section */
+    .partners {
+    padding: 0;
+    gap: 1vw;
+    }
+
+    .logo-container p {
+    font-size: 0.35em;
+    }
+
+    .logo-container {
+    max-width: 20vw;
+    height: 18vh;
+    }
+
+    /* Form */
+    .inquire {
+    width: 100vw;
+    right: -100vw;
+    }
+
+    /* Footer */
+    footer .logo div {
+    font-size: 2.67em;
+    line-height: .75;
+    }
+
+    footer .info p {
+    font-size: 1.33em;
+    }
+
+    footer .links {
+    display: none;
+    }
+
+    footer .back-to-top {
+    font-size: 1.25em;
+    }
+
+    footer .my-btn {
+    min-width: 33vw;
+    }
+
+    footer #ptp-footer-logo {
+    width: 50vw;
+    }
+}
+
+@media (max-width: 425px) {
+
+    /* 2-Column Text Layout */
+    .info-section .body-2col {
+        -webkit-column-count: 1;
+        /* Chrome, Safari, Opera */
+        -moz-column-count: 1;
+        /* Firefox */
+        column-count: 1;
+        /* Standard syntax */
+    }
+
+    header .col-head.logo {
+    flex-basis: 33%;
+    }
+
+    header .col-head.icon {
+    flex-basis: 33%;
+    }
+
+    header .menu {
+    width: 125%;
+    left: 0;
+    }
+
+    header .menu ul {
+    font-size: 1.85em;
+    }
+
+    header .menu .social {
+    font-size: .95em;
+    width: 67%;
+    }
+
+    header .menu .info p {
+    font-size: 1.33em;
+    }
+
+    header .menu .info span {
+    font-size: 1em;
+    }
+
+    .my-btn {
+    font-size: .95em;
+    padding: 0.75vw 1.5vw;
+    min-width: 40vw;
+    }
+
+    .my-btn svg {
+    width: 2vw;
+    }
+
+    /* ------------------------------ HOME PAGE ---------------------------- */
+    /* Hero Section */
+    .hero-nav {
+    width: 50vw;
+    padding-right: 2vw;
+    }
+
+    .hero-nav span {
+    font-size: 2.85em;
+    line-height: 1.125;
+    }
+
+    .image-caption {
+    font-size: 1.25em;
+    transform: translateX(-100%);
+    }
+
+    /* Info Section */
+    #global-tagline-cont {
+    width: 100%;
+    padding-left: 1.5rem;
+    padding-bottom: 5vh;
+    }
+
+    .global-tagline .border-gray-r {
+    border-right: none;
+    border-bottom: var(--border-gray);
+    }
+
+    .global-tagline .sec-1 h2 {
+    font-size: 1.33em;
+    }
+
+    .global-tagline .sec-1 p {
+    font-size: 1.03875em;
+    }
+
+    #global-tagline-accordion {
+    min-height: 40vh;
+    margin-top: 5vh;
+    width: 100%;
+    padding-left: 1.5rem;
+    }
+
+    .my-accordion h3 {
+    font-size: 1.33em;
+    margin-left: 0;
+    }
+
+    .my-accordion .accordion-item {
+    margin-left: 0;
+    }
+
+    .my-accordion .accordion-button {
+    font-size: 1.125em;
+    }
+
+    .my-accordion p {
+    font-size: .85em;
+    }
+
+    #accordion-4 {
+    margin-bottom: 4vh;
+    }
+
+    .global-tagline .sec-1 .my-btn {
+    bottom: 5vh;
+    }
+
+    /* Video Section */
+    .video-section {
+    height: 33vh;
+    }
+
+    /* Project Section */
+    .proj-tagline .border-gray-r {
+    border-right: none;
+    border-bottom: var(--border-gray);
+    }
+
+    .proj-tagline #project-tagline-cont {
+    padding-left: 1.5rem;
+    }
+
+    #project-tagline-cont {
+    min-height: 40vh;
+    padding: 5vh 0 3vh 0;
+    }
+
+    .proj-tagline h2 {
+    font-size: 1.33em;
+    }
+
+    .proj-tagline p {
+    font-size: 1.03875em;
+    }
+
+    .proj-tagline .my-btn {
+    bottom: 1vh;
+    }
+
+    .building {
+    flex: 0 0 calc(100% / 1.85);
+    margin: 0 0 5vh 0;
+    }
+
+    .building .building-title {
+    font-size: 1.25rem;
+    }
+
+    .building .building-address {
+    font-size: 1.03875em;
+    }
+
+    .carousel-prev svg, .carousel-next svg {
+    height: 5vw;
+    width: 5vw;
+    }
+
+    /* Stats Section */
+    #biz-insights-sect, #reception-desk-sect {
+    padding-left: 1.5rem;
+    width: 100%;
+    }
+
+    .stats .row .border-gray-r {
+    border-right: none;
+    border-bottom: var(--border-gray);
+    }
+
+    #reception-desk-sect {
+    padding-top: 6vh;
+    }
+
+    #reception-desk-sect #rus-stat {
+    border-right: var(--border-gray);
+    }
+
+    .stats h2 {
+    font-size: 1.33em;
+    }
+
+    .stat-big div {
+    font-size: 3em;
+    }
+
+    .stat-small div {
+    font-size: 2.25em;
+    }
+
+    .bar-graph {
+    height: 45vh;
+    }
+
+    .stats .my-btn {
+    margin-top: 3vh;
+    }
+
+    /* Partners Section */
+    .partners {
+    padding: 0;
+    gap: 1vw;
+    }
+
+    .logo-container p {
+    font-size: 0.35em;
+    }
+
+    .logo-container {
+    max-width: 20vw;
+    height: 18vh;
+    }
+
+    /* Form */
+    .inquire {
+    width: 100vw;
+    right: -100vw;
+    }
+
+    /* Footer */
+    footer .logo div {
+    font-size: 2.67em;
+    line-height: .75;
+    }
+
+    footer .info p {
+    font-size: 1.33em;
+    }
+
+    footer .links {
+    display: none;
+    }
+
+    footer .back-to-top {
+    font-size: 1.25em;
+    }
+
+    footer .my-btn {
+    min-width: 33vw;
+    }
+
+    footer #ptp-footer-logo {
+    width: 50vw;
     }
 }
