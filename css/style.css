@@ -1378,7 +1378,7 @@ footer #back-to-top-icon {
 .page-ecosystem #ptp-ecosystem-feat img, .eco-item-image img {
     object-fit: cover;
     width: 100%;
-    height: auto;
+    height: 100%;
 }
 
 /* Info Section */

@@ -6,6 +6,10 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <!-- Preload Fonts -->
+    <link rel="preload" href="/font/Montserrat Webfont/Montserrat-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/font/Montserrat Webfont/Montserrat-Medium.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/font/Montserrat Webfont/Montserrat-ExtraBold.woff2" as="font" type="font/woff2" crossorigin>
     <!-- SEO meta tags -->
     <meta name="description" content="PT Proje is proud to introduce our unparalleled team that prioritizes trust and partnership, always putting our clients needs at the forefront of our daily work.">
     <meta name="keywords" content="Turkish Real Estate Development Project Marketing: About Us">
@@ -190,15 +194,20 @@
     </section>
     <section class="hero">
         <picture id="hero-feat">
-            <!-- For high-resolution screens on devices with min-width 768px -->
-            <source media="(min-width: 768px) and (min-resolution: 192dpi)" srcset="/img/Vision-Hero/PTP-Vision-BG-sm.webp" type="image/webp">
-            <source media="(min-width: 768px) and (min-resolution: 192dpi)" srcset="/img/Vision-Hero/PTP-Vision-BG-sm.jpg" type="image/jpeg">
-            <!-- For devices with min-width 768px -->
-            <source media="(min-width: 768px)" srcset="/img/Vision-Hero/PTP-Vision-BG-sm.webp" type="image/webp">
-            <source media="(min-width: 768px)" srcset="/img/Vision-Hero/PTP-Vision-BG-sm.jpg" type="image/jpeg">
-            <!-- Default -->
-            <source srcset="/img/Vision-Hero/PTP-Vision-BG.webp" type="image/webp">
-            <img id="hero-img" src="/img/Vision-Hero/PTP-Vision-BG.jpg" type="image/jpeg" alt="ptp-dolmabahce-img">
+            <!-- For very large screens (e.g., 4K) -->
+            <source media="(min-width: 2560px)" srcset="/img/Vision-Hero/PTP-Vision-BG-Feat-4k.webp" type="image/webp" sizes="60vw">
+            <source media="(min-width: 2560px)" srcset="/img/Vision-Hero/PTP-Vision-BG-Feat-4k.jpg" type="image/jpeg" sizes="60vw">
+            <!-- For large desktop screens -->
+            <source media="(min-width: 1920px)" srcset="/img/Vision-Hero/PTP-Vision-BG-Feat-Lg.webp" type="image/webp" sizes="60vw">
+            <source media="(min-width: 1920px)" srcset="/img/Vision-Hero/PTP-Vision-BG-Feat-Lg.jpg" type="image/jpeg" sizes="60vw">
+            <!-- For standard desktop screens -->
+            <source media="(min-width: 1440px)" srcset="/img/Vision-Hero/PTP-Vision-BG-Feat-Md.webp" type="image/webp" sizes="60vw">
+            <source media="(min-width: 1440px)" srcset="/img/Vision-Hero/PTP-Vision-BG-Feat-Md.jpg" type="image/jpeg" sizes="60vw">
+            <!-- For small desktop / large tablet -->
+            <source media="(min-width: 1024px)" srcset="/img/Vision-Hero/PTP-Vision-BG-Feat-Sm.webp" type="image/webp" sizes="60vw">
+            <source media="(min-width: 1024px)" srcset="/img/Vision-Hero/PTP-Vision-BG-Feat-Sm.jpg" type="image/jpeg" sizes="60vw">
+            <!-- Default for mobile and fallback -->
+            <img id="hero-img" src="/img/Vision-Hero/PTP-Vision-BG-Feat-Tab.jpg" srcset="/img/Vision-Hero/PTP-Vision-BG-Feat-Tab.webp" type="image/webp" alt="ptp-dolmabahce-img">
         </picture>
         <p class="image-caption">DOLMABAHÇE PALACE, İSTANBUL</p>
     </section>

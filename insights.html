@@ -6,6 +6,10 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <!-- Preload Fonts -->
+    <link rel="preload" href="/font/Montserrat Webfont/Montserrat-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/font/Montserrat Webfont/Montserrat-Medium.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/font/Montserrat Webfont/Montserrat-ExtraBold.woff2" as="font" type="font/woff2" crossorigin>
     <!-- SEO meta tags -->
     <meta name="description" content="PT Proje is a leading project marketing company provides premier services for varying sizes of development projects.">
     <meta name="keywords" content="Turkish Real Estate Development Partners">
@@ -27,7 +31,7 @@
     <meta name="twitter:image" content="/img/Html-Head-Img/PTP-Twitter-Thumb.jpg>
 
     <!-- Schema.org for Google -->
-    <meta itemprop="name" content="PT Proje Insights">
+    <meta itemprop=" name" content="PT Proje Insights">
     <meta itemprop="description" content="PT Proje is a leading project marketing company provides premier services for varying sizes of development projects.">
     <meta itemprop="image" content="/img/Html-Head-Img/PTP-Google-Thumb.jpg">
     <!-- CSS -->
@@ -190,15 +194,20 @@
     </section>
     <section class="hero">
         <picture id="hero-feat">
-            <!-- For high-resolution screens on devices with min-width 768px -->
-            <source media="(min-width: 768px) and (min-resolution: 192dpi)" srcset="img/Insights-Hero/PTP-Insights-BG-sm.webp" type="image/webp">
-            <source media="(min-width: 768px) and (min-resolution: 192dpi)" srcset="img/Insights-Hero/PTP-Insights-BG-sm.jpg" type="image/jpeg">
-            <!-- For devices with min-width 768px -->
-            <source media="(min-width: 768px)" srcset="img/Insights-Hero/PTP-Insights-BG-sm.webp" type="image/webp">
-            <source media="(min-width: 768px)" srcset="img/Insights-Hero/PTP-Insights-BG-sm.jpg" type="image/jpeg">
-            <!-- Default -->
-            <source srcset="img/Insights-Hero/PTP-Insights-BG.webp" type="image/webp">
-            <img id="hero-img" src="img/Insights-Hero/PTP-Insights-BG.jpg" type="image/jpeg" alt="ptp-beyoglu-img">
+            <!-- For very large screens (e.g., 4K) -->
+            <source media="(min-width: 2560px)" srcset="/img/Insights-Hero/PTP-Insights-BG-Feat-4k.webp" type="image/webp" sizes="60vw">
+            <source media="(min-width: 2560px)" srcset="/img/Insights-Hero/PTP-Insights-BG-Feat-4k.jpg" type="image/jpeg" sizes="60vw">
+            <!-- For large desktop screens -->
+            <source media="(min-width: 1920px)" srcset="/img/Insights-Hero/PTP-Insights-BG-Feat-Lg.webp" type="image/webp" sizes="60vw">
+            <source media="(min-width: 1920px)" srcset="/img/Insights-Hero/PTP-Insights-BG-Feat-Lg.jpg" type="image/jpeg" sizes="60vw">
+            <!-- For standard desktop screens -->
+            <source media="(min-width: 1440px)" srcset="/img/Insights-Hero/PTP-Insights-BG-Feat-Md.webp" type="image/webp" sizes="60vw">
+            <source media="(min-width: 1440px)" srcset="/img/Insights-Hero/PTP-Insights-BG-Feat-Md.jpg" type="image/jpeg" sizes="60vw">
+            <!-- For small desktop / large tablet -->
+            <source media="(min-width: 1024px)" srcset="/img/Insights-Hero/PTP-Insights-BG-Feat-Sm.webp" type="image/webp" sizes="60vw">
+            <source media="(min-width: 1024px)" srcset="/img/Insights-Hero/PTP-Insights-BG-Feat-Sm.jpg" type="image/jpeg" sizes="60vw">
+            <!-- Default for mobile and fallback -->
+            <img id="hero-img" src="/img/Insights-Hero/PTP-Insights-BG-Feat-Tab.jpg" srcset="/img/Insights-Hero/PTP-Insights-BG-Feat-Tab.webp" type="image/webp" alt="ptp-beyoglu-img">
         </picture>
         <p class="image-caption">BEYOĞLU, İSTANBUL</p>
     </section>
@@ -227,15 +236,20 @@
     <!-- Image Texture -->
     <div class="images-sec">
         <picture id="img-texture-cont">
-            <!-- For high-resolution screens on devices with min-width 768px -->
-            <source media="(min-width: 768px) and (min-resolution: 192dpi)" srcset="img/Insights-Hero/PTP-Insights-feat-sm.webp" type="image/webp">
-            <source media="(min-width: 768px) and (min-resolution: 192dpi)" srcset="img/Insights-Hero/PTP-Insights-feat-sm.jpg" type="image/jpeg">
-            <!-- For devices with min-width 768px -->
-            <source media="(min-width: 768px)" srcset="img/Insights-Hero/PTP-Insights-feat-sm.webp" type="image/webp">
-            <source media="(min-width: 768px)" srcset="img/Insights-Hero/PTP-Insights-feat-sm.jpg" type="image/jpeg">
-            <!-- Default -->
-            <source srcset="img/Insights-Hero/PTP-Insights-feat.webp" type="image/webp">
-            <img id="text-img-item" src="img/Insights-Hero/PTP-Insights-feat.jpg" type="image/jpeg" alt="ptp-ifc-img">
+            <!-- For very large screens (e.g., 4K) -->
+            <source media="(min-width: 2560px)" srcset="/img/Insights-Hero/PTP-Insights-Feat-2-4k.webp" type="image/webp" sizes="60vw">
+            <source media="(min-width: 2560px)" srcset="/img/Insights-Hero/PTP-Insights-Feat-2-4k.jpg" type="image/jpeg" sizes="60vw">
+            <!-- For large desktop screens -->
+            <source media="(min-width: 1920px)" srcset="/img/Insights-Hero/PTP-Insights-Feat-2-Lg.webp" type="image/webp" sizes="60vw">
+            <source media="(min-width: 1920px)" srcset="/img/Insights-Hero/PTP-Insights-Feat-2-Lg.jpg" type="image/jpeg" sizes="60vw">
+            <!-- For standard desktop screens -->
+            <source media="(min-width: 1440px)" srcset="/img/Insights-Hero/PTP-Insights-Feat-2-Md.webp" type="image/webp" sizes="60vw">
+            <source media="(min-width: 1440px)" srcset="/img/Insights-Hero/PTP-Insights-Feat-2-Md.jpg" type="image/jpeg" sizes="60vw">
+            <!-- For small desktop / large tablet -->
+            <source media="(min-width: 1024px)" srcset="/img/Insights-Hero/PTP-Insights-Feat-2-Sm.webp" type="image/webp" sizes="60vw">
+            <source media="(min-width: 1024px)" srcset="/img/Insights-Hero/PTP-Insights-Feat-2-Sm.jpg" type="image/jpeg" sizes="60vw">
+            <!-- Default for mobile and fallback -->
+            <img id="text-img-item" src="/img/Insights-Hero/PTP-Insights-Feat-2-Tab.jpg" srcset="/img/Insights-Hero/PTP-Insights-Feat-2-Tab.webp" type="image/webp" alt="ptp-ifc-img">
         </picture>
     </div>
     <!-- Reception Accordion -->
@@ -281,67 +295,100 @@
     <section class="staff-container">
         <div class="agents-grid">
             <div class="agent" data-aos="fade-down">
-                <img src="img/Staff-Img/PTP-Staff-Nazrin-Aliyeva.png" alt="Nazrin-Aliyeva" />
+                <picture>
+                    <source srcset="img/Staff-Img/PTP-Staff-Nazrin-Aliyeva.webp" type="image/webp">
+                    <img src="img/Staff-Img/PTP-Staff-Nazrin-Aliyeva.png" alt="Nazrin-Aliyeva">
+                </picture>
                 <h4>Nazrin</br>Aliyeva</h4>
                 <hr />
                 <span>Managing Director</span>
             </div>
             <div class="agent" data-aos="fade-down">
-                <img src="img/Staff-Img/PTP-Staff-Emre-Şahin.png" alt="Emre-Şahin" />
+                <picture>
+                    <source srcset="img/Staff-Img/PTP-Staff-Emre-Şahin.webp" type="image/webp">
+                    <img src="img/Staff-Img/PTP-Staff-Emre-Şahin.png" alt="Emre-Şahin">
+                </picture>
                 <h4>Emre</br>Şahİn</h4>
                 <hr />
                 <span>Sales & After Sales Ops. Exec.</span>
             </div>
             <div class="agent" data-aos="fade-down">
-                <img src="img/Staff-Img/PTP-Staff-Aysun-Özkara.png" alt="Aysun-Özkara" />
+                <picture>
+                    <source srcset="img/Staff-Img/PTP-Staff-Aysun-Özkara.webp" type="image/webp">
+                    <img src="img/Staff-Img/PTP-Staff-Aysun-Özkara.png" alt="Aysun-Özkara">
+                </picture>
                 <h4>Aysun</br>Özkara</h4>
                 <hr />
                 <span>Operations Manager</span>
             </div>
             <div class="agent" data-aos="fade-down">
-                <img src="img/Staff-Img/PTP-Staff-Halil-Ibrahim-Irklı.png" alt="Halil-Ibrahim-Irklı" />
+                <picture>
+                    <source srcset="img/Staff-Img/PTP-Staff-Halil-Ibrahim-Irklı.webp" type="image/webp">
+                    <img src="img/Staff-Img/PTP-Staff-Halil-Ibrahim-Irklı.png" alt="Halil-Ibrahim-Irklı">
+                </picture>
                 <h4>Halİl</br>İbrahim Irklı</h4>
                 <hr />
                 <span>General Coordinator</span>
             </div>
             <div class="agent" data-aos="fade-down">
-                <img src="img/Staff-Img/PTP-Staff-Sarah-Omrani.png" alt="Sarah-Omrani" />
+                <picture>
+                    <source srcset="img/Staff-Img/PTP-Staff-Sarah-Omrani.webp" type="image/webp">
+                    <img src="img/Staff-Img/PTP-Staff-Sarah-Omrani.png" alt="Sarah-Omrani">
+                </picture>
                 <h4>Sarah</br>Omranİ</h4>
                 <hr />
                 <span>Senior Sales Executive</span>
             </div>
             <div class="agent" data-aos="fade-down">
-                <img src="img/Staff-Img/PTP-Staff-Gizem-Sena-Tozkoparan.png" alt="Gizem-Sena-Tozkoparan" />
+                <picture>
+                    <source srcset="img/Staff-Img/PTP-Staff-Gizem-Sena-Tozkoparan.webp" type="image/webp">
+                    <img src="img/Staff-Img/PTP-Staff-Gizem-Sena-Tozkoparan.png" alt="Gizem-Sena-Tozkoparan">
+                </picture>
                 <h4>Gİzem Sena</br>Tozkoparan</h4>
                 <hr />
                 <span>Sales Executive</span>
             </div>
             <div class="agent" data-aos="fade-down">
-                <img src="img/Staff-Img/PTP-Staff-Kateryna-Synytska.png" alt="Kateryna-Synytska" />
+                <picture>
+                    <source srcset="img/Staff-Img/PTP-Staff-Kateryna-Synytska.webp" type="image/webp">
+                    <img src="img/Staff-Img/PTP-Staff-Kateryna-Synytska.png" alt="Kateryna-Synytska">
+                </picture>
                 <h4>Kateryna</br>Synytska</h4>
                 <hr />
                 <span>Sales Executive</span>
             </div>
             <div class="agent" data-aos="fade-down">
-                <img src="img/Staff-Img/PTP-Staff-Mohamad-Hammami.png" alt="Mohamad-Hammami" />
+                <picture>
+                    <source srcset="img/Staff-Img/PTP-Staff-Mohamad-Hammami.webp" type="image/webp">
+                    <img src="img/Staff-Img/PTP-Staff-Mohamad-Hammami.png" alt="Mohamad-Hammami">
+                </picture>
                 <h4>Mohamad</br>Hammami</h4>
                 <hr />
                 <span>Sales Executive</span>
             </div>
             <div class="agent" data-aos="fade-down">
-                <img src="img/Staff-Img/PTP-Staff-Adrin-Abdollahpour.png" alt="Adrin-Abdollahpour" />
+                <picture>
+                    <source srcset="img/Staff-Img/PTP-Staff-Adrin-Abdollahpour.webp" type="image/webp">
+                    <img src="img/Staff-Img/PTP-Staff-Adrin-Abdollahpour.png" alt="Adrin-Abdollahpour">
+                </picture>
                 <h4>Adrin</br>Abdollahpour</h4>
                 <hr />
                 <span>Sales Consultant</span>
             </div>
             <div class="agent" data-aos="fade-down">
-                <img src="img/Staff-Img/PTP-Staff-Ali-Ghassabi.png" alt="Ali-Ghassabi" />
+                <picture>
+                    <source srcset="img/Staff-Img/PTP-Staff-Ali-Ghassabi.webp" type="image/webp">
+                    <img src="img/Staff-Img/PTP-Staff-Ali-Ghassabi.png" alt="Ali-Ghassabi">
+                </picture>
                 <h4>Ali</br>Ghassabi</h4>
                 <hr />
                 <span>Sales Consultant</span>
             </div>
             <div class="agent" data-aos="fade-down">
-                <img src="img/Staff-Img/PTP-Staff-Myriem-Khabtheni.png" alt="Myriem-Khabtheni" />
+                <picture>
+                    <source srcset="img/Staff-Img/PTP-Staff-Myriem-Khabtheni.webp" type="image/webp">
+                    <img src="img/Staff-Img/PTP-Staff-Myriem-Khabtheni.png" alt="Myriem-Khabtheni">
+                </picture>
                 <h4>Myriem</br>Khabtheni</h4>
                 <hr />
                 <span>Sales Consultant</span>
