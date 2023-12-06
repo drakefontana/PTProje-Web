@@ -1325,7 +1325,7 @@ footer #back-to-top-icon {
 }
 
 .page-ecosystem section:target {
-  scroll-margin-top: 10vh;
+    scroll-margin-top: 10vh;
 }
 
 .page-ecosystem .nav-item-container {
@@ -1387,7 +1387,8 @@ footer #back-to-top-icon {
     z-index: 1;
 }
 
-.page-ecosystem #ptp-ecosystem-feat img, .eco-item-image img {
+.page-ecosystem #ptp-ecosystem-feat img,
+.eco-item-image img {
     object-fit: cover;
     width: 100%;
     height: 100%;
@@ -1412,11 +1413,13 @@ footer #back-to-top-icon {
 .page-ecosystem .info-section .body-2col p {
     font-size: 1.25em;
     font-weight: 400;
-    margin-bottom: 1em; /* Adjust this value to control spacing between paragraphs */
+    margin-bottom: 1em;
+    /* Adjust this value to control spacing between paragraphs */
 }
 
 .page-ecosystem .info-section .body-2col {
-    margin-top: 5vh; /* Common top margin */
+    margin-top: 5vh;
+    /* Common top margin */
     -webkit-column-count: 2;
     /* Chrome, Safari, Opera */
     -moz-column-count: 2;
@@ -1475,7 +1478,8 @@ footer #back-to-top-icon {
     z-index: 1;
 }
 
-.page-ecosystem .ecosystem-item .eco-item-logo-bg img {
+.page-ecosystem .ecosystem-item #eco-item-logo-bg img {
+    position: absolute;
     object-fit: cover;
     width: 100%;
     height: auto;
@@ -1493,7 +1497,7 @@ footer #back-to-top-icon {
 }
 
 .page-ecosystem #funding-turkey-2 {
-  height: 50%;
+    height: 50%;
 }
 
 
@@ -1626,11 +1630,13 @@ footer #back-to-top-icon {
 .page-vision .info-section .body-2col p {
     font-size: 1.25em;
     font-weight: 400;
-    margin-bottom: 1em; /* Adjust this value to control spacing between paragraphs */
+    margin-bottom: 1em;
+    /* Adjust this value to control spacing between paragraphs */
 }
 
 .page-vision .info-section .body-2col {
-    margin-top: 5vh; /* Common top margin */
+    margin-top: 5vh;
+    /* Common top margin */
     -webkit-column-count: 2;
     /* Chrome, Safari, Opera */
     -moz-column-count: 2;
@@ -1685,11 +1691,13 @@ footer #back-to-top-icon {
 .page-reception .info-section .body-2col p {
     font-size: 1.25em;
     font-weight: 400;
-    margin-bottom: 1em; /* Adjust this value to control spacing between paragraphs */
+    margin-bottom: 1em;
+    /* Adjust this value to control spacing between paragraphs */
 }
 
 .page-reception .info-section .body-2col {
-    margin-top: 5vh; /* Common top margin */
+    margin-top: 5vh;
+    /* Common top margin */
     -webkit-column-count: 2;
     /* Chrome, Safari, Opera */
     -moz-column-count: 2;
@@ -1787,11 +1795,13 @@ footer #back-to-top-icon {
 .page-insights .info-section .body-2col p {
     font-size: 1.25em;
     font-weight: 400;
-    margin-bottom: 1em; /* Adjust this value to control spacing between paragraphs */
+    margin-bottom: 1em;
+    /* Adjust this value to control spacing between paragraphs */
 }
 
 .page-insights .info-section .body-2col {
-    margin-top: 5vh; /* Common top margin */
+    margin-top: 5vh;
+    /* Common top margin */
     -webkit-column-count: 2;
     /* Chrome, Safari, Opera */
     -moz-column-count: 2;
@@ -1812,7 +1822,8 @@ footer #back-to-top-icon {
 }
 
 .page-insights .my-accordion .accordion-collapse {
-    display: block !important; /* Always show the content */
+    display: block !important;
+    /* Always show the content */
 }
 
 
@@ -1921,7 +1932,7 @@ footer #back-to-top-icon {
 }
 
 .page-projects section:target {
-  scroll-margin-top: 10vh;
+    scroll-margin-top: 10vh;
 }
 
 .page-projects .nav-item-container {
@@ -1970,19 +1981,23 @@ footer #back-to-top-icon {
     top: 0;
     left: 0;
     z-index: 1;
-    overflow: hidden; /* Add this to ensure no overflow if the image is larger than the container */
+    overflow: hidden;
+    /* Add this to ensure no overflow if the image is larger than the container */
 }
 
 .page-projects .ptp-projects-feat img {
     object-fit: cover;
-    width: 100%; /* Change to 100% */
-    height: 100%; /* Ensure height is 100% */
-    object-position: center; /* Center the image */
+    width: 100%;
+    /* Change to 100% */
+    height: 100%;
+    /* Ensure height is 100% */
+    object-position: center;
+    /* Center the image */
 }
 
 .page-projects .image-caption {
-  text-transform: uppercase;
-  z-index: 2;
+    text-transform: uppercase;
+    z-index: 2;
 }
 
 .page-projects .ptp-projects-feat,
@@ -2073,14 +2088,18 @@ footer #back-to-top-icon {
     top: 0;
     left: 0;
     z-index: 1;
-    overflow: hidden; /* Add this to ensure no overflow if the image is larger than the container */
+    overflow: hidden;
+    /* Add this to ensure no overflow if the image is larger than the container */
 }
 
 .page-projects-indiv .ptp-proj-indiv-feat img {
     object-fit: cover;
-    width: 100%; /* Change to 100% */
-    height: 100%; /* Ensure height is 100% */
-    object-position: center; /* Center the image */
+    width: 100%;
+    /* Change to 100% */
+    height: 100%;
+    /* Ensure height is 100% */
+    object-position: center;
+    /* Center the image */
 }
 
 /* Project Caorusel  */
@@ -2366,261 +2385,355 @@ section {
 
 /* ------------------- MEDIA QUERIES ------------------ */
 
-/* <576px Small ≥576px Medium ≥768px Large ≥992px Extra large ≥1200px */
+/* <425px Mobile 768pxpx Tablet 1024x Lo-Res Desktop ≥2160px Hi-Res Desktop */
 @media (min-width: 2160px) {
 
-    /* 2-Column Text Layout */
-    .info-section .body-2col {
-        -webkit-column-count: 1;
-        /* Chrome, Safari, Opera */
-        -moz-column-count: 1;
-        /* Firefox */
-        column-count: 1;
-        /* Standard syntax */
-    }
-
     header .menu ul {
-    font-size: 2.75em;
+        font-size: 2.75em;
     }
 
     header .menu .social {
-    font-size: 1.25em;
+        font-size: 1.25em;
     }
 
     header .menu .info p {
-    font-size: 1.75em;
+        font-size: 1.75em;
     }
 
     header .menu .info span {
-    font-size: 1.5em;
+        font-size: 1.5em;
     }
 
     .my-btn {
-    font-size: 1.33em;
+        font-size: 1.33em;
     }
 
     .my-btn svg {
-    width: 1.25vw;
+        width: 1.25vw;
     }
 
     /* ------------------------------ HOME PAGE ---------------------------- */
     /* Hero Section */
     .hero-nav span {
-    font-size: 5em;
-    line-height: 1.125;
+        font-size: 5em;
+        line-height: 1.125;
     }
 
     .image-caption {
-    font-size: 1.75em;
+        font-size: 1.75em;
     }
 
     /* Global Section */
     .global-tagline .sec-1 h2 {
-    font-size: 2.33em;
+        font-size: 2.33em;
     }
 
     .global-tagline .sec-1 p {
-    font-size: 1.33em;
+        font-size: 1.33em;
     }
 
     .my-accordion h3 {
-    font-size: 2.125em;
+        font-size: 2.125em;
+    }
+
+    .my-accordion p {
+    font-size: 1.15em;
     }
 
     .my-accordion .accordion-button {
-    font-size: 1.85em;
+        font-size: 1.85em;
     }
 
     /* Project Section */
 
     .proj-tagline h2 {
-    font-size: 2.33em;
+        font-size: 2.33em;
     }
 
     .proj-tagline p {
-    font-size: 1.33em;
+        font-size: 1.33em;
     }
 
     .building {
-    flex: 0 0 calc(100% / 2.5);
+        flex: 0 0 calc(100% / 2.5);
     }
 
     .building .building-title {
-    font-size: 1.75rem;
+        font-size: 1.75rem;
     }
 
     .building .building-address {
-    font-size: 1.33em;
+        font-size: 1.33em;
     }
 
     /* Stats Section */
     .stats h2 {
-    font-size: 2.33em;
+        font-size: 2.33em;
     }
 
     .bar-graph {
-    height: 45vh;
+        height: 45vh;
     }
 
     .stat-big .stat-title {
-    font-size: 1.35em;
+        font-size: 1.35em;
     }
 
     .stat-small div {
-    padding: 1.5vw;
-    font-size: 2.5em;
+        padding: 1.5vw;
+        font-size: 2.5em;
     }
 
     .stat-small .stat-title {
-    font-size: 1em;
+        font-size: 1em;
     }
 
     .nation-flag {
-    height: 1.5em;
+        height: 1.5em;
     }
 
     /* Partners */
     .logo-container p {
-    font-size: .9em;
+        font-size: .9em;
     }
 
     /* Footer */
     footer .logo div {
-    font-size: 4.67em;
-    line-height: .75;
+        font-size: 4.67em;
+        line-height: .75;
     }
 
     footer .my-btn {
-    min-width: 16vw;
+        min-width: 16vw;
+    }
+
+    /* ------------------------------ ECOSYSTEM PAGE ---------------------------- */
+    .page-ecosystem .hero-nav span {
+    font-size: 3em;
+    }
+
+    .page-ecosystem .info-section h2 {
+    font-size: 2.33em;
+    }
+
+    .page-ecosystem .info-section .body-2col p {
+    font-size: 1.33em;
+    }
+
+    .page-ecosystem .ecosystem-item h2 {
+    font-size: 2.125em;
+    }
+
+    .page-ecosystem .ecosystem-item p {
+    font-size: 1.15em;
+    }
+
+    .page-ecosystem .ecosystem-item #item-media {
+    height: 30vh;
+    }
+
+    /* ----------------------------VISION PAGE --------------------------------*/
+    .common-sec .title {
+    font-size: 5.25em;
+    }
+
+    .mission-statment p {
+    font-size: 2em;
+    }
+
+    .values .value-feat h4 {
+    font-size: 2.125em;
+    }
+
+    .values .value-feat p {
+    font-size: 1.15em;
+    }
+
+    .page-vision .info-section h2 {
+    font-size: 2.33em;
+    }
+
+    .page-vision .info-section .body-2col p {
+    font-size: 1.33em;
     }
 }
 
 @media (max-width: 1024px) {
 
-    /* 2-Column Text Layout */
-    .info-section .body-2col {
-        -webkit-column-count: 1;
-        /* Chrome, Safari, Opera */
-        -moz-column-count: 1;
-        /* Firefox */
-        column-count: 1;
-        /* Standard syntax */
-    }
-
     header .col-head.logo {
-    flex-basis: 33%;
+        flex-basis: 33%;
     }
 
     header .col-head.icon {
-    flex-basis: 33%;
+        flex-basis: 33%;
     }
 
     .my-btn {
-    font-size: 1.2em;
+        font-size: 1.2em;
     }
 
     /* ------------------------------ HOME PAGE ---------------------------- */
     /* Hero Section */
     .hero-nav span {
-    font-size: 3.06125em;
-    line-height: 1.125;
+        font-size: 3.06125em;
+        line-height: 1.125;
     }
 
     .image-caption {
-    font-size: 1.125em;
+        font-size: 1.125em;
     }
 
     /* Info Section */
     .global-tagline .sec-1 h2 {
-    font-size: 1.67em;
+        font-size: 1.67em;
     }
 
     .global-tagline .sec-1 p {
-    font-size: 1.125em;
+        font-size: 1.125em;
     }
 
     .my-accordion h3 {
-    font-size: 1.67em;
+        font-size: 1.67em;
     }
 
     .my-accordion .accordion-button {
-    font-size: 1.5em;
+        font-size: 1.5em;
     }
 
     /* Project Section */
     .proj-tagline h2 {
-    font-size: 1.67em;
+        font-size: 1.67em;
     }
 
     .proj-tagline p {
-    font-size: 1.125em;
+        font-size: 1.125em;
     }
 
     .building {
-    flex: 0 0 calc(100% / 1.9);
+        flex: 0 0 calc(100% / 1.9);
     }
 
     .building .building-title {
-    font-size: 1.125rem;
+        font-size: 1.125rem;
     }
 
     .building .building-address {
-    font-size: .95em;
+        font-size: .95em;
     }
 
-    .carousel-prev svg, .carousel-next svg {
-    height: 4vw;
-    width: 4vw;
+    .carousel-prev svg,
+    .carousel-next svg {
+        height: 4vw;
+        width: 4vw;
     }
 
     /* Stats Section */
     .stats h2 {
-    font-size: 1.67em;
+        font-size: 1.67em;
     }
 
     .stat-big div {
-    font-size: 2.75em;
+        font-size: 2.75em;
     }
 
     .stat-small div {
-    font-size: 1.75em;
+        font-size: 1.75em;
     }
 
     .bar-graph {
-    height: 30vh;
+        height: 30vh;
     }
 
     /* Partners Section */
     .partners {
-    padding: 1vh 0;
+        padding: 1vh 0;
     }
 
     /* Form */
     .inquire {
-    width: 67vw;
-    right: -67vw;
+        width: 67vw;
+        right: -67vw;
     }
 
     /* Footer */
     footer .logo div {
-    font-size: 2.67em;
-    line-height: .75;
+        font-size: 2.67em;
+        line-height: .75;
     }
 
     footer .info p {
-    font-size: 1.33em;
+        font-size: 1.33em;
     }
 
     footer .links a {
-    font-size: 1.33em;
+        font-size: 1.33em;
     }
 
     footer .back-to-top {
-    font-size: 1.25em;
+        font-size: 1.25em;
     }
 
     footer .my-btn {
-    min-width: 20vw;
+        min-width: 20vw;
+    }
+
+    /* ------------------------------ ECOSYSTEM PAGE ---------------------------- */
+    .page-ecosystem .hero-nav span {
+    font-size: 1.25em;
+    }
+
+    .page-ecosystem .info-section h2 {
+    font-size: 1.67em;
+    }
+
+    .page-ecosystem .info-section .body-2col p {
+    font-size: 1.125em;
+    }
+
+    .page-ecosystem .ecosystem-item h2 {
+    font-size: 1.67em;
+    }
+
+    .page-ecosystem .ecosystem-item p {
+    font-size: 1.0625em;
+    }
+
+    .page-ecosystem .ecosystem-item .info {
+    padding: 6vh 2vw 3vh 3vw;
+    }
+
+    .page-ecosystem .ecosystem-item #item-media {
+    height: 52vh;
+    }
+
+    /* ----------------------------VISION PAGE --------------------------------*/
+    .common-sec .title {
+    font-size: 2.75em;
+    }
+
+    .mission-statment p {
+    max-width: 75%;
+    font-size: 1.33em;
+    }
+
+    .values .value-feat h4 {
+    font-size: 1.6em;
+    }
+
+    .values .value-feat p {
+    font-size: 1.0625em;
+    }
+
+    .page-vision .global-tagline .sec-1 {
+    min-height: 45vh;
+    }
+
+    .page-vision .info-section h2 {
+    font-size: 1.67em;
+    }
+
+    .page-vision .info-section .body-2col p {
+    font-size: 1.125em;
     }
 }
 
@@ -2637,248 +2750,338 @@ section {
     }
 
     header .col-head.logo {
-    flex-basis: 33%;
+        flex-basis: 33%;
     }
 
     header .col-head.icon {
-    flex-basis: 33%;
+        flex-basis: 33%;
     }
 
     header .menu {
-    width: 125%;
-    left: 0;
+        width: 125%;
+        left: 0;
     }
 
     header .menu ul {
-    font-size: 1.85em;
+        font-size: 1.85em;
     }
 
     header .menu .social {
-    font-size: .95em;
-    width: 67%;
+        font-size: .95em;
+        width: 67%;
     }
 
     header .menu .info p {
-    font-size: 1.33em;
+        font-size: 1.33em;
     }
 
     header .menu .info span {
-    font-size: 1em;
+        font-size: 1em;
     }
 
     .my-btn {
-    font-size: .95em;
-    padding: 0.75vw 1.5vw;
-    min-width: 40vw;
+        font-size: .95em;
+        padding: 0.75vw 1.5vw;
+        min-width: 40vw;
     }
 
     .my-btn svg {
-    width: 2vw;
+        width: 2vw;
     }
 
     /* ------------------------------ HOME PAGE ---------------------------- */
     /* Hero Section */
     .hero-nav {
-    width: 50vw;
-    padding-right: 2vw;
+        width: 50vw;
+        padding-right: 2vw;
     }
 
     .hero-nav span {
-    font-size: 2.85em;
-    line-height: 1.125;
+        font-size: 2.85em;
+        line-height: 1.125;
     }
 
     .image-caption {
-    font-size: 1.25em;
-    transform: translateX(-100%);
+        font-size: 1.25em;
+        transform: translateX(-100%);
     }
 
     /* Info Section */
     #global-tagline-cont {
-    width: 100%;
-    padding-left: 1.5rem;
-    padding-bottom: 5vh;
+        width: 100%;
+        padding-left: 1.5rem;
+        padding-bottom: 5vh;
     }
 
     .global-tagline .border-gray-r {
-    border-right: none;
-    border-bottom: var(--border-gray);
+        border-right: none;
+        border-bottom: var(--border-gray);
     }
 
     .global-tagline .sec-1 h2 {
-    font-size: 1.33em;
+        font-size: 1.33em;
     }
 
     .global-tagline .sec-1 p {
-    font-size: 1.03875em;
+        font-size: 1.03875em;
     }
 
     #global-tagline-accordion {
-    min-height: 40vh;
-    margin-top: 5vh;
-    width: 100%;
-    padding-left: 1.5rem;
+        min-height: 40vh;
+        margin-top: 5vh;
+        width: 100%;
+        padding-left: 1.5rem;
     }
 
     .my-accordion h3 {
-    font-size: 1.33em;
-    margin-left: 0;
+        font-size: 1.33em;
+        margin-left: 0;
     }
 
     .my-accordion .accordion-item {
-    margin-left: 0;
+        margin-left: 0;
     }
 
     .my-accordion .accordion-button {
-    font-size: 1.125em;
+        font-size: 1.125em;
     }
 
     .my-accordion p {
-    font-size: .85em;
+        font-size: .85em;
     }
 
     #accordion-4 {
-    margin-bottom: 4vh;
+        margin-bottom: 4vh;
     }
 
     .global-tagline .sec-1 .my-btn {
-    bottom: 5vh;
+        bottom: 5vh;
     }
 
     /* Video Section */
     .video-section {
-    height: 33vh;
+        height: 33vh;
     }
 
     /* Project Section */
     .proj-tagline .border-gray-r {
-    border-right: none;
-    border-bottom: var(--border-gray);
+        border-right: none;
+        border-bottom: var(--border-gray);
     }
 
     .proj-tagline #project-tagline-cont {
-    padding-left: 1.5rem;
+        padding-left: 1.5rem;
     }
 
     #project-tagline-cont {
-    min-height: 40vh;
-    padding: 5vh 0 3vh 0;
+        min-height: 40vh;
+        padding: 5vh 0 3vh 0;
     }
 
     .proj-tagline h2 {
-    font-size: 1.33em;
+        font-size: 1.33em;
     }
 
     .proj-tagline p {
-    font-size: 1.03875em;
+        font-size: 1.03875em;
     }
 
     .proj-tagline .my-btn {
-    bottom: 1vh;
+        bottom: 1vh;
     }
 
     .building {
-    flex: 0 0 calc(100% / 1.85);
-    margin: 0 0 5vh 0;
+        flex: 0 0 calc(100% / 1.85);
+        margin: 0 0 5vh 0;
     }
 
     .building .building-title {
-    font-size: 1.25rem;
+        font-size: 1.25rem;
     }
 
     .building .building-address {
-    font-size: 1.03875em;
+        font-size: 1.03875em;
     }
 
-    .carousel-prev svg, .carousel-next svg {
-    height: 5vw;
-    width: 5vw;
+    .carousel-prev svg,
+    .carousel-next svg {
+        height: 5vw;
+        width: 5vw;
     }
 
     /* Stats Section */
-    #biz-insights-sect, #reception-desk-sect {
-    padding-left: 1.5rem;
-    width: 100%;
+    #biz-insights-sect,
+    #reception-desk-sect {
+        padding-left: 1.5rem;
+        width: 100%;
     }
 
     .stats .row .border-gray-r {
-    border-right: none;
-    border-bottom: var(--border-gray);
+        border-right: none;
+        border-bottom: var(--border-gray);
     }
 
     #reception-desk-sect {
-    padding-top: 6vh;
+        padding-top: 6vh;
     }
 
     #reception-desk-sect #rus-stat {
-    border-right: var(--border-gray);
+        border-right: var(--border-gray);
     }
 
     .stats h2 {
-    font-size: 1.33em;
+        font-size: 1.33em;
     }
 
     .stat-big div {
-    font-size: 3em;
+        font-size: 3em;
     }
 
     .stat-small div {
-    font-size: 2.25em;
+        font-size: 2.25em;
     }
 
     .bar-graph {
-    height: 45vh;
+        height: 45vh;
     }
 
     .stats .my-btn {
-    margin-top: 3vh;
+        margin-top: 3vh;
     }
 
     /* Partners Section */
     .partners {
-    padding: 0;
-    gap: 1vw;
+        padding: 0;
+        gap: 1vw;
     }
 
     .logo-container p {
-    font-size: 0.35em;
+        font-size: 0.35em;
     }
 
     .logo-container {
-    max-width: 20vw;
-    height: 18vh;
+        max-width: 20vw;
+        height: 18vh;
     }
 
     /* Form */
     .inquire {
-    width: 100vw;
-    right: -100vw;
+        width: 100vw;
+        right: -100vw;
     }
 
     /* Footer */
     footer .logo div {
-    font-size: 2.67em;
-    line-height: .75;
+        font-size: 2.67em;
+        line-height: .75;
     }
 
     footer .info p {
-    font-size: 1.33em;
+        font-size: 1.33em;
     }
 
     footer .links {
-    display: none;
+        display: none;
     }
 
     footer .back-to-top {
-    font-size: 1.25em;
+        font-size: 1.25em;
     }
 
     footer .my-btn {
-    min-width: 33vw;
+        min-width: 33vw;
     }
 
     footer #ptp-footer-logo {
-    width: 50vw;
+        width: 50vw;
+    }
+
+    /* ------------------------------ ECOSYSTEM PAGE ---------------------------- */
+    .page-ecosystem .info-section .body-2col {
+        -webkit-column-count: 1;
+        /* Chrome, Safari, Opera */
+        -moz-column-count: 1;
+        /* Firefox */
+        column-count: 1;
+        /* Standard syntax */
+    }
+
+    .page-ecosystem .hero-nav span {
+    font-size: 1.125em;
+    }
+
+    .page-ecosystem .hero-nav {
+    padding-right: 0vw;
+    }
+
+    .page-ecosystem .info-section h2 {
+    font-size: 1.33em;
+    }
+
+    .page-ecosystem .info-section .body-2col p {
+    font-size: 1.03875em;
+    }
+
+    .page-ecosystem .ecosystem-item h2 {
+    font-size: 1.33em;
+    }
+
+    .page-ecosystem .ecosystem-item p {
+    font-size: .85em;
+    }
+
+    .page-ecosystem .ecosystem-item .info {
+    padding: 6vh 2vw 3vh 3vw;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    }
+
+    .page-ecosystem .ecosystem-item #item-media {
+    height: 40vh;
+    }
+
+    /* ----------------------------VISION PAGE --------------------------------*/
+    .page-vision .info-section .body-2col {
+        -webkit-column-count: 1;
+        /* Chrome, Safari, Opera */
+        -moz-column-count: 1;
+        /* Firefox */
+        column-count: 1;
+        /* Standard syntax */
+    }
+
+    .page-vision .image-caption {
+        font-size: 1em;
+        transform: translateX(-50%);
+    }
+
+    .common-sec .title {
+    font-size: 2em;
+    }
+
+    .mission-statment p {
+    font-size: 1.125em;
+    }
+
+    .values .value-feat h4 {
+    font-size: 1.33em;
+    }
+
+    .values .value-feat p {
+    font-size: .85em;
+    }
+
+    .page-vision .global-tagline .sec-1 {
+    min-height: 40vh;
+    }
+
+    .page-vision .info-section h2 {
+    font-size: 1.33em;
+    }
+
+    .page-vision .info-section .body-2col p {
+    font-size: 1.03875em;
     }
 }
 
@@ -2895,247 +3098,456 @@ section {
     }
 
     header .col-head.logo {
-    flex-basis: 33%;
+        flex-basis: 60%;
     }
 
     header .col-head.icon {
-    flex-basis: 33%;
+        flex-basis: 20%;
+    }
+
+    header #menu-animation {
+        height: 5vh;
     }
 
     header .menu {
-    width: 125%;
-    left: 0;
+        width: 500%;
+        left: 0;
+    }
+
+    header .menu .list {
+        padding: 4vh 5vw;
+        min-height: 86vh;
     }
 
     header .menu ul {
-    font-size: 1.85em;
+        font-size: 2.25em;
     }
 
     header .menu .social {
-    font-size: .95em;
-    width: 67%;
+        font-size: 1.125em;
+        width: 50%;
+    }
+
+    header .menu .info {
+        margin-top: 3vh;
+        padding-bottom: 3vh;
+        margin-bottom: 4vh;
     }
 
     header .menu .info p {
-    font-size: 1.33em;
+        font-size: 1.5em;
     }
 
     header .menu .info span {
-    font-size: 1em;
+        font-size: 1.25em;
     }
 
     .my-btn {
-    font-size: .95em;
-    padding: 0.75vw 1.5vw;
-    min-width: 40vw;
+        font-size: .95em;
+        padding: 1.25vw 3vw;
+        min-width: 100%;
     }
 
     .my-btn svg {
-    width: 2vw;
+        width: 5vw;
     }
 
     /* ------------------------------ HOME PAGE ---------------------------- */
     /* Hero Section */
+    .hero {
+        flex-direction: column;
+    }
+
+    #hero-feat {
+        width: 100vw;
+        height: 40vh;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        overflow: hidden;
+        z-index: -1;
+        align-content: flex-end;
+        flex-direction: column;
+    }
+
     .hero-nav {
-    width: 50vw;
-    padding-right: 2vw;
+        display: flex;
+        width: 100vw;
+        height: 46vh;
+        padding-right: 2vw;
+        padding-top: 3vh;
+        padding-bottom: 3vh;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        align-content: flex-start;
+    }
+
+    .nav-item-container {
+        text-align: right;
+        display: flex;
+        gap: 1vh;
+        align-items: flex-end;
+        flex-direction: column;
     }
 
     .hero-nav span {
-    font-size: 2.85em;
-    line-height: 1.125;
+        font-size: 2.33em;
+        line-height: 1.125;
     }
 
     .image-caption {
-    font-size: 1.25em;
-    transform: translateX(-100%);
+        font-size: 1em;
+        transform: translate(-50%, -43vh);
     }
 
     /* Info Section */
     #global-tagline-cont {
-    width: 100%;
-    padding-left: 1.5rem;
-    padding-bottom: 5vh;
+        width: 100%;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+        padding-bottom: 5vh;
     }
 
     .global-tagline .border-gray-r {
-    border-right: none;
-    border-bottom: var(--border-gray);
+        border-right: none;
+        border-bottom: var(--border-gray);
     }
 
     .global-tagline .sec-1 h2 {
-    font-size: 1.33em;
+        font-size: 1.5em;
     }
 
     .global-tagline .sec-1 p {
-    font-size: 1.03875em;
+        font-size: .95em;
+        margin-bottom: 6rem;
     }
 
     #global-tagline-accordion {
-    min-height: 40vh;
-    margin-top: 5vh;
-    width: 100%;
-    padding-left: 1.5rem;
+        min-height: 40vh;
+        margin-top: 5vh;
+        width: 100%;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
     }
 
     .my-accordion h3 {
-    font-size: 1.33em;
-    margin-left: 0;
+        font-size: 1.33em;
+        margin-left: 0;
     }
 
     .my-accordion .accordion-item {
-    margin-left: 0;
+        margin-left: 0;
     }
 
     .my-accordion .accordion-button {
-    font-size: 1.125em;
+        font-size: 1.03875em;
     }
 
     .my-accordion p {
-    font-size: .85em;
+        font-size: .75em;
+        margin-bottom: 2rem;
     }
 
     #accordion-4 {
-    margin-bottom: 4vh;
+        margin-bottom: 4vh;
     }
 
     .global-tagline .sec-1 .my-btn {
-    bottom: 5vh;
+        bottom: 5vh;
+        min-width: 88%;
     }
 
     /* Video Section */
     .video-section {
-    height: 33vh;
+        height: 25vh;
     }
 
     /* Project Section */
+    .proj-tagline {
+        padding-bottom: 0;
+    }
+
     .proj-tagline .border-gray-r {
-    border-right: none;
-    border-bottom: var(--border-gray);
+        border-right: none;
+        border-bottom: var(--border-gray);
     }
 
     .proj-tagline #project-tagline-cont {
-    padding-left: 1.5rem;
-    }
-
-    #project-tagline-cont {
-    min-height: 40vh;
-    padding: 5vh 0 3vh 0;
+        min-height: 40vh;
+        width: 100%;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+        padding-bottom: 5vh;
     }
 
     .proj-tagline h2 {
-    font-size: 1.33em;
+        font-size: 1.5em;
     }
 
     .proj-tagline p {
-    font-size: 1.03875em;
+        font-size: .95em;
+        margin-bottom: 6rem;
     }
 
     .proj-tagline .my-btn {
-    bottom: 1vh;
+        bottom: 5vh;
+        min-width: 88%;
     }
 
     .building {
-    flex: 0 0 calc(100% / 1.85);
-    margin: 0 0 5vh 0;
+        flex: 0 0 calc(100% / 1.19);
+        margin: 0 0 5vh 0;
+        padding: 0 4vw;
+    }
+
+    .building-image {
+        height: 25vh;
     }
 
     .building .building-title {
-    font-size: 1.25rem;
+        font-size: 1.15rem;
     }
 
     .building .building-address {
-    font-size: 1.03875em;
+        font-size: .85em;
     }
 
-    .carousel-prev svg, .carousel-next svg {
-    height: 5vw;
-    width: 5vw;
+    .carousel-prev svg,
+    .carousel-next svg {
+        height: 10vw;
+        width: 10vw;
     }
 
     /* Stats Section */
-    #biz-insights-sect, #reception-desk-sect {
-    padding-left: 1.5rem;
-    width: 100%;
+    #biz-insights-sect,
+    #reception-desk-sect {
+        padding-left: 1.5rem;
+        width: 100%;
     }
 
     .stats .row .border-gray-r {
-    border-right: none;
-    border-bottom: var(--border-gray);
+        border-right: none;
+        border-bottom: var(--border-gray);
     }
 
     #reception-desk-sect {
-    padding-top: 6vh;
+        padding-top: 6vh;
     }
 
     #reception-desk-sect #rus-stat {
-    border-right: var(--border-gray);
+        border-right: var(--border-gray);
     }
 
     .stats h2 {
-    font-size: 1.33em;
+        font-size: 1.5em;
     }
 
     .stat-big div {
-    font-size: 3em;
+        font-size: 2.5em;
+        padding: 5vw;
+    }
+
+    .stat-big .stat-title {
+        font-size: .75em;
     }
 
     .stat-small div {
-    font-size: 2.25em;
+        font-size: 1.5em;
+        padding: 3vw;
+    }
+
+    .stat-small .stat-title {
+        font-size: .67em;
     }
 
     .bar-graph {
-    height: 45vh;
+        height: 25vh;
+        transform: translateX(0vw);
     }
 
     .stats .my-btn {
-    margin-top: 3vh;
+        margin-top: 3vh;
+        bottom: 5vh;
+        min-width: 107%;
+        margin-bottom: 5vh;
     }
 
     /* Partners Section */
     .partners {
-    padding: 0;
-    gap: 1vw;
+        padding: 3vh 0 3vh 0;
+        gap: 1vw;
     }
 
     .logo-container p {
-    font-size: 0.35em;
+        font-size: 0.5em;
     }
 
     .logo-container {
-    max-width: 20vw;
-    height: 18vh;
+        max-width: 30vw;
+        height: 10vh;
     }
 
     /* Form */
     .inquire {
-    width: 100vw;
-    right: -100vw;
+        width: 100vw;
+        right: -100vw;
+        min-height: 86vh;
+        padding-left: 5vw;
+        padding-right: 5vw;
+    }
+
+    .inquire_form .col-6 {
+        width: 100%;
+    }
+
+    .inquire .inquire_form input {
+        margin-top: 1.75vh;
+        font-size: 1em;
     }
 
     /* Footer */
+    footer .logo {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
     footer .logo div {
-    font-size: 2.67em;
-    line-height: .75;
+        font-size: 1.67em;
+        line-height: .75;
     }
 
     footer .info p {
-    font-size: 1.33em;
+        font-size: .95em;
     }
 
     footer .links {
-    display: none;
+        display: none;
     }
 
     footer .back-to-top {
-    font-size: 1.25em;
+        font-size: 1.125em;
+        margin-right: 2vw;
     }
 
     footer .my-btn {
-    min-width: 33vw;
+        min-width: 100%;
     }
 
     footer #ptp-footer-logo {
-    width: 50vw;
+        width: 50vw;
+    }
+
+    /* ------------------------------ ECOSYSTEM PAGE ---------------------------- */
+    .page-ecosystem .info-section .body-2col {
+        -webkit-column-count: 1;
+        /* Chrome, Safari, Opera */
+        -moz-column-count: 1;
+        /* Firefox */
+        column-count: 1;
+        /* Standard syntax */
+    }
+
+    .page-ecosystem .hero {
+    flex-direction: column;
+    }
+
+    .page-ecosystem .nav-item {
+    height: 5.75vh;
+    }
+
+    .page-ecosystem .hero-nav {
+    order: 0;
+    padding-right: 0vw;
+    }
+
+    .page-ecosystem .hero-nav span {
+    font-size: 1.125em;
+    padding-left: 1.5rem;
+    }
+
+    .page-ecosystem #hero-feat {
+    width: 100vw;
+    height: 40vh;
+    }
+
+    .page-ecosystem .info-section h2 {
+    font-size: 1.5em;
+    }
+
+    .page-ecosystem .info-section .body-2col p {
+    font-size: .95em;
+    }
+
+    .page-ecosystem .ecosystem-item h2 {
+    font-size: 1.33em;
+    }
+
+    .page-ecosystem .ecosystem-item p {
+    font-size: .75em;
+    }
+
+    .page-ecosystem .ecosystem-item #item-media {
+    height: 33vh;
+    }
+
+    /* ----------------------------VISION PAGE --------------------------------*/
+    .page-vision .info-section .body-2col {
+        -webkit-column-count: 1;
+        /* Chrome, Safari, Opera */
+        -moz-column-count: 1;
+        /* Firefox */
+        column-count: 1;
+        /* Standard syntax */
+    }
+
+    .page-vision .image-caption {
+        font-size: 1em;
+        transform: translateX(25%);
+        left: 0;
+    }
+
+    .common-sec {
+    height: 20vh;
+    }
+
+    .common-sec .title {
+    font-size: 1.2em;
+    }
+
+    .mission-statment p {
+    font-size: 1.03875em;
+    }
+
+    .values {
+    padding: 6vh 3vw;
+    padding-top: 0vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: center;
+    }
+
+    .values .value-feat {
+    max-width: 90%;
+    padding-top: 3vh;
+    }
+
+    .values .value-feat h4 {
+    font-size: 1.33em;
+    }
+
+    .values .value-feat p {
+    font-size: .75em;
+    }
+
+    .page-vision .info-section h2 {
+    font-size: 1.5em;
+    }
+
+    .page-vision .info-section .body-2col p {
+    font-size: .95em;
     }
 }
