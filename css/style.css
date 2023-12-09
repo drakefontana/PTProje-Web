@@ -479,6 +479,13 @@ header .ptp-agency-logo p {
 .hero {
     position: relative;
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.home .hero {
+    flex-direction: row;
 }
 
 #hero-feat {
@@ -560,8 +567,6 @@ header .ptp-agency-logo p {
 
 .image-caption {
     position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
     color: white;
     bottom: 2vh;
     font-size: 1.67em;
@@ -1517,7 +1522,7 @@ footer #back-to-top-icon {
 
 .common-sec .title {
     text-align: center;
-    font-size: 4em;
+    font-size: 3.5em;
     font-weight: 600;
     color: var(--gray);
     line-height: 1.2;
@@ -1715,7 +1720,7 @@ footer #back-to-top-icon {
 /* Autoplay Video Texture */
 
 .page-reception .video-section {
-    height: 60vh;
+    height: 50vh;
     /* Adjust as needed */
 }
 
@@ -1886,6 +1891,17 @@ footer #back-to-top-icon {
 }
 
 /* Stats Section */
+
+.page-insights #biz-insights-sect h3 {
+    color: var(--brown);
+    font-size: 1.9em;
+    font-weight: 600;
+    margin-left: 3vw;
+    border-bottom: var(--border-gray) !important;
+    padding-bottom: 2vh;
+    text-transform: uppercase;
+}
+
 .page-insights #biz-insights-cont {
     padding: 6vh 3vw;
     color: var(--brown);
@@ -2556,6 +2572,54 @@ section {
     .page-vision .info-section .body-2col p {
     font-size: 1.33em;
     }
+
+    /* ----------------------------INSIGHTS PAGE --------------------------------*/
+    .page-insights .info-section h2 {
+    font-size: 2.33em;
+    }
+
+    .page-insights .info-section .body-2col p {
+    font-size: 1.33em;
+    }
+
+    .agent h4 {
+    font-size: 2.25em;
+    }
+
+    .agent span {
+    font-size: 1.5em;
+    }
+
+    .page-insights #biz-insights-sect h3 {
+    font-size: 2.125em;
+    margin-left: 2vw;
+    }
+
+    .page-insights .bar-graph {
+    height: 30vh;
+    }
+
+    .page-insights .stat-big .stat-title {
+    font-size: 1.5em;
+    }
+
+    /* ----------------------------RECEPTION PAGE --------------------------------*/
+    .page-reception .info-section h2 {
+    font-size: 2.33em;
+    }
+
+    .page-reception .info-section .body-2col p {
+    font-size: 1.33em;
+    }
+
+    .page-reception .video-section {
+    height: 45vh;
+    }
+
+    /* ------------------------------ PROJECTS PAGE ---------------------------- */
+    .page-projects .hero-nav span {
+    font-size: 3em;
+    }
 }
 
 @media (max-width: 1024px) {
@@ -2735,6 +2799,66 @@ section {
     .page-vision .info-section .body-2col p {
     font-size: 1.125em;
     }
+
+    /* ----------------------------INSIGHTS PAGE --------------------------------*/
+    .page-insights .info-section h2 {
+    font-size: 1.67em;
+    }
+
+    .page-insights .info-section .body-2col p {
+    font-size: 1.125em;
+    }
+
+    .page-insights #text-img-item {
+    transform: translateY(8vh);
+    }
+
+    .agent {
+    width: 20vw;
+    }
+
+    .agent h4 {
+    font-size: 1.67em;
+    }
+
+    .agent span {
+    font-size: .95em;
+    }
+
+    .page-insights #biz-insights-sect h3 {
+    font-size: 1.5em;
+    margin-left: 1vw;
+    }
+
+    .page-insights .bar-graph {
+    height: 24vh;
+    }
+
+    .page-insights #biz-insights-cont {
+    padding: 9vh 1vw;
+    }
+
+    .page-insights .stat-big .stat-title {
+    font-size: 1em;
+    }
+
+    /* ----------------------------RECEPTION PAGE --------------------------------*/
+    .page-reception .info-section h2 {
+    font-size: 1.67em;
+    }
+
+    .page-reception .info-section .body-2col p {
+    font-size: 1.125em;
+    }
+
+    .page-reception .video-section {
+    height: 36vh;
+    }
+
+    /* ------------------------------ PROJECTS PAGE ---------------------------- */
+    .page-projects .hero-nav span {
+    font-size: 1.75em;
+    }
 }
 
 @media (max-width: 768px) {
@@ -2791,6 +2915,11 @@ section {
 
     /* ------------------------------ HOME PAGE ---------------------------- */
     /* Hero Section */
+
+    .home .image-caption {
+        transform: translateX(-50%);
+    }
+
     .hero-nav {
         width: 50vw;
         padding-right: 2vw;
@@ -2802,8 +2931,7 @@ section {
     }
 
     .image-caption {
-        font-size: 1.25em;
-        transform: translateX(-100%);
+        font-size: 1em;
     }
 
     /* Info Section */
@@ -3051,11 +3179,6 @@ section {
         /* Standard syntax */
     }
 
-    .page-vision .image-caption {
-        font-size: 1em;
-        transform: translateX(-50%);
-    }
-
     .common-sec .title {
     font-size: 2em;
     }
@@ -3083,12 +3206,9 @@ section {
     .page-vision .info-section .body-2col p {
     font-size: 1.03875em;
     }
-}
 
-@media (max-width: 425px) {
-
-    /* 2-Column Text Layout */
-    .info-section .body-2col {
+    /* ----------------------------INSIGHTS PAGE --------------------------------*/
+    .page-insights .info-section .body-2col {
         -webkit-column-count: 1;
         /* Chrome, Safari, Opera */
         -moz-column-count: 1;
@@ -3096,6 +3216,96 @@ section {
         column-count: 1;
         /* Standard syntax */
     }
+
+    .page-insights .info-section h2 {
+    font-size: 1.33em;
+    }
+
+    .page-insights .info-section .body-2col p {
+    font-size: 1.03875em;
+    }
+
+
+    .page-insights #global-tagline-accordion {
+    min-height: 36vh;
+    }
+
+    .agent h4 {
+    font-size: 1.25em;
+    }
+
+    .agent span {
+    font-size: .75em;
+    }
+
+    .page-insights #biz-insights-sect h3 {
+    font-size: 1.25em;
+    margin-left: 0vw;
+    padding-top: 5vh;
+    }
+
+    .page-insights .bar-graph {
+    height: 45vh;
+    }
+
+    .page-insights #biz-insights-cont {
+    padding: 6vh 3vw;
+    }
+
+    .page-insights .stat-big div {
+    font-size: 2.25em;
+    }
+
+    .page-insights .stat-big .stat-title {
+    font-size: .75em;
+    }
+
+    /* ----------------------------RECEPTION PAGE --------------------------------*/
+    .page-reception .info-section .body-2col {
+        -webkit-column-count: 1;
+        /* Chrome, Safari, Opera */
+        -moz-column-count: 1;
+        /* Firefox */
+        column-count: 1;
+        /* Standard syntax */
+    }
+
+    .page-reception .info-section h2 {
+    font-size: 1.33em;
+    }
+
+    .page-reception .info-section .body-2col p {
+    font-size: 1.03875em;
+    }
+
+    .page-reception .video-section {
+    height: 30vh;
+    }
+
+    /* ------------------------------ PROJECTS PAGE ---------------------------- */
+    .page-projects .hero {
+    flex-direction: column-reverse;
+    }
+
+    .page-projects .hero-nav span {
+    font-size: 1.5em;
+    line-height: .5;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    }
+
+    .page-projects .hero-nav {
+    height: 40vh;
+    padding-right: 0vw;
+    }
+
+    .page-projects #hero-feat {
+    width: 100vw;
+    height: 46vh;
+    }
+}
+
+@media (max-width: 425px) {
 
     header .col-head.logo {
         flex-basis: 60%;
@@ -3154,8 +3364,13 @@ section {
 
     /* ------------------------------ HOME PAGE ---------------------------- */
     /* Hero Section */
-    .hero {
-        flex-direction: column;
+
+    .home .hero {
+    flex-direction: column;
+    }
+
+    .home .image-caption {
+    transform: translateY(-43vh);
     }
 
     #hero-feat {
@@ -3194,11 +3409,6 @@ section {
     .hero-nav span {
         font-size: 2.33em;
         line-height: 1.125;
-    }
-
-    .image-caption {
-        font-size: 1em;
-        transform: translate(-50%, -43vh);
     }
 
     /* Info Section */
@@ -3439,14 +3649,6 @@ section {
     }
 
     /* ------------------------------ ECOSYSTEM PAGE ---------------------------- */
-    .page-ecosystem .info-section .body-2col {
-        -webkit-column-count: 1;
-        /* Chrome, Safari, Opera */
-        -moz-column-count: 1;
-        /* Firefox */
-        column-count: 1;
-        /* Standard syntax */
-    }
 
     .page-ecosystem .hero {
     flex-direction: column;
@@ -3492,27 +3694,13 @@ section {
     }
 
     /* ----------------------------VISION PAGE --------------------------------*/
-    .page-vision .info-section .body-2col {
-        -webkit-column-count: 1;
-        /* Chrome, Safari, Opera */
-        -moz-column-count: 1;
-        /* Firefox */
-        column-count: 1;
-        /* Standard syntax */
-    }
-
-    .page-vision .image-caption {
-        font-size: 1em;
-        transform: translateX(25%);
-        left: 0;
-    }
 
     .common-sec {
     height: 20vh;
     }
 
     .common-sec .title {
-    font-size: 1.2em;
+    font-size: 1.125em;
     }
 
     .mission-statment p {
@@ -3549,5 +3737,86 @@ section {
 
     .page-vision .info-section .body-2col p {
     font-size: .95em;
+    }
+
+    /* ----------------------------INSIGHTS PAGE --------------------------------*/
+
+    .page-insights .info-section h2 {
+    font-size: 1.5em;
+    }
+
+    .page-insights .info-section .body-2col p {
+    font-size: .95em;
+    }
+
+    .page-insights #img-texture-cont {
+    height: 20vh;
+    }
+
+    .page-insights #text-img-item {
+    transform: translateY(2vh);
+    }
+
+    .page-insights .global-tagline {
+    padding: 4vh 3vw;
+    }
+
+    .agents-grid {
+    row-gap: 3vh;
+    }
+
+    .agent {
+    width: 28vw;
+    }
+
+    .agent h4 {
+    font-size: .95em;
+    }
+
+    .agent span {
+    font-size: 0.67em;
+    line-height: 1.125;
+    }
+
+    .page-insights .global-tagline .sec-1 p {
+    margin-bottom: 3rem;
+    }
+
+    .page-insights #biz-insights-sect h3 {
+    font-size: 1.25em;
+    margin-left: -2vw;
+    padding-top: 5vh;
+    }
+
+    .page-insights .bar-graph {
+    height: 25vh;
+    }
+
+    .page-insights #biz-insights-cont {
+    padding: 5vh 2vw;
+    }
+
+    .page-insights .stat-big div {
+    font-size: 1.5em;
+    line-height: 1.125;
+    padding: 3vw;
+    }
+
+    .page-insights .stat-big .stat-title {
+    font-size: .67em;
+    }
+
+    /* ----------------------------RECEPTION PAGE --------------------------------*/
+
+    .page-reception .info-section h2 {
+    font-size: 1.5em;
+    }
+
+    .page-reception .info-section .body-2col p {
+    font-size: .95em;
+    }
+
+    .page-reception .video-section {
+    height: 20vh;
     }
 }

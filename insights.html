@@ -31,7 +31,7 @@
     <meta name="twitter:image" content="/img/Html-Head-Img/PTP-Twitter-Thumb.jpg>
 
     <!-- Schema.org for Google -->
-    <meta itemprop=" name" content="PT Proje Insights">
+    <meta itemprop="name" content="PT Proje Insights">
     <meta itemprop="description" content="PT Proje is a leading project marketing company provides premier services for varying sizes of development projects.">
     <meta itemprop="image" content="/img/Html-Head-Img/PTP-Google-Thumb.jpg">
     <!-- CSS -->
@@ -256,9 +256,9 @@
     <section class="global-tagline">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-md-5 col-12 sec-1 border-gray-r position-relative" data-aos="fade-left">
+                <div id="global-tagline-cont" class="col-md-5 col-12 sec-1 border-gray-r position-relative" data-aos="fade-left">
                     <h2>
-                        ELEVATE YOUR<br />REAL ESTATE VENTURES
+                        ELEVATE YOUR<br/>REAL ESTATE VENTURES
                     </h2>
                     <p>
                         At PT Proje, our B2B services are tailored to empower developers and investors alike, driving success and profitability. Discover the PT Proje client experience.
@@ -271,7 +271,7 @@
                         </svg>
                     </a>
                 </div>
-                <div class="col-md-7 sec-2 col-12" data-aos="fade-up">
+                <div id="global-tagline-accordion" class="col-md-7 sec-2 col-12" data-aos="fade-up">
                     <div class="my-accordion accordion accordion-flush" id="accordion1">
                         <h3>PTP, B2B EXCELLENCE</h3>
                         <div class="accordion-item" id="accordion-1">
@@ -329,6 +329,15 @@
                 <h4>Halİl</br>İbrahim Irklı</h4>
                 <hr />
                 <span>General Coordinator</span>
+            </div>
+            <div class="agent" data-aos="fade-down">
+                <picture>
+                    <source srcset="img/Staff-Img/PTP-Staff-Mohsen-Mofidi.webp" type="image/webp">
+                    <img src="img/Staff-Img/PTP-Staff-Mohsen-Mofidi.png" alt="Mohsen-Mofidi">
+                </picture>
+                <h4>Mohsen</br>Mofidi</h4>
+                <hr />
+                <span>Art Director</span>
             </div>
             <div class="agent" data-aos="fade-down">
                 <picture>
@@ -399,12 +408,12 @@
     <section class="global-tagline border-bottom-0 border-gray-t">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-md-5 col-12 sec-1 border-gray-r position-relative" data-aos="fade-left">
+                <div id="global-tagline-cont" class="col-md-5 col-12 sec-1 border-gray-r position-relative" data-aos="fade-left">
                     <h2>
                         POWERING SUCCESS,<br />
                         YEAR AFTER YEAR
                     </h2>
-                    <p class="fs-5">
+                    <p>
                         Embark on a journey of sustained success with PT Proje. Our B2B services are not just a transaction; they're a partnership designed to elevate your real estate ventures. Witness the proven track record of our success alongside Property Turkey, as depicted in the sales graph from 2016 to 2022. At PT Proje, we don't just promise results; we deliver a legacy of prosperity. Explore the graph to see the trajectory of success that awaits you.
                     </p>
                 </div>
@@ -858,7 +867,7 @@
     <section class="proj-tagline">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-12 col-lg-7 border-gray-r pe-5 ps-5" data-aos="fade-right">
+                <div id="project-tagline-slider" class="col-12 col-lg-7 border-gray-r pe-5" data-aos="fade-right">
                     <div id="slider" class="portfolio-carousel">
                         <div class="carousel-wrapper">
                             <div id="slides" class="slides">
@@ -1053,10 +1062,9 @@
                         </button>
                     </div>
                 </div>
-                <div class="col-12 col-lg-5 ps-5" data-aos="fade-left">
+                <div id="project-tagline-cont" class="col-12 col-lg-5" data-aos="fade-left">
                     <h2>
-                        EXPLORE TOMORROW'S TURKISH<br />
-                        REAL ESTATE TODAY
+                        EXPLORE TOMORROW'S TURKISH REAL ESTATE TODAY
                     </h2>
                     <p>
                         Witness the future of Turkish real estate through our diverse portfolio of prestigious projects.
@@ -1147,7 +1155,7 @@
                 </svg>
             </div>
         </div>
-        <form class="row inquire_form">
+        <form class="row inquire_form" id="form">
             <div class="col-6">
                 <input type="text" name="first-name" id="first-name-input" placeholder="First Name*" />
             </div>
@@ -1167,7 +1175,7 @@
                 <input type="text" name="company" id="company-input" placeholder="Your Company" />
             </div>
             <div class="col-12 mt-3">
-                <button type="submit" class="my-btn">
+                <button type="submit" class="my-btn" id="form_btn">
                     SUBMIT
                     <svg id="PTP-Button-Arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 49.726">
                         <path d="M24.863,0,0,20V50H49.726V20Z" transform="translate(50) rotate(90)" />
